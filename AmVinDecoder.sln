@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmVinDecoder", "AmVinDecoder\AmVinDecoder.csproj", "{D534CC66-5821-4A77-9F1E-E7B520542F43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmVinDecoderLib", "AmVinDecoderLib\AmVinDecoderLib.csproj", "{E7AAE6B0-FE90-4E9D-B372-096AEF718912}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmVinDecoderLib.UnitTest", "AmVinDecoderLib.UnitTest\AmVinDecoderLib.UnitTest.csproj", "{6F43FFE6-B615-4318-83B2-FC1673FBDDAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{90597C91-2532-4205-8567-B8F7CB18586C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D534CC66-5821-4A77-9F1E-E7B520542F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D534CC66-5821-4A77-9F1E-E7B520542F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D534CC66-5821-4A77-9F1E-E7B520542F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D534CC66-5821-4A77-9F1E-E7B520542F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7AAE6B0-FE90-4E9D-B372-096AEF718912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7AAE6B0-FE90-4E9D-B372-096AEF718912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7AAE6B0-FE90-4E9D-B372-096AEF718912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7AAE6B0-FE90-4E9D-B372-096AEF718912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F43FFE6-B615-4318-83B2-FC1673FBDDAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F43FFE6-B615-4318-83B2-FC1673FBDDAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F43FFE6-B615-4318-83B2-FC1673FBDDAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F43FFE6-B615-4318-83B2-FC1673FBDDAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F43FFE6-B615-4318-83B2-FC1673FBDDAC} = {90597C91-2532-4205-8567-B8F7CB18586C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AA5CB55-0BC2-49D0-AB50-5754A7DC02FC}
+	EndGlobalSection
+EndGlobal

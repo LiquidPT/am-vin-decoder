@@ -7,12 +7,15 @@ namespace AmVinDecoder
     {
         static void Main(string[] args)
         {
+            string vin;
+
             if (args.Length == 0)
             {
-                throw new ArgumentNullException(nameof(args));
+                Console.WriteLine("VIN?: ");
+                vin = Console.ReadLine();
+            } else{
+                vin = args[0];
             }
-
-            var vin = args[0];
 
             var vehicle = VinDecoder.GetVehicleInfo(vin);
             Console.WriteLine("------------------------------------------------------------");
@@ -34,3 +37,4 @@ namespace AmVinDecoder
         }
     }
 }
+

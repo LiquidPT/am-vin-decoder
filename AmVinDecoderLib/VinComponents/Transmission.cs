@@ -6,6 +6,8 @@ namespace AmVinDecoderLib.VinComponents
     {
         private readonly bool _isV12VantageS;
 
+        public bool HasClutchPedal { get; private set; }
+
         public Transmission(char vinCode, bool isV12VantageS = false)
             : base(vinCode)
         {

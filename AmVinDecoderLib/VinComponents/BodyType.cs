@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AmVinDecoderLib.VinComponents.Enum;
+using System;
 using System.Linq;
 
 namespace AmVinDecoderLib.VinComponents
@@ -6,6 +7,10 @@ namespace AmVinDecoderLib.VinComponents
     public class BodyType : BaseVinComponent
     {
         private new readonly string _vinCode;
+
+        public int DoorCount { get; private set; }
+
+        public BodyStyle BodyStyle { get; private set; }
 
         public BodyType(string vinCode)
         {

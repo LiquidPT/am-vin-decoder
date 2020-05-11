@@ -12,6 +12,8 @@ namespace AmVinDecoderLib.VinComponents
         private const string fourSeats = "4 seats";
         private new readonly string _vinCode;
 
+        public int SeatCount { get; private set; }
+
         public Seating(string vinCode)
         {
             if (string.IsNullOrWhiteSpace(vinCode))

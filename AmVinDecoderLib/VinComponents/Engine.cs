@@ -4,6 +4,8 @@ namespace AmVinDecoderLib.VinComponents
 {
     public class Engine : BaseVinComponent
     {
+        public int Cylinders { get; private set; }
+
         public Engine(char vinCode)
             : base(vinCode)
         {

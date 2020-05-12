@@ -1,11 +1,10 @@
-﻿using AmVinDecoderLib.VinComponents;
-using AmVinDecoderLib.VinComponents.Enum;
+﻿using AmVinDecoderLib.Utilities;
+using AmVinDecoderLib.VinComponents;
 using System;
-using System.Linq;
 
-namespace AmVinDecoderLib.VinLookup
+namespace AmVinDecoderLib.Repositories
 {
-    public static class BodyTypeLookup
+    public  class BodyTypeRepository
     {
         public static BodyType Lookup(string vinCode)
         {

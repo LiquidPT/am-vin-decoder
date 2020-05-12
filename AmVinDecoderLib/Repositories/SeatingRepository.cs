@@ -1,9 +1,10 @@
 ﻿using AmVinDecoderLib.VinComponents;
+using AmVinDecoderLib.Utilities;
 using System;
 
-namespace AmVinDecoderLib.VinLookup
+namespace AmVinDecoderLib.Repositories
 {
-    public class SeatingLookup
+    public class SeatingRepository
     {
         private const string twoPlusTwo = "2+2";
         private const string twoPlusZero = "2+0";

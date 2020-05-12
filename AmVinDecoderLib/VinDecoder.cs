@@ -1,5 +1,4 @@
-﻿using AmVinDecoderLib.VinComponents;
-using AmVinDecoderLib.VinLookup;
+﻿using AmVinDecoderLib.Repositories;
 using System;
 
 namespace AmVinDecoderLib
@@ -40,18 +39,18 @@ namespace AmVinDecoderLib
             var info = new VehicleSummary
             {
                 Vin = vin,
-                Factory = FactoryLookup.Lookup(vin[VinPosition.Factory]),
-                ModelYear = ModelYearLookup.Lookup(vin[VinPosition.ModelYear]),
-                Model = ModelLookup.Lookup(vin[VinPosition.Model], vin[VinPosition.SerialNumber]),
-                SteeringPosition = SteeringLookup.Lookup(vin[VinPosition.Transmission]),
-                BodyType = BodyTypeLookup.Lookup(vin.Substring(VinPosition.BodyType, 2)),
-                Seating = SeatingLookup.Lookup(vin.Substring(VinPosition.BodyType, 2)),
-                Engine = EngineLookup.Lookup(vin[VinPosition.Engine]),
+                Factory = FactoryRepository.Lookup(vin[VinPosition.Factory]),
+                ModelYear = ModelYearRepository.Lookup(vin[VinPosition.ModelYear]),
+                Model = ModelRepository.Lookup(vin[VinPosition.Model], vin[VinPosition.SerialNumber]),
+                SteeringPosition = SteeringRepository.Lookup(vin[VinPosition.Transmission]),
+                BodyType = BodyTypeRepository.Lookup(vin.Substring(VinPosition.BodyType, 2)),
+                Seating = SeatingRepository.Lookup(vin.Substring(VinPosition.BodyType, 2)),
+                Engine = EngineRepository.Lookup(vin[VinPosition.Engine]),
                 SerialNumber = vin.Substring(VinPosition.SerialNumber, 5),
             };
 
-            info.RestraintSystem = RestraintSystemLookup.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, vin[VinPosition.Model]);
-            info.Transmisson = TransmissionLookup.Lookup(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
+            info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, vin[VinPosition.Model]);
+            info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
 
             return info;
         }

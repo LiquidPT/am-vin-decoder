@@ -1,10 +1,11 @@
 ﻿using AmVinDecoderLib.VinComponents;
 using AmVinDecoderLib.VinComponents.Enum;
+using AmVinDecoderLib.Utilities;
 using System;
 
-namespace AmVinDecoderLib.VinLookup
+namespace AmVinDecoderLib.Repositories
 {
-    public class SteeringLookup
+    public class SteeringRepository
     {
         public static Steering Lookup(char vinCode)
         {

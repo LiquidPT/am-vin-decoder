@@ -1,9 +1,10 @@
 ﻿using AmVinDecoderLib.VinComponents;
+using AmVinDecoderLib.Utilities;
 using System;
 
-namespace AmVinDecoderLib.VinLookup
+namespace AmVinDecoderLib.Repositories
 {
-    public class ModelLookup
+    public class ModelRepository
     {
         public static Model Lookup(char vinCode, char? serialModifer)
         {

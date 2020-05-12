@@ -1,38 +1,38 @@
 using AmVinDecoderLib.VinComponents;
-using AmVinDecoderLib.VinLookup;
+using AmVinDecoderLib.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace AmVinDecoderLib.UnitTest.VinLookup
+namespace AmVinDecoderLib.UnitTest.Repositories
 {
     [TestClass]
-    public class TransmissionLookupTests
+    public class EngineRepositoryTests
     {
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Lookup_SymbolVinCode_ThrowsException()
         {
-            _ = TransmissionLookup.Lookup('*');
+            _ = EngineRepository.Lookup('*');
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Lookup_NumericVinCode_ThrowsException()
         {
-            _ = TransmissionLookup.Lookup('1');
+            _ = EngineRepository.Lookup('1');
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void Lookup_UnknownLetterVinCode_ThrowsException()
         {
-            _= TransmissionLookup.Lookup('X');
+            _ = EngineRepository.Lookup('X');
         }
 
         [TestMethod]
         public void Lookup_KnownLetterVinCode_ReturnsValue()
         {
-            var result = TransmissionLookup.Lookup('A');
+            var result = EngineRepository.Lookup('A');
             Assert.IsNotNull(result.Text);
         }
     }

@@ -1,9 +1,10 @@
-﻿using AmVinDecoderLib.VinComponents;
+﻿using AmVinDecoderLib.Utilities;
+using AmVinDecoderLib.VinComponents;
 using System;
 
-namespace AmVinDecoderLib.VinLookup
+namespace AmVinDecoderLib.Repositories
 {
-    public class TransmissionLookup
+    public class TransmissionRepository
     {
         public static Transmission Lookup(char vinCode, bool isV12VantageS = false)
         {

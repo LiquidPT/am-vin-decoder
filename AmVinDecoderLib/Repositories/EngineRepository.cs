@@ -1,9 +1,10 @@
 ﻿using AmVinDecoderLib.VinComponents;
+using AmVinDecoderLib.Utilities;
 using System;
 
-namespace AmVinDecoderLib.VinLookup
+namespace AmVinDecoderLib.Repositories
 {
-    public class EngineLookup
+    public class EngineRepository
     {
         public static Engine Lookup(char vinCode)
         {

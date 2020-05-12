@@ -1,9 +1,10 @@
 ﻿using AmVinDecoderLib.VinComponents;
+using AmVinDecoderLib.Utilities;
 using System;
 
-namespace AmVinDecoderLib.VinLookup
+namespace AmVinDecoderLib.Repositories
 {
-    public class RestraintSystemLookup
+    public class RestraintSystemRepository
     {
         public static RestraintSystem Lookup(char vinCode, string modelYear, char? modelCode)
         {

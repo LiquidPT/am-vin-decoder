@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace AmVinDecoderLib.VinLookup
+namespace AmVinDecoderLib.Utilities
 {
     public static class LookupUtility
     {

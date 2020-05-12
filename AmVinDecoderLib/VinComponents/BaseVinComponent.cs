@@ -2,6 +2,6 @@
 {
     public abstract class BaseVinComponent
     {
-        public string Text { get; internal set; }
+        public string Text { get; set; }
     }
 }

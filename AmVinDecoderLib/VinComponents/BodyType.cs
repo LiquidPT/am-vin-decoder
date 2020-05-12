@@ -4,8 +4,8 @@ namespace AmVinDecoderLib.VinComponents
 {
     public class BodyType : BaseVinComponent
     {
-        public int DoorCount { get; internal set; }
+        public int DoorCount { get; set; }
 
-        public BodyStyle BodyStyle { get; internal set; }
+        public BodyStyle BodyStyle { get; set; }
     }
 }

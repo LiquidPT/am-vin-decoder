@@ -1,4 +1,5 @@
 ﻿using AmVinDecoderLib.VinComponents;
+using AmVinDecoderLib.VinLookup;
 using System;
 
 namespace AmVinDecoderLib
@@ -39,18 +40,18 @@ namespace AmVinDecoderLib
             var info = new VehicleSummary
             {
                 Vin = vin,
-                Factory = new Factory(vin[VinPosition.Factory]),
-                ModelYear = new ModelYear(vin[VinPosition.ModelYear]),
-                Model = new Model(vin[VinPosition.Model], vin[VinPosition.SerialNumber]),
-                SteeringPosition = new Steering(vin[VinPosition.Transmission]),
-                BodyType = new BodyType(vin.Substring(VinPosition.BodyType, 2)),
-                Seating = new Seating(vin.Substring(VinPosition.BodyType, 2)),
-                Engine = new Engine(vin[VinPosition.Engine]),
+                Factory = FactoryLookup.Lookup(vin[VinPosition.Factory]),
+                ModelYear = ModelYearLookup.Lookup(vin[VinPosition.ModelYear]),
+                Model = ModelLookup.Lookup(vin[VinPosition.Model], vin[VinPosition.SerialNumber]),
+                SteeringPosition = SteeringLookup.Lookup(vin[VinPosition.Transmission]),
+                BodyType = BodyTypeLookup.Lookup(vin.Substring(VinPosition.BodyType, 2)),
+                Seating = SeatingLookup.Lookup(vin.Substring(VinPosition.BodyType, 2)),
+                Engine = EngineLookup.Lookup(vin[VinPosition.Engine]),
                 SerialNumber = vin.Substring(VinPosition.SerialNumber, 5),
             };
 
-            info.RestraintSystem = new RestraintSystem(vin[VinPosition.Restraint], info.ModelYear.Text, vin[VinPosition.Model]);
-            info.Transmisson = new Transmission(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
+            info.RestraintSystem = RestraintSystemLookup.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, vin[VinPosition.Model]);
+            info.Transmisson = TransmissionLookup.Lookup(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
 
             return info;
         }

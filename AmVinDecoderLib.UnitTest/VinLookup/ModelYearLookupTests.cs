@@ -1,39 +1,40 @@
 using AmVinDecoderLib.VinComponents;
+using AmVinDecoderLib.VinLookup;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace AmVinDecoderLib.UnitTest.VinComponents
+namespace AmVinDecoderLib.UnitTest.VinLookup
 {
     [TestClass]
-    public class ModelYearTests
+    public class ModelYearLookupTests
     {
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Contructor_SymbolVinCode_ThrowsException()
+        public void Lookup_SymbolVinCode_ThrowsException()
         {
-            _ = new ModelYear('*');
+            _ = ModelYearLookup.Lookup('*');
         }
 
         [TestMethod]
-        public void Contructor_NumericVinCode_ReturnsValue()
+        public void Lookup_NumericVinCode_ReturnsValue()
         {
-            var result = new ModelYear('6');
+            var result = ModelYearLookup.Lookup('6');
             Assert.IsNotNull(result.Text);
             Assert.AreEqual("2006", result.Text);
         }
 
         [TestMethod]
-        public void Contructor_FirstLetterVinCode_ReturnsValue()
+        public void Lookup_FirstLetterVinCode_ReturnsValue()
         {
-            var result = new ModelYear('A');
+            var result = ModelYearLookup.Lookup('A');
             Assert.IsNotNull(result.Text);
             Assert.AreEqual("2010", result.Text);
         }
 
         [TestMethod]
-        public void Contructor_LetterVinCode_ReturnsValue()
+        public void Lookup_LetterVinCode_ReturnsValue()
         {
-            var result = new ModelYear('D');
+            var result = ModelYearLookup.Lookup('D');
             Assert.IsNotNull(result.Text);
             Assert.AreEqual("2013", result.Text);
         }

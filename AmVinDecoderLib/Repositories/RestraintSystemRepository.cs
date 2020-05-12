@@ -6,7 +6,7 @@ namespace AmVinDecoderLib.Repositories
 {
     public class RestraintSystemRepository
     {
-        public static RestraintSystem Lookup(char vinCode, string modelYear, char? modelCode)
+        public static RestraintSystem Lookup(char vinCode, string modelYear, bool isDB11Volante = false)
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
 
@@ -17,18 +17,13 @@ namespace AmVinDecoderLib.Repositories
                 throw new ArgumentOutOfRangeException(nameof(modelYear), "Expecting numeric year");
             }
 
-            if (modelCode.HasValue && !char.IsLetter(modelCode.Value))
-            {
-                throw new ArgumentOutOfRangeException(nameof(modelCode), "Expecting a letter");
-            }
-
             return new RestraintSystem
             {
-                Text = GetText(validatedVinCode, intModelYear, char.ToUpperInvariant(modelCode.GetValueOrDefault()))
+                Text = GetText(validatedVinCode, intModelYear, isDB11Volante)
             };
         }
 
-        private static string GetText(string validatedVinCode, int modelYear, char modelCode)
+        private static string GetText(string validatedVinCode, int modelYear, bool isDB11Volante)
         {
             switch (validatedVinCode)
             {
@@ -64,7 +59,7 @@ namespace AmVinDecoderLib.Repositories
                     return "2+2 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR) + curtain side  airbags in the doors.";
                 case "R":
                     var rDesc = "2+2 Airbags Drv/Pass: Front, knee, side (in  seat & cantrail) Seat belts Drv/Pass: 3point ELR, pyropretensioners (Retractor & Sill), singlestage load limiter within retractor (+ ALR pass) Rear Pass: 3point ALR.";
-                    if (modelCode.Equals('M')) // DB11 Volante
+                    if (isDB11Volante)
                     {
                         rDesc += " +Roll Bars & Cantrail airbag in doors.";
                     }

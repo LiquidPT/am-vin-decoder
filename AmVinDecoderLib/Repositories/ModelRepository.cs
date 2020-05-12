@@ -18,7 +18,8 @@ namespace AmVinDecoderLib.Repositories
             return new Model
             {
                 Text = GetText(validatedVinCode, serialModifer.GetValueOrDefault()),
-                IsV12VantageS = IsV12VantageS(validatedVinCode, serialModifer.GetValueOrDefault())
+                IsV12VantageS = IsV12VantageS(validatedVinCode, serialModifer.GetValueOrDefault()),
+                IsDB11Volante = IsDB11Volante(validatedVinCode)
             };
         }
 
@@ -31,6 +32,16 @@ namespace AmVinDecoderLib.Repositories
 
             var sMod = serialmodifier;
             if (sMod == '0' || sMod == '2')
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private static bool IsDB11Volante(string validatedVinCode)
+        {
+            if (validatedVinCode.Equals("M", StringComparison.OrdinalIgnoreCase))
             {
                 return true;
             }

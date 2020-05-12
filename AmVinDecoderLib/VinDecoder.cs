@@ -49,7 +49,7 @@ namespace AmVinDecoderLib
                 SerialNumber = vin.Substring(VinPosition.SerialNumber, 5),
             };
 
-            info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, vin[VinPosition.Model]);
+            info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.IsDB11Volante);
             info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
 
             return info;

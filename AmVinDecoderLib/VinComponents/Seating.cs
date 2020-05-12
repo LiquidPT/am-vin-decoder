@@ -2,6 +2,6 @@
 {
     public class Seating : BaseVinComponent
     {
-        public int SeatCount { get; set; }
+        public int? SeatCount { get; set; }
     }
 }

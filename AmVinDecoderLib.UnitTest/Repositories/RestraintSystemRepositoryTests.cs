@@ -1,4 +1,3 @@
-using AmVinDecoderLib.VinComponents;
 using AmVinDecoderLib.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

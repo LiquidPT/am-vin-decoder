@@ -1,5 +1,5 @@
-﻿using AmVinDecoderLib.VinComponents;
-using AmVinDecoderLib.Utilities;
+﻿using AmVinDecoderLib.Utilities;
+using AmVinDecoderLib.VinComponents;
 using System;
 
 namespace AmVinDecoderLib.Repositories
@@ -26,12 +26,12 @@ namespace AmVinDecoderLib.Repositories
         {
             switch (validatedVinCode)
             {
-                case "01": 
-                case "02": 
-                case "AA": 
-                case "AB": 
+                case "01":
+                case "02":
+                case "AA":
+                case "AB":
                 case "AE":
-                case "AF": 
+                case "AF":
                 case "CB":
                 case "CC":
                 case "CF":
@@ -45,12 +45,12 @@ namespace AmVinDecoderLib.Repositories
                 case "HA":
                     return twoPlusTwo;
 
-                case "03": 
-                case "04": 
-                case "AC": 
-                case "AD": 
+                case "03":
+                case "04":
+                case "AC":
+                case "AD":
                 case "AG":
-                case "AH": 
+                case "AH":
                 case "CA":
                 case "CE":
                 case "CH":
@@ -60,26 +60,26 @@ namespace AmVinDecoderLib.Repositories
                 case "EB":
                     return twoPlusZero;
 
-                case "05": 
-                case "CP": 
-                case "CR": 
-                    return twoPlusUnknown; 
-                    
-                case "BA": 
+                case "05":
+                case "CP":
+                case "CR":
+                    return twoPlusUnknown;
+
+                case "BA":
                 case "BB":
-                case "BC": 
+                case "BC":
                 case "BD":
-                case "BE": 
-                case "BF": 
-                case "BN": 
+                case "BE":
+                case "BF":
+                case "BN":
                 case "BP":
-                case "GA": 
-                    return twoSeats; 
-                    
-                case "DA": 
-                case "DE": 
-                case "DF": 
-                    return fourSeats; 
+                case "GA":
+                    return twoSeats;
+
+                case "DA":
+                case "DE":
+                case "DF":
+                    return fourSeats;
 
                 default: throw new ArgumentException("Unrecognized body type code.");
             }

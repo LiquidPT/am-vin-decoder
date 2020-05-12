@@ -1,5 +1,4 @@
 ﻿using AmVinDecoderLib.VinComponents;
-using AmVinDecoderLib.Utilities;
 using System;
 
 namespace AmVinDecoderLib.Repositories

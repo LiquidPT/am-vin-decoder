@@ -13,7 +13,9 @@ namespace AmVinDecoder
             {
                 Console.WriteLine("VIN?: ");
                 vin = Console.ReadLine();
-            } else{
+            }
+            else
+            {
                 vin = args[0];
             }
 

@@ -1,6 +1,6 @@
-﻿using AmVinDecoderLib.VinComponents;
+﻿using AmVinDecoderLib.Utilities;
+using AmVinDecoderLib.VinComponents;
 using AmVinDecoderLib.VinComponents.Enum;
-using AmVinDecoderLib.Utilities;
 using System;
 
 namespace AmVinDecoderLib.Repositories

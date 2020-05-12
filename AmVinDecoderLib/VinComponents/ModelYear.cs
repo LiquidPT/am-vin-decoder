@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace AmVinDecoderLib.VinComponents
+﻿namespace AmVinDecoderLib.VinComponents
 {
-    public class ModelYear: BaseVinComponent
+    public class ModelYear : BaseVinComponent
     {
     }
 }

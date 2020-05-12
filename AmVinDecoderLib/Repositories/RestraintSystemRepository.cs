@@ -1,5 +1,5 @@
-﻿using AmVinDecoderLib.VinComponents;
-using AmVinDecoderLib.Utilities;
+﻿using AmVinDecoderLib.Utilities;
+using AmVinDecoderLib.VinComponents;
 using System;
 
 namespace AmVinDecoderLib.Repositories
@@ -32,7 +32,7 @@ namespace AmVinDecoderLib.Repositories
         {
             switch (validatedVinCode)
             {
-                  case "A":
+                case "A":
                     return "2+2 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR).";
                 case "B":
                     return "2+0 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.).";

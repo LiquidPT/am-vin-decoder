@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace AmVinDecoderLib.VinComponents
+﻿namespace AmVinDecoderLib.VinComponents
 {
     public class Seating : BaseVinComponent
     {

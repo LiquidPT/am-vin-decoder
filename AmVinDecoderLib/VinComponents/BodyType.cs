@@ -1,6 +1,4 @@
 ﻿using AmVinDecoderLib.VinComponents.Enum;
-using System;
-using System.Linq;
 
 namespace AmVinDecoderLib.VinComponents
 {

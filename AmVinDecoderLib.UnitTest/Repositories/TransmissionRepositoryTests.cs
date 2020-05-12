@@ -1,4 +1,3 @@
-using AmVinDecoderLib.VinComponents;
 using AmVinDecoderLib.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -26,7 +25,7 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         [ExpectedException(typeof(ArgumentException))]
         public void Lookup_UnknownLetterVinCode_ThrowsException()
         {
-            _= TransmissionRepository.Lookup('X');
+            _ = TransmissionRepository.Lookup('X');
         }
 
         [TestMethod]

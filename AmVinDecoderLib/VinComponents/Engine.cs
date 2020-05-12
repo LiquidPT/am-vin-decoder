@@ -2,6 +2,6 @@
 {
     public class Engine : BaseVinComponent
     {
-        public int Cylinders { get; internal set; }
+        public int Cylinders { get; set; }
     }
 }

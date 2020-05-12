@@ -2,6 +2,6 @@
 {
     public class Transmission : BaseVinComponent
     {
-        public bool HasClutchPedal { get; internal set; }
+        public bool HasClutchPedal { get; set; }
     }
 }

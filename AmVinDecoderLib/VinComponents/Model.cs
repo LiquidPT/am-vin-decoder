@@ -2,6 +2,6 @@
 {
     public class Model : BaseVinComponent
     {
-        public bool IsV12VantageS { get; internal set; }
+        public bool IsV12VantageS { get; set; }
     }
 }

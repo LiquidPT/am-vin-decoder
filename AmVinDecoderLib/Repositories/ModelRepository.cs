@@ -19,8 +19,7 @@ namespace AmVinDecoderLib.Repositories
             var data = InitializeData()[validatedVinCode];
             if (data.Text != null)
             {
-                var model = data.ToObject<Model>();
-                return PopulateBooleanFields(model, validatedVinCode, serialModifer);
+                return data.ToObject<Model>();
             }
 
             if (data[_default] != null)
@@ -36,44 +35,10 @@ namespace AmVinDecoderLib.Repositories
                     model = subdata[_default];
                 }
 
-                return PopulateBooleanFields(model, validatedVinCode, serialModifer);
+                return model;
             }
 
             throw new FormatException($"JSON node for Model {validatedVinCode} was not in the expected format.");
-        }
-
-        private static Model PopulateBooleanFields(Model model, string validatedVinCode, char? serialModifer)
-        {
-            model.IsV12VantageS = IsV12VantageS(validatedVinCode, serialModifer.GetValueOrDefault());
-            model.IsDB11Volante = IsDB11Volante(validatedVinCode);
-
-            return model;
-        }
-
-        private static bool IsV12VantageS(string validatedVinCode, char serialmodifier)
-        {
-            if (!validatedVinCode.Equals("S", StringComparison.OrdinalIgnoreCase))
-            {
-                return false;
-            }
-
-            var sMod = serialmodifier;
-            if (sMod == '0' || sMod == '2')
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        private static bool IsDB11Volante(string validatedVinCode)
-        {
-            if (validatedVinCode.Equals("M", StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
-
-            return false;
         }
     }
 }

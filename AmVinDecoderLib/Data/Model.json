@@ -47,7 +47,8 @@
     "Text": "DB11 Coupe"
   },
   "M": {
-    "Text": "DB11 Volante"
+    "Text": "DB11 Volante",
+    "IsDB11Volante":  true
   },
   "N": {
     "Text": "New Vantage Coupe"
@@ -57,13 +58,15 @@
   },
   "S": {
     "0": {
-      "Text": "V12 Vantage S Coupe"
+      "Text": "V12 Vantage S Coupe",
+      "IsV12VantageS":  true
     },
     "1": {
       "Text": "V12 Vantage Roadster"
     },
     "2": {
-      "Text": "V12 Vantage S Roadster"
+      "Text": "V12 Vantage S Roadster",
+      "IsV12VantageS": true
     },
     "default": {
       "Text": "V12 Vantage Coupe"

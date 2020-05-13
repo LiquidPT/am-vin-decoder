@@ -1,0 +1,72 @@
+// The 12th position of the VIN, with the 13th as a possible modifier
+{
+  "A": {
+    "Text": "DB9 Coupe"
+  },
+  "B": {
+    "Text": "DB9 Volante"
+  },
+  "C": {
+    "Text": "V8/V8S Coupe"
+  },
+  "D": {
+    "Text": "V8/V8S Roadster"
+  },
+  "E": {
+    "0": {
+      "Text": "DBS Coupe"
+    },
+    "1": {
+      "Text": "DBS Volante"
+    },
+    "default": {
+      "Text": "DBS"
+    }
+  },
+  "F": {
+    "Text": "Rapide"
+  },
+  "G": {
+    "Text": "Virage Coupe"
+  },
+  "H": {
+    "Text": "Virage Volante"
+  },
+  "J": {
+    "3": {
+      "Text": "Vanquish Zagato Coupe"
+    },
+    "default": {
+      "Text": "Vanquish Coupe"
+    }
+  },
+  "K": {
+    "Text": "Vanquish Volante"
+  },
+  "L": {
+    "Text": "DB11 Coupe"
+  },
+  "M": {
+    "Text": "DB11 Volante"
+  },
+  "N": {
+    "Text": "New Vantage Coupe"
+  },
+  "R": {
+    "Text": "New DBS Coupe"
+  },
+  "S": {
+    "0": {
+      "Text": "V12 Vantage S Coupe"
+    },
+    "1": {
+      "Text": "V12 Vantage Roadster"
+    },
+    "2": {
+      "Text": "V12 Vantage S Roadster"
+    },
+    "default": {
+      "Text": "V12 Vantage Coupe"
+    }
+  }
+}

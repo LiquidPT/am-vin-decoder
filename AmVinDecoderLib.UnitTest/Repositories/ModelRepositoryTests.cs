@@ -1,6 +1,7 @@
 using AmVinDecoderLib.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace AmVinDecoderLib.UnitTest.Repositories
 {
@@ -22,7 +23,7 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(KeyNotFoundException))]
         public void Lookup_UnknownLetterVinCode_ThrowsException()
         {
             var result = ModelRepository.Lookup('X', null);
@@ -47,6 +48,12 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         public void Lookup_KnownLetterVinCode_ReturnsValue()
         {
             _ = ModelRepository.Lookup('A', null);
+        }
+
+        [TestMethod]
+        public void Lookup_KnownLetterVinCodeDefaultSerialModifier_ReturnsValue()
+        {
+            _ = ModelRepository.Lookup('E', null);
         }
 
         [TestMethod]

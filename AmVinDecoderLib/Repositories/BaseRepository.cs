@@ -10,6 +10,8 @@ namespace AmVinDecoderLib.Repositories
         private static Dictionary<string, TDictionary> _repo;
         private const string DataPath = @".\Data\";
 
+        protected const string _default = "default";
+
         protected static Dictionary<string, TDictionary> InitializeData()
         {
             if (_repo == null)

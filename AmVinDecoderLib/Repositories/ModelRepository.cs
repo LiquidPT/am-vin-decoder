@@ -1,10 +1,11 @@
 ﻿using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using System;
+using System.Collections.Generic;
 
 namespace AmVinDecoderLib.Repositories
 {
-    public class ModelRepository
+    public class ModelRepository : BaseRepository<Model, dynamic>
     {
         public static Model Lookup(char vinCode, char? serialModifer)
         {
@@ -15,12 +16,38 @@ namespace AmVinDecoderLib.Repositories
                 throw new ArgumentOutOfRangeException(nameof(serialModifer), "Expecting a digit");
             }
 
-            return new Model
+            var data = InitializeData()[validatedVinCode];
+            if (data.Text != null)
             {
-                Text = GetText(validatedVinCode, serialModifer.GetValueOrDefault()),
-                IsV12VantageS = IsV12VantageS(validatedVinCode, serialModifer.GetValueOrDefault()),
-                IsDB11Volante = IsDB11Volante(validatedVinCode)
-            };
+                var model = data.ToObject<Model>();
+                return PopulateBooleanFields(model, validatedVinCode, serialModifer);
+            }
+
+            if (data[_default] != null)
+            {
+                var subdata = data.ToObject<Dictionary<string, Model>>();
+                Model model;
+                try
+                {
+                    model = subdata[serialModifer.ToString()];
+                }
+                catch (KeyNotFoundException)
+                {
+                    model = subdata[_default];
+                }
+
+                return PopulateBooleanFields(model, validatedVinCode, serialModifer);
+            }
+
+            throw new FormatException($"JSON node for Model {validatedVinCode} was not in the expected format.");
+        }
+
+        private static Model PopulateBooleanFields(Model model, string validatedVinCode, char? serialModifer)
+        {
+            model.IsV12VantageS = IsV12VantageS(validatedVinCode, serialModifer.GetValueOrDefault());
+            model.IsDB11Volante = IsDB11Volante(validatedVinCode);
+
+            return model;
         }
 
         private static bool IsV12VantageS(string validatedVinCode, char serialmodifier)
@@ -47,53 +74,6 @@ namespace AmVinDecoderLib.Repositories
             }
 
             return false;
-        }
-
-        private static string GetText(string validatedVinCode, char serialmodifier)
-        {
-            switch (validatedVinCode)
-            {
-                case "A": return "DB9 Coupe";
-                case "B": return "DB9 Volante";
-                case "C": return "V8/V8S Coupe";
-                case "D": return "V8/V8S Roadster";
-                case "E":
-                    {
-                        switch (serialmodifier)
-                        {
-                            case '0': return "DBS Coupe";
-                            case '1': return "DBS Volante";
-                            default: return "DBS";
-                        }
-                    }
-                case "F": return "Rapide";
-                case "G": return "Virage Coupe";
-                case "H": return "Virage Volante";
-                case "J":
-                    {
-                        switch (serialmodifier)
-                        {
-                            case '3': return "Vanquish Zagato Coupe";
-                            default: return "Vanquish Coupe";
-                        }
-                    }
-                case "K": return "Vanquish Volante";
-                case "L": return "DB11 Coupe";
-                case "M": return "DB11 Volante";
-                case "N": return "New Vantage Coupe";
-                case "R": return "New DBS Coupe";
-                case "S":
-                    {
-                        switch (serialmodifier)
-                        {
-                            case '0': return "V12 Vantage S Coupe";
-                            case '1': return "V12 Vantage Roadster";
-                            case '2': return "V12 Vantage S Roadster";
-                            default: return "V12 Vantage Coupe";
-                        }
-                    }
-                default: throw new ArgumentException("Unrecognized model code.");
-            }
         }
     }
 }

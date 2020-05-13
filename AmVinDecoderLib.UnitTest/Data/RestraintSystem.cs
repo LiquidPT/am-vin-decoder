@@ -1,5 +1,4 @@
 ﻿using AmVinDecoderLib.Repositories;
-using AmVinDecoderLib.VinComponents.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using vin = AmVinDecoderLib.VinComponents;
 

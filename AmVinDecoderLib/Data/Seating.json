@@ -1,0 +1,138 @@
+// The 6th and 7th position of the VIN
+{
+  "01": {
+    "Text": "2+2"
+  },
+  "02": {
+    "Text": "2+2"
+  },
+  "03": {
+    "Text": "2+0"
+  },
+  "04": {
+    "Text": "2+0"
+  },
+  "05": {
+    "Text": "2+0 or 2+2"
+  },
+  "AA": {
+    "Text": "2+2"
+  },
+  "AB": {
+    "Text": "2+2"
+  },
+  "AC": {
+    "Text": "2+0"
+  },
+  "AD": {
+    "Text": "2+0"
+  },
+  "AE": {
+    "Text": "2+2"
+  },
+  "AF": {
+    "Text": "2+2"
+  },
+  "AG": {
+    "Text": "2+0"
+  },
+  "AH": {
+    "Text": "2+0"
+  },
+  "BA": {
+    "Text": "2 seats"
+  },
+  "BB": {
+    "Text": "2 seats"
+  },
+  "BC": {
+    "Text": "2 seats"
+  },
+  "BD": {
+    "Text": "2 seats"
+  },
+  "BE": {
+    "Text": "2 seats"
+  },
+  "BF": {
+    "Text": "2 seats"
+  },
+  "BN": {
+    "Text": "2 seats"
+  },
+  "BP": {
+    "Text": "2 seats"
+  },
+  "CA": {
+    "Text": "2+0"
+  },
+  "CB": {
+    "Text": "2+2"
+  },
+  "CC": {
+    "Text": "2+2"
+  },
+  "CE": {
+    "Text": "2+0"
+  },
+  "CF": {
+    "Text": "2+2"
+  },
+  "CG": {
+    "Text": "2+2"
+  },
+  "CH": {
+    "Text": "2+0"
+  },
+  "CJ": {
+    "Text": "2+0"
+  },
+  "CK": {
+    "Text": "2+2"
+  },
+  "CL": {
+    "Text": "2+2"
+  },
+  "CM": {
+    "Text": "2+0"
+  },
+  "CP": {
+    "Text": "2+0 or 2+2"
+  },
+  "CR": {
+    "Text": "2+0 or 2+2"
+  },
+  "DA": {
+    "Text": "4 seats"
+  },
+  "DE": {
+    "Text": "4 seats"
+  },
+  "DF": {
+    "Text": "4 seats"
+  },
+  "EA": {
+    "Text": "2+0"
+  },
+  "EB": {
+    "Text": "2+0"
+  },
+  "EC": {
+    "Text": "2+2"
+  },
+  "ED": {
+    "Text": "2+2"
+  },
+  "FA": {
+    "Text": "2+2"
+  },
+  "FC": {
+    "Text": "2+2"
+  },
+  "GA": {
+    "Text": "2 seats"
+  },
+  "HA": {
+    "Text": "2+2"
+  }
+}

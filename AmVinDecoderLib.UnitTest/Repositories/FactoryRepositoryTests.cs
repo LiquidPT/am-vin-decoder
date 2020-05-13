@@ -1,6 +1,7 @@
 using AmVinDecoderLib.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace AmVinDecoderLib.UnitTest.Repositories
 {
@@ -22,7 +23,7 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(KeyNotFoundException))]
         public void Lookup_UnknownLetterVinCode_ThrowsException()
         {
             _ = FactoryRepository.Lookup('X');

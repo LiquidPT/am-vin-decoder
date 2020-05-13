@@ -1,0 +1,103 @@
+// The 8th position of the VIN
+{
+  "A": {
+    "Text": "V12 AM04",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "B": {
+    "Text": "AM05 - 4.3",
+    "Cylinders": 8,
+    "Induction": "NormallyAspirated"
+  },
+  "C": {
+    "Text": "AM07 - 4.7",
+    "Cylinders": 8,
+    "Induction": "NormallyAspirated"
+  },
+  "D": {
+    "Text": "V12(DBS) AM08",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "E": {
+    "Text": "V12 AM09",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "F": {
+    "Text": "V12(Vantage) AM10",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "G": {
+    "Text": "GAM05 - 4.3 N400 spec",
+    "Cylinders": 8,
+    "Induction": "NormallyAspirated"
+  },
+  "J": {
+    "Text": "V12(Rapide) AM16",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "K": {
+    "Text": "4.7(011MY Euro 5) AM14",
+    "Cylinders": 8,
+    "Induction": "NormallyAspirated"
+  },
+  "L": {
+    "Text": "4.7(V8S spec) AM15",
+    "Cylinders": 8,
+    "Induction": "NormallyAspirated"
+  },
+  "M": {
+    "Text": "V12(DB9 13MY +) AM11",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "N": {
+    "Text": "V12(Virage) AM25",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "P": {
+    "Text": "V12(Vanquish) AM11",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "U": {
+    "Text": "(Vanquish 15MY - AM29)",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "R": {
+    "Text": "V12 Vantage S AM28",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "T": {
+    "Text": "V12(Rapide S) AM11",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "S": {
+    "Text": "(RapideS 15MY - AM29)",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  },
+  "V": {
+    "Text": "V12 Twin Turbo AE31",
+    "Cylinders": 12,
+    "Induction": "TurboCharged"
+  },
+  "W": {
+    "Text": "V8 Twin Turbo -177590",
+    "Cylinders": 8,
+    "Induction": "TurboCharged"
+  },
+  "Z": {
+    "Text": "Vanquish S(Zagato) AM27",
+    "Cylinders": 12,
+    "Induction": "NormallyAspirated"
+  }
+}

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmVinDecoder", "AmVinDecoder\AmVinDecoder.csproj", "{D534CC66-5821-4A77-9F1E-E7B520542F43}"
 EndProject
@@ -10,6 +10,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmVinDecoderLib.UnitTest", "AmVinDecoderLib.UnitTest\AmVinDecoderLib.UnitTest.csproj", "{6F43FFE6-B615-4318-83B2-FC1673FBDDAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{90597C91-2532-4205-8567-B8F7CB18586C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6669000B-B947-4153-9A3D-FCF8D653BDD2}"
+	ProjectSection(SolutionItems) = preProject
+		CustomAnalysisRules.ruleset = CustomAnalysisRules.ruleset
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

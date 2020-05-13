@@ -1,4 +1,9 @@
-﻿using AmVinDecoderLib.Repositories;
+﻿// -------------------------------------------------------------------------------------------------
+// Copyright (c) Matt Fraser. All rights reserved.
+// Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// -------------------------------------------------------------------------------------------------
+
+using AmVinDecoderLib.Repositories;
 using AmVinDecoderLib.VinComponents.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using vin = AmVinDecoderLib.VinComponents;
@@ -153,11 +158,12 @@ namespace AmVinDecoderLib.UnitTest.Data
             Assert.IsNotNull(actual);
 
             Assert.AreEqual(expectedText, actual.Text);
-            //Assert.AreEqual(expectedCylinders, actual.Cylinders);
-            //Assert.AreEqual(expectedInduction, actual.Induction);
-            //displacement
-            //power
-            //torque
+
+            // Assert.AreEqual(expectedCylinders, actual.Cylinders);
+            // Assert.AreEqual(expectedInduction, actual.Induction);
+            // displacement
+            // power
+            // torque
         }
     }
 }

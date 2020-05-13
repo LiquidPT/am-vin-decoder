@@ -1,15 +1,19 @@
-﻿using AmVinDecoderLib.Utilities;
-using AmVinDecoderLib.VinComponents;
+﻿// -------------------------------------------------------------------------------------------------
+// Copyright (c) Matt Fraser. All rights reserved.
+// Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// -------------------------------------------------------------------------------------------------
+
 using System;
+using AmVinDecoderLib.Utilities;
+using AmVinDecoderLib.VinComponents;
 
 namespace AmVinDecoderLib.Repositories
 {
-    public class RestraintSystemRepository
+    public static class RestraintSystemRepository
     {
         public static RestraintSystem Lookup(char vinCode, string modelYear, bool isDB11Volante = false)
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
-
 
             int intModelYear = 0;
             if (!string.IsNullOrWhiteSpace(modelYear) && !int.TryParse(modelYear, out intModelYear))
@@ -19,7 +23,7 @@ namespace AmVinDecoderLib.Repositories
 
             return new RestraintSystem
             {
-                Text = GetText(validatedVinCode, intModelYear, isDB11Volante)
+                Text = GetText(validatedVinCode, intModelYear, isDB11Volante),
             };
         }
 
@@ -37,6 +41,7 @@ namespace AmVinDecoderLib.Repositories
                     {
                         eDesc += " +dual pretensioners / dual stage load limiters for the seat belts.";
                     }
+
                     return eDesc;
                 case "F":
                     var fDesc = "2+2 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR).";
@@ -44,6 +49,7 @@ namespace AmVinDecoderLib.Repositories
                     {
                         fDesc += " +dual pretensioners / dual stage load limiters for the seat belts.";
                     }
+
                     return fDesc;
                 case "G":
                     return "2+0 seating. Front airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) (light weight seats).";
@@ -63,6 +69,7 @@ namespace AmVinDecoderLib.Repositories
                     {
                         rDesc += " +Roll Bars & Cantrail airbag in doors.";
                     }
+
                     return rDesc;
                 case "S":
                     return "2+0 Airbags Drv/Pass: Front, knee, side (in  seat & cantrail) Seat belts Drv/Pass: 3point ELR, pyropretensioners (Retractor & Sill), singlestage load limiter  within retractor (+ ALR pass)";

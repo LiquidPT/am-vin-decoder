@@ -1,6 +1,11 @@
+// -------------------------------------------------------------------------------------------------
+// Copyright (c) Matt Fraser. All rights reserved.
+// Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// -------------------------------------------------------------------------------------------------
+
+using System;
 using AmVinDecoderLib.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace AmVinDecoderLib.UnitTest.Repositories
 {

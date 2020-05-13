@@ -1,4 +1,9 @@
-﻿using System;
+﻿// -------------------------------------------------------------------------------------------------
+// Copyright (c) Matt Fraser. All rights reserved.
+// Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// -------------------------------------------------------------------------------------------------
+
+using System;
 using System.Linq;
 
 namespace AmVinDecoderLib.Utilities
@@ -27,7 +32,7 @@ namespace AmVinDecoderLib.Utilities
                 throw new ArgumentOutOfRangeException(nameof(vinCode), $"VIN code is not {length} characters long");
             }
 
-            if (!vinCode.All(Char.IsLetterOrDigit))
+            if (!vinCode.All(char.IsLetterOrDigit))
             {
                 throw new ArgumentOutOfRangeException(nameof(vinCode), "Expecting only letters and digits");
             }

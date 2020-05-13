@@ -1,23 +1,15 @@
-﻿using AmVinDecoderLib.Repositories;
+﻿// -------------------------------------------------------------------------------------------------
+// Copyright (c) Matt Fraser. All rights reserved.
+// Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// -------------------------------------------------------------------------------------------------
+
 using System;
+using AmVinDecoderLib.Repositories;
 
 namespace AmVinDecoderLib
 {
     public static class VinDecoder
     {
-        private class VinPosition
-        {
-            internal const int Wmi = 0;
-            internal const int Restraint = 3;
-            internal const int Transmission = 4;
-            internal const int BodyType = 5;
-            internal const int Engine = 7;
-            internal const int ModelYear = 9;
-            internal const int Factory = 10;
-            internal const int Model = 11;
-            internal const int SerialNumber = 12;
-        }
-
         public static VehicleSummary GetVehicleInfo(string vin)
         {
             if (string.IsNullOrWhiteSpace(vin))
@@ -31,7 +23,7 @@ namespace AmVinDecoderLib
             }
 
             var wmi = vin.Substring(VinPosition.Wmi, 3);
-            if (!wmi.Equals("SCF", StringComparison.OrdinalIgnoreCase)) // Aston Martin
+            if (!wmi.Equals("SCF", StringComparison.OrdinalIgnoreCase))
             {
                 throw new ArgumentOutOfRangeException(nameof(vin), "Not an Aston Martin VIN");
             }
@@ -53,6 +45,19 @@ namespace AmVinDecoderLib
             info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
 
             return info;
+        }
+
+        private class VinPosition
+        {
+            internal const int Wmi = 0;
+            internal const int Restraint = 3;
+            internal const int Transmission = 4;
+            internal const int BodyType = 5;
+            internal const int Engine = 7;
+            internal const int ModelYear = 9;
+            internal const int Factory = 10;
+            internal const int Model = 11;
+            internal const int SerialNumber = 12;
         }
     }
 }

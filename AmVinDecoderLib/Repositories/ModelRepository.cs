@@ -1,7 +1,12 @@
-﻿using AmVinDecoderLib.Utilities;
-using AmVinDecoderLib.VinComponents;
+﻿// -------------------------------------------------------------------------------------------------
+// Copyright (c) Matt Fraser. All rights reserved.
+// Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// -------------------------------------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
+using AmVinDecoderLib.Utilities;
+using AmVinDecoderLib.VinComponents;
 
 namespace AmVinDecoderLib.Repositories
 {
@@ -22,7 +27,7 @@ namespace AmVinDecoderLib.Repositories
                 return data.ToObject<Model>();
             }
 
-            if (data[_default] != null)
+            if (data[Default] != null)
             {
                 var subdata = data.ToObject<Dictionary<string, Model>>();
                 Model model;
@@ -32,7 +37,7 @@ namespace AmVinDecoderLib.Repositories
                 }
                 catch (KeyNotFoundException)
                 {
-                    model = subdata[_default];
+                    model = subdata[Default];
                 }
 
                 return model;

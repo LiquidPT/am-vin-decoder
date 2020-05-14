@@ -20,7 +20,7 @@ namespace AmVinDecoderLib.Repositories
         where TFile : BaseVinComponent
     {
         private static Dictionary<string, TDictionary> _repo;
-        private const string DataPath = @".\Data\";
+        private const string DataPath = @"./Data/";
 
         protected const string Default = "default";
 

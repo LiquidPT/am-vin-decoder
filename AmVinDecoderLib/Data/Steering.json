@@ -1,0 +1,33 @@
+// The 5th position of the VIN
+{
+  "A": {
+    "Text": "RHD"
+  },
+  "B": {
+    "Text": "LHD"
+  },
+  "C": {
+    "Text": "RHD"
+  },
+  "D": {
+    "Text": "LHD"
+  },
+  "E": {
+    "Text": "RHD"
+  },
+  "F": {
+    "Text": "LHD"
+  },
+  "J": {
+    "Text": "RHD"
+  },
+  "K": {
+    "Text": "LHD"
+  },
+  "L": {
+    "Text": "RHD"
+  },
+  "M": {
+    "Text": "LHD"
+  }
+}

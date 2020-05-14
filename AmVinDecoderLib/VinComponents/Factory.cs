@@ -1,22 +1,11 @@
-﻿using System;
+﻿// -------------------------------------------------------------------------------------------------
+// Copyright (c) Matt Fraser. All rights reserved.
+// Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// -------------------------------------------------------------------------------------------------
 
 namespace AmVinDecoderLib.VinComponents
 {
     public class Factory : BaseVinComponent
     {
-        public Factory(char vinCode)
-            : base(vinCode)
-        {
-        }
-
-        protected override string GetText()
-        {
-            switch (_vinCode)
-            {
-                case "A": return "Austria, Magna Steyr";
-                case "G": return "Gaydon";
-                default: throw new ArgumentException("Unrecognized factory code.");
-            }
-        }
     }
 }

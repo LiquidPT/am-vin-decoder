@@ -1,0 +1,180 @@
+// The 6th and 7th position of the VIN
+{
+  "01": {
+    "Text": "2+2",
+    "SeatCount":  4
+  },
+  "02": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "03": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "04": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "05": {
+    "Text": "2+0 or 2+2"
+  },
+  "AA": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "AB": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "AC": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "AD": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "AE": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "AF": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "AG": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "AH": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "BA": {
+    "Text": "2 seats",
+    "SeatCount": 2
+  },
+  "BB": {
+    "Text": "2 seats",
+    "SeatCount": 2
+  },
+  "BC": {
+    "Text": "2 seats",
+    "SeatCount": 2
+  },
+  "BD": {
+    "Text": "2 seats",
+    "SeatCount": 2
+  },
+  "BE": {
+    "Text": "2 seats",
+    "SeatCount": 2
+  },
+  "BF": {
+    "Text": "2 seats",
+    "SeatCount": 2
+  },
+  "BN": {
+    "Text": "2 seats",
+    "SeatCount": 2
+  },
+  "BP": {
+    "Text": "2 seats",
+    "SeatCount": 2
+  },
+  "CA": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "CB": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "CC": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "CE": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "CF": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "CG": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "CH": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "CJ": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "CK": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "CL": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "CM": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "CP": {
+    "Text": "2+0 or 2+2"
+  },
+  "CR": {
+    "Text": "2+0 or 2+2"
+  },
+  "DA": {
+    "Text": "4 seats",
+    "SeatCount": 4
+  },
+  "DE": {
+    "Text": "4 seats",
+    "SeatCount": 4
+  },
+  "DF": {
+    "Text": "4 seats",
+    "SeatCount": 4
+  },
+  "EA": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "EB": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
+  "EC": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "ED": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "FA": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "FC": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "GA": {
+    "Text": "2 seats",
+    "SeatCount": 2
+  },
+  "HA": {
+    "Text": "2+2",
+    "SeatCount": 4
+  }
+}

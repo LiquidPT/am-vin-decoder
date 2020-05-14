@@ -1,0 +1,43 @@
+// The 5th position of the VIN, plus if it's a V12 Vantage S
+{
+  "A": {
+    "Text": "Manual"
+  },
+  "B": {
+    "Text": "Manual"
+  },
+  "C": {
+    "Text": "Auto"
+  },
+  "D": {
+    "Text": "Auto"
+  },
+  "E": {
+    "Text": "Sportshift"
+  },
+  "F": {
+    "Text": "Sportshift"
+  },
+  "J": {
+    "V12VantageS": {
+      "Text": "Sportshift III"
+    },
+    "default": {
+      "Text": "Sportshift II"
+    }
+  },
+  "K": {
+    "V12VantageS": {
+      "Text": "Sportshift III"
+    },
+    "default": {
+      "Text": "Sportshift II"
+    }
+  },
+  "L": {
+    "Text": "8-speed Auto"
+  },
+  "M": {
+    "Text": "8-speed Auto"
+  }
+}

@@ -1,0 +1,228 @@
+// The 6th and 7th position of the VIN
+{
+  "01": {
+    "Text": "Coupe",
+    "DoorCount": 2,
+    "BodyStyle":  "Coupe"
+  },
+  "03": {
+    "Text": "Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "02": {
+    "Text": "Convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "04": {
+    "Text": "Convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "05": {
+    "Text": "DBS",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "AA": {
+    "Text": "DB9 Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "AC": {
+    "Text": "DB9 Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "AB": {
+    "Text": "DB9 Convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "AD": {
+    "Text": "DB9 Convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "AE": {
+    "Text": "DB9 Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "AG": {
+    "Text": "DB9 Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "AF": {
+    "Text": "DB9 Convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "AH": {
+    "Text": "DB9 Convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "BA": {
+    "Text": "Vantage coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "BB": {
+    "Text": "Vantage roadster",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "BC": {
+    "Text": "V12 Vantage/S coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "BD": {
+    "Text": "Vantage S coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "BE": {
+    "Text": "Vantage S convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "BF": {
+    "Text": "V12 Vantage/S convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "BN": {
+    "Text": "V12VS w/ sports+ pack coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "BP": {
+    "Text": "V12VS w/ sports+ pack convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "CA": {
+    "Text": "DBS Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "CB": {
+    "Text": "DBS Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "CC": {
+    "Text": "DBS convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "CE": {
+    "Text": "Vanquish coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "CF": {
+    "Text": "Vanquish coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "CG": {
+    "Text": "Vanquish convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "CH": {
+    "Text": "Vanquish convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "CJ": {
+    "Text": "Vanquish S coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "CK": {
+    "Text": "Vanquish S coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "CL": {
+    "Text": "Vanquish S convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "CM": {
+    "Text": "Vanquish S convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "CP": {
+    "Text": "Vanquish Zagato coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "CR": {
+    "Text": "Vanquish Zagato convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "DA": {
+    "Text": "Rapide",
+    "DoorCount": 4,
+    "BodyStyle": "Sedan"
+  },
+  "DE": {
+    "Text": "Rapide S",
+    "DoorCount": 4,
+    "BodyStyle": "Sedan"
+  },
+  "DF": {
+    "Text": "Rapide Shadow Ed",
+    "DoorCount": 4,
+    "BodyStyle": "Sedan"
+  },
+  "EA": {
+    "Text": "Virage coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "EC": {
+    "Text": "Virage coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "EB": {
+    "Text": "Virage convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "ED": {
+    "Text": "Virage convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "FA": {
+    "Text": "DB11 coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "FC": {
+    "Text": "DB11 convertible",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
+  },
+  "GA": {
+    "Text": "New Vantage",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "HA": {
+    "Text": "New DBS Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  }
+}

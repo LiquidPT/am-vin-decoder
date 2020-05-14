@@ -1,32 +1,12 @@
-﻿using System;
+﻿// -------------------------------------------------------------------------------------------------
+// Copyright (c) Matt Fraser. All rights reserved.
+// Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
+// -------------------------------------------------------------------------------------------------
 
 namespace AmVinDecoderLib.VinComponents
 {
     public abstract class BaseVinComponent
     {
-        protected readonly string _vinCode;
-
-        public string Text {
-            get
-            {
-                return GetText();
-            }
-        }
-
-        public BaseVinComponent()
-        {
-        }
-
-        public BaseVinComponent(char vinCode)
-        {
-            if (!char.IsLetter(vinCode))
-            {
-                throw new ArgumentOutOfRangeException(nameof(vinCode), "Expecting a letter code");
-            }
-
-            _vinCode = vinCode.ToString().ToUpperInvariant();
-        }
-
-        protected abstract string GetText();
+        public string Text { get; set; }
     }
 }

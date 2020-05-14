@@ -1,4 +1,4 @@
-// The 5th position of the VIN
+// The 5th position of the VIN, plus if it's a V12 Vantage S
 {
   "A": {
     "Text": "Manual"

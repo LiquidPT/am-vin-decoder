@@ -4,13 +4,18 @@
 // -------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
+using Microsoft.CodeAnalysis.CSharp.Scripting;
 
 namespace AmVinDecoderLib.Repositories
 {
-    public static class RestraintSystemRepository
+    public class RestraintSystemRepository : BaseRepository<RestraintSystem, dynamic>
     {
+        private const string DB11Volante = "DB11Volante";
+
         public static RestraintSystem Lookup(char vinCode, string modelYear, bool isDB11Volante = false)
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
@@ -21,61 +26,49 @@ namespace AmVinDecoderLib.Repositories
                 throw new ArgumentOutOfRangeException(nameof(modelYear), "Expecting numeric year");
             }
 
-            return new RestraintSystem
+            var data = InitializeData()[validatedVinCode];
+            if (data.Text != null)
             {
-                Text = GetText(validatedVinCode, intModelYear, isDB11Volante),
-            };
-        }
+                return data.ToObject<RestraintSystem>();
+            }
 
-        private static string GetText(string validatedVinCode, int modelYear, bool isDB11Volante)
-        {
-            switch (validatedVinCode)
+            if (data[Default] != null)
             {
-                case "A":
-                    return "2+2 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR).";
-                case "B":
-                    return "2+0 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.).";
-                case "E":
-                    var eDesc = "2+0 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.).";
-                    if (modelYear >= 2013)
-                    {
-                        eDesc += " +dual pretensioners / dual stage load limiters for the seat belts.";
-                    }
+                Dictionary<string, RestraintSystem> subdata = data.ToObject<Dictionary<string, RestraintSystem>>();
 
-                    return eDesc;
-                case "F":
-                    var fDesc = "2+2 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR).";
-                    if (modelYear >= 2013)
-                    {
-                        fDesc += " +dual pretensioners / dual stage load limiters for the seat belts.";
-                    }
+                // Check what type of branching clause it is.
+                var nonDefault = subdata.Where(s => s.Key != Default);
+                if (!nonDefault.Any())
+                {
+                    return subdata[Default];
+                }
 
-                    return fDesc;
-                case "G":
-                    return "2+0 seating. Front airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) (light weight seats).";
-                case "H":
-                    return "4-seater Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR) + side curtain in pass & drvr  + both rear doors, pyro-pretension rear seatbelts.";
-                case "K":
-                    return "2+0 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + dual  pretensioners/dual stage load limiters + curtain side airbags in the cantrails.";
-                case "L":
-                    return "2+2 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR) + curtain side  airbags in the cantrails.";
-                case "N":
-                    return "2+0 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + dual  pretensioners/dual stage load limiters + curtain side airbags in the doors.";
-                case "P":
-                    return "2+2 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR) + curtain side  airbags in the doors.";
-                case "R":
-                    var rDesc = "2+2 Airbags Drv/Pass: Front, knee, side (in  seat & cantrail) Seat belts Drv/Pass: 3point ELR, pyropretensioners (Retractor & Sill), singlestage load limiter within retractor (+ ALR pass) Rear Pass: 3point ALR.";
+                // Sub data is for the DB 11 Volante
+                var sample = nonDefault.First();
+                if (sample.Key == DB11Volante)
+                {
                     if (isDB11Volante)
                     {
-                        rDesc += " +Roll Bars & Cantrail airbag in doors.";
+                        return sample.Value;
                     }
 
-                    return rDesc;
-                case "S":
-                    return "2+0 Airbags Drv/Pass: Front, knee, side (in  seat & cantrail) Seat belts Drv/Pass: 3point ELR, pyropretensioners (Retractor & Sill), singlestage load limiter  within retractor (+ ALR pass)";
+                    return subdata[Default];
+                }
 
-                default: throw new ArgumentException("Unrecognized reatraint code.");
+                // Sub data is year comparison based
+                // TODO: Do better checking here
+                foreach (var yearClause in nonDefault)
+                {
+                    if (CSharpScript.EvaluateAsync<bool>($"{intModelYear}{yearClause.Key}").Result)
+                    {
+                        return yearClause.Value;
+                    }
+                }
+
+                return subdata[Default];
             }
+
+            throw new FormatException($"JSON node for RestraintSystem {validatedVinCode} was not in the expected format.");
         }
     }
 }

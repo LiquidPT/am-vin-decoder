@@ -36,7 +36,7 @@ namespace AmVinDecoderLib.Repositories
                 return subdata[Default];
             }
 
-            throw new FormatException($"JSON node for Model {validatedVinCode} was not in the expected format.");
+            throw new FormatException($"JSON node for Transmission {validatedVinCode} was not in the expected format.");
         }
     }
 }

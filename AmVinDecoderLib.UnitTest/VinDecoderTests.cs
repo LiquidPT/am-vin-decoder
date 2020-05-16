@@ -128,5 +128,15 @@ namespace AmVinDecoderLib.UnitTest
 
             Assert.AreEqual("Virage Coupe", result.Model.Text);
         }
+
+        [TestMethod]
+        public void GetInfo_NgDbsVin_ReturnsValue()
+        {
+            var result = VinDecoder.GetVehicleInfo("SCFRMHAV2KGR00947");
+            Assert.IsNotNull(result);
+
+            Assert.AreEqual("New DBS Coupe", result.Model.Text);
+            Assert.IsFalse(result.Model.IsV12VantageS);
+        }
     }
 }

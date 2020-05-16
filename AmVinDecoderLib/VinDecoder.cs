@@ -37,11 +37,11 @@ namespace AmVinDecoderLib
                 SteeringPosition = SteeringRepository.Lookup(vin[VinPosition.Transmission]),
                 BodyType = BodyTypeRepository.Lookup(vin.Substring(VinPosition.BodyType, 2)),
                 Seating = SeatingRepository.Lookup(vin.Substring(VinPosition.BodyType, 2)),
-                Engine = EngineRepository.Lookup(vin[VinPosition.Engine]),
                 SerialNumber = vin.Substring(VinPosition.SerialNumber, 5),
             };
 
-            info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.IsDB11Volante);
+            info.Engine = EngineRepository.Lookup(vin[VinPosition.Engine], info.Model.IsNgDbs);
+            info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.IsDb11Volante);
             info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
 
             return info;

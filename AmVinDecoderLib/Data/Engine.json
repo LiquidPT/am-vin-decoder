@@ -3,101 +3,213 @@
   "A": {
     "Text": "V12 AM04",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 335,
+    "MaxPowerRpm": 6000,
+    "MaxTorqueInNm": 570,
+    "MaxTorqueRpm": 5000
   },
   "B": {
     "Text": "AM05 - 4.3",
     "Cylinders": 8,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 4280,
+    "MaxPowerInKw": 283,
+    "MaxPowerRpm": 7000,
+    "MaxTorqueInNm": 410,
+    "MaxTorqueRpm": 5000
   },
   "C": {
     "Text": "AM07 - 4.7",
     "Cylinders": 8,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 4735,
+    "MaxPowerInKw": 313,
+    "MaxPowerRpm": 7300,
+    "MaxTorqueInNm": 470,
+    "MaxTorqueRpm": 5000
   },
   "D": {
     "Text": "V12(DBS) AM08",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 380,
+    "MaxPowerRpm": 6500,
+    "MaxTorqueInNm": 570,
+    "MaxTorqueRpm": 5750
   },
   "E": {
     "Text": "V12 AM09",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 350,
+    "MaxPowerRpm": 6000,
+    "MaxTorqueInNm": 600,
+    "MaxTorqueRpm": 5000
   },
   "F": {
     "Text": "V12(Vantage) AM10",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 380,
+    "MaxPowerRpm": 6500,
+    "MaxTorqueInNm": 620,
+    "MaxTorqueRpm": 5750
   },
   "G": {
     "Text": "GAM05 - 4.3 N400 spec",
     "Cylinders": 8,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 4280,
+    "MaxPowerInKw": 283,
+    "MaxPowerRpm": 7000,
+    "MaxTorqueInNm": 410,
+    "MaxTorqueRpm": 5000
   },
   "J": {
     "Text": "V12(Rapide) AM16",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 350,
+    "MaxPowerRpm": 6000,
+    "MaxTorqueInNm": 600,
+    "MaxTorqueRpm": 5000
   },
   "K": {
     "Text": "4.7(011MY Euro 5) AM14",
     "Cylinders": 8,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 4735,
+    "MaxPowerInKw": 313,
+    "MaxPowerRpm": 7300,
+    "MaxTorqueInNm": 470,
+    "MaxTorqueRpm": 5000
   },
   "L": {
     "Text": "4.7(V8S spec) AM15",
     "Cylinders": 8,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 4735,
+    "MaxPowerInKw": 321,
+    "MaxPowerRpm": 7300,
+    "MaxTorqueInNm": 490,
+    "MaxTorqueRpm": 5000
   },
   "M": {
     "Text": "V12(DB9 13MY +) AM11",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 380,
+    "MaxPowerRpm": 6500,
+    "MaxTorqueInNm": 620,
+    "MaxTorqueRpm": 5500
   },
   "N": {
     "Text": "V12(Virage) AM25",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 365,
+    "MaxPowerRpm": 6500,
+    "MaxTorqueInNm": 570,
+    "MaxTorqueRpm": 5750
   },
   "P": {
     "Text": "V12(Vanquish) AM11",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 421,
+    "MaxPowerRpm": 6750,
+    "MaxTorqueInNm": 620,
+    "MaxTorqueRpm": 5500
   },
   "U": {
     "Text": "(Vanquish 15MY - AM29)",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 424,
+    "MaxPowerRpm": 6750,
+    "MaxTorqueInNm": 630,
+    "MaxTorqueRpm": 5500
   },
   "R": {
     "Text": "V12 Vantage S AM28",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 421,
+    "MaxPowerRpm": 6750,
+    "MaxTorqueInNm": 620,
+    "MaxTorqueRpm": 5750
   },
   "T": {
     "Text": "V12(Rapide S) AM11",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 410,
+    "MaxPowerRpm": 6750,
+    "MaxTorqueInNm": 620,
+    "MaxTorqueRpm": 5500
   },
   "S": {
     "Text": "(RapideS 15MY - AM29)",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 412,
+    "MaxPowerRpm": 6650,
+    "MaxTorqueInNm": 630,
+    "MaxTorqueRpm": 5500
   },
   "V": {
-    "Text": "V12 Twin Turbo AE31",
-    "Cylinders": 12,
-    "Induction": "TurboCharged"
+    "NgDbs": {
+      "Text": "V12 Twin Turbo AE31",
+      "Cylinders": 12,
+      "Induction": "TurboCharged",
+      "DisplacementInCc": 5204,
+      "MaxPowerInKw": 533,
+      "MaxPowerRpm": 6500,
+      "MaxTorqueInNm": 900,
+      "MaxTorqueRpm": 1800
+    },
+    "default": {
+      "Text": "V12 Twin Turbo AE31",
+      "Cylinders": 12,
+      "Induction": "TurboCharged",
+      "DisplacementInCc": 5204,
+      "MaxPowerInKw": 447,
+      "MaxPowerRpm": 6500,
+      "MaxTorqueInNm": 700,
+      "MaxTorqueRpm": 1500
+    }
   },
   "W": {
     "Text": "V8 Twin Turbo -177590",
     "Cylinders": 8,
-    "Induction": "TurboCharged"
+    "Induction": "TurboCharged",
+    "DisplacementInCc": 3982,
+    "MaxPowerInKw": 375,
+    "MaxPowerRpm": 6000,
+    "MaxTorqueInNm": 685,
+    "MaxTorqueRpm": 2000
   },
   "Z": {
     "Text": "Vanquish S(Zagato) AM27",
     "Cylinders": 12,
-    "Induction": "NormallyAspirated"
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 5935,
+    "MaxPowerInKw": 444,
+    "MaxPowerRpm": 7000,
+    "MaxTorqueInNm": 630,
+    "MaxTorqueRpm": 5500
   }
 }

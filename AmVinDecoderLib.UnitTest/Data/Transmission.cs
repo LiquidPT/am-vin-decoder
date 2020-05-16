@@ -16,14 +16,14 @@ namespace AmVinDecoderLib.UnitTest.Data
         public void Lookup_A_ReturnsExpectedValues()
         {
             var result = TransmissionRepository.Lookup('A');
-            TestValues(result, "Manual");
+            TestValues(result, "Manual", true);
         }
 
         [TestMethod]
         public void Lookup_B_ReturnsExpectedValues()
         {
             var result = TransmissionRepository.Lookup('B');
-            TestValues(result, "Manual");
+            TestValues(result, "Manual", true);
         }
 
         [TestMethod]
@@ -96,11 +96,12 @@ namespace AmVinDecoderLib.UnitTest.Data
             TestValues(result, "8-speed Auto");
         }
 
-        private void TestValues(vin.Transmission actual, string expectedText)
+        private void TestValues(vin.Transmission actual, string expectedText, bool expectedHasClutchPedal = false)
         {
             Assert.IsNotNull(actual);
 
             Assert.AreEqual(expectedText, actual.Text);
+            Assert.AreEqual(expectedHasClutchPedal, actual.HasClutchPedal);
         }
     }
 }

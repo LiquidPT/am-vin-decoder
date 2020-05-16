@@ -13,10 +13,14 @@ namespace AmVinDecoderLib.VinComponents
 
         public Induction Induction { get; set; }
 
-        public decimal Displacement { get; set; }
+        public double DisplacementInCc { get; set; }
 
-        public decimal Power { get; set; }
+        public double? MaxPowerInKw { get; set; }
 
-        public decimal Torque { get; set; }
+        public double? MaxPowerRpm { get; set; }
+
+        public double? MaxTorqueInNm { get; set; }
+
+        public double? MaxTorqueRpm { get; set; }
     }
 }

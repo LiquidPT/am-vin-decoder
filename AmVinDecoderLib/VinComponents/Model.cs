@@ -9,6 +9,8 @@ namespace AmVinDecoderLib.VinComponents
     {
         public bool IsV12VantageS { get; set; }
 
-        public bool IsDB11Volante { get; set; }
+        public bool IsDb11Volante { get; set; }
+
+        public bool IsNgDbs { get; set; }
     }
 }

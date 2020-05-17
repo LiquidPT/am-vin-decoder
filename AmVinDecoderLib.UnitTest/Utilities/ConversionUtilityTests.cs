@@ -4,6 +4,7 @@
 // -------------------------------------------------------------------------------------------------
 
 using AmVinDecoderLib.Utilities;
+using AmVinDecoderLib.VinComponents.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AmVinDecoderLib.UnitTest.Utilities
@@ -12,33 +13,49 @@ namespace AmVinDecoderLib.UnitTest.Utilities
     public class ConversionUtilityTests
     {
         [TestMethod]
-        public void PowerInKwToHp_Null_ReturnsNull()
+        public void ConvertPower_Null_ReturnsNull()
         {
-            var result = ConversionUtility.PowerInKwToHp(null);
+            var result = ConversionUtility.ConvertPower(null, PowerUnit.Kw, PowerUnit.Hp);
             Assert.IsNull(result);
         }
 
         [TestMethod]
-        public void PowerInKwToHp_Value_ReturnsCorrectValue()
+        public void ConvertPower_KwToHp_ReturnsCorrectValue()
         {
-            var result = ConversionUtility.PowerInKwToHp(10);
+            var result = ConversionUtility.ConvertPower(10, PowerUnit.Kw, PowerUnit.Hp);
             Assert.IsNotNull(result);
             Assert.AreEqual(13.41, result);
         }
 
         [TestMethod]
-        public void TorqueInNmToLbFt_Null_ReturnsNull()
+        public void ConvertPower_HpToKw_ReturnsCorrectValue()
         {
-            var result = ConversionUtility.TorqueInNmToLbFt(null);
+            var result = ConversionUtility.ConvertPower(10, PowerUnit.Hp, PowerUnit.Kw);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(7.46, result);
+        }
+
+        [TestMethod]
+        public void ConvertTorque_Null_ReturnsNull()
+        {
+            var result = ConversionUtility.ConvertTorque(null, TorqueUnit.Nm, TorqueUnit.LbFt);
             Assert.IsNull(result);
         }
 
         [TestMethod]
-        public void TorqueInNmToLbFt_Value_ReturnsCorrectValue()
+        public void ConvertTorque_NmToLbFt_ReturnsCorrectValue()
         {
-            var result = ConversionUtility.TorqueInNmToLbFt(10);
+            var result = ConversionUtility.ConvertTorque(10, TorqueUnit.Nm, TorqueUnit.LbFt);
             Assert.IsNotNull(result);
             Assert.AreEqual(7.38, result);
+        }
+
+        [TestMethod]
+        public void ConvertTorque_LbFtToNm_ReturnsCorrectValue()
+        {
+            var result = ConversionUtility.ConvertTorque(10, TorqueUnit.LbFt, TorqueUnit.Nm);
+            Assert.IsNotNull(result);
+            Assert.AreEqual(13.56, result);
         }
     }
 }

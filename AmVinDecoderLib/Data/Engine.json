@@ -5,9 +5,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 335,
+    "MaxPower": 335,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6000,
-    "MaxTorqueInNm": 570,
+    "MaxTorque": 570,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5000
   },
   "B": {
@@ -15,9 +17,11 @@
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4280,
-    "MaxPowerInKw": 283,
+    "MaxPower": 283,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 7000,
-    "MaxTorqueInNm": 410,
+    "MaxTorque": 410,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5000
   },
   "C": {
@@ -25,9 +29,11 @@
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4735,
-    "MaxPowerInKw": 313,
+    "MaxPower": 313,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 7300,
-    "MaxTorqueInNm": 470,
+    "MaxTorque": 470,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5000
   },
   "D": {
@@ -35,9 +41,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 380,
+    "MaxPower": 380,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6500,
-    "MaxTorqueInNm": 570,
+    "MaxTorque": 570,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5750
   },
   "E": {
@@ -45,9 +53,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 350,
+    "MaxPower": 350,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6000,
-    "MaxTorqueInNm": 600,
+    "MaxTorque": 600,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5000
   },
   "F": {
@@ -55,9 +65,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 380,
+    "MaxPower": 380,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6500,
-    "MaxTorqueInNm": 620,
+    "MaxTorque": 620,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5750
   },
   "G": {
@@ -65,9 +77,11 @@
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4280,
-    "MaxPowerInKw": 283,
+    "MaxPower": 283,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 7000,
-    "MaxTorqueInNm": 410,
+    "MaxTorque": 410,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5000
   },
   "J": {
@@ -75,9 +89,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 350,
+    "MaxPower": 350,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6000,
-    "MaxTorqueInNm": 600,
+    "MaxTorque": 600,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5000
   },
   "K": {
@@ -85,9 +101,11 @@
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4735,
-    "MaxPowerInKw": 313,
+    "MaxPower": 313,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 7300,
-    "MaxTorqueInNm": 470,
+    "MaxTorque": 470,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5000
   },
   "L": {
@@ -95,9 +113,11 @@
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4735,
-    "MaxPowerInKw": 321,
+    "MaxPower": 321,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 7300,
-    "MaxTorqueInNm": 490,
+    "MaxTorque": 490,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5000
   },
   "M": {
@@ -105,9 +125,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 380,
+    "MaxPower": 380,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6500,
-    "MaxTorqueInNm": 620,
+    "MaxTorque": 620,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5500
   },
   "N": {
@@ -115,9 +137,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 365,
+    "MaxPower": 365,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6500,
-    "MaxTorqueInNm": 570,
+    "MaxTorque": 570,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5750
   },
   "P": {
@@ -125,9 +149,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 421,
+    "MaxPower": 421,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6750,
-    "MaxTorqueInNm": 620,
+    "MaxTorque": 620,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5500
   },
   "U": {
@@ -135,9 +161,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 424,
+    "MaxPower": 424,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6750,
-    "MaxTorqueInNm": 630,
+    "MaxTorque": 630,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5500
   },
   "R": {
@@ -145,9 +173,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 421,
+    "MaxPower": 421,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6750,
-    "MaxTorqueInNm": 620,
+    "MaxTorque": 620,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5750
   },
   "T": {
@@ -155,9 +185,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 410,
+    "MaxPower": 410,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6750,
-    "MaxTorqueInNm": 620,
+    "MaxTorque": 620,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5500
   },
   "S": {
@@ -165,9 +197,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 412,
+    "MaxPower": 412,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6650,
-    "MaxTorqueInNm": 630,
+    "MaxTorque": 630,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5500
   },
   "V": {
@@ -176,9 +210,11 @@
       "Cylinders": 12,
       "Induction": "TurboCharged",
       "DisplacementInCc": 5204,
-      "MaxPowerInKw": 533,
+      "MaxPower": 533,
+      "MaxPowerUnit": "Kw",
       "MaxPowerRpm": 6500,
-      "MaxTorqueInNm": 900,
+      "MaxTorque": 900,
+      "MaxTorqueUnit": "Nm",
       "MaxTorqueRpm": 1800
     },
     "default": {
@@ -186,9 +222,11 @@
       "Cylinders": 12,
       "Induction": "TurboCharged",
       "DisplacementInCc": 5204,
-      "MaxPowerInKw": 447,
+      "MaxPower": 447,
+      "MaxPowerUnit": "Kw",
       "MaxPowerRpm": 6500,
-      "MaxTorqueInNm": 700,
+      "MaxTorque": 700,
+      "MaxTorqueUnit": "Nm",
       "MaxTorqueRpm": 1500
     }
   },
@@ -197,9 +235,11 @@
     "Cylinders": 8,
     "Induction": "TurboCharged",
     "DisplacementInCc": 3982,
-    "MaxPowerInKw": 375,
+    "MaxPower": 375,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 6000,
-    "MaxTorqueInNm": 685,
+    "MaxTorque": 685,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 2000
   },
   "Z": {
@@ -207,9 +247,11 @@
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
-    "MaxPowerInKw": 444,
+    "MaxPower": 444,
+    "MaxPowerUnit": "Kw",
     "MaxPowerRpm": 7000,
-    "MaxTorqueInNm": 630,
+    "MaxTorque": 630,
+    "MaxTorqueUnit": "Nm",
     "MaxTorqueRpm": 5500
   }
 }

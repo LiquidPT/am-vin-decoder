@@ -15,11 +15,15 @@ namespace AmVinDecoderLib.VinComponents
 
         public double DisplacementInCc { get; set; }
 
-        public double? MaxPowerInKw { get; set; }
+        public double? MaxPower { get; set; }
+
+        public PowerUnit MaxPowerUnit { get; set; }
 
         public double? MaxPowerRpm { get; set; }
 
-        public double? MaxTorqueInNm { get; set; }
+        public double? MaxTorque { get; set; }
+
+        public TorqueUnit MaxTorqueUnit { get; set; }
 
         public double? MaxTorqueRpm { get; set; }
     }

@@ -178,9 +178,11 @@ namespace AmVinDecoderLib.UnitTest.Data
             Assert.AreEqual(expectedCylinders, actual.Cylinders);
             Assert.AreEqual(expectedInduction, actual.Induction);
             Assert.AreEqual(expectedDisplacement, actual.DisplacementInCc);
-            Assert.AreEqual(expectedPower, actual.MaxPowerInKw);
+            Assert.AreEqual(expectedPower, actual.MaxPower);
+            Assert.AreEqual(PowerUnit.Kw, actual.MaxPowerUnit);
             Assert.AreEqual(expectedPowerRpm, actual.MaxPowerRpm);
-            Assert.AreEqual(expectedTorque, actual.MaxTorqueInNm);
+            Assert.AreEqual(expectedTorque, actual.MaxTorque);
+            Assert.AreEqual(TorqueUnit.Nm, actual.MaxTorqueUnit);
             Assert.AreEqual(expectedTorqueRpm, actual.MaxTorqueRpm);
         }
     }

@@ -4,6 +4,7 @@
 // -------------------------------------------------------------------------------------------------
 
 using System;
+using AmVinDecoderLib.VinComponents.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AmVinDecoderLib.UnitTest
@@ -11,11 +12,28 @@ namespace AmVinDecoderLib.UnitTest
     [TestClass]
     public class VinDecoderTests
     {
-        private UnitOptions unitOptions = new UnitOptions();
+        private UnitOptions unitOptions;
+
+        public VinDecoderTests()
+        {
+            unitOptions = new UnitOptions
+            {
+                UseMetric = true,
+                Power = PowerUnit.Hp,
+                Torque = TorqueUnit.LbFt,
+            };
+        }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void GetInfo_NullVin_ThrowsException()
+        {
+            _ = VinDecoder.GetVehicleInfo("AAAAAAAAAAAAAAAAA", null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void GetInfo_NullUnitOptions_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo(null, unitOptions);
         }

@@ -33,15 +33,15 @@ namespace AmVinDecoder
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine($"VIN: {vin}");
             Console.WriteLine($"SerialNumber: {vehicle.SerialNumber}");
-            Console.WriteLine($"Model: {vehicle.Model.Text}");
-            Console.WriteLine($"Model Year: {vehicle.ModelYear.Text}");
-            Console.WriteLine($"Factory: {vehicle.Factory.Text}");
-            Console.WriteLine($"Body Type: {vehicle.BodyType.Text}");
-            Console.WriteLine($"Seating: {vehicle.Seating.Text}");
-            Console.WriteLine($"Engine: {vehicle.Engine.Text}");
-            Console.WriteLine($"Transmisson: {vehicle.Transmisson.Text}");
-            Console.WriteLine($"Steering Position: {vehicle.SteeringPosition.Text}");
-            Console.WriteLine($"Restraint System: {vehicle.RestraintSystem.Text}");
+            Console.WriteLine($"Model: {vehicle.Model}");
+            Console.WriteLine($"Model Year: {vehicle.ModelYear}");
+            Console.WriteLine($"Factory: {vehicle.Factory}");
+            Console.WriteLine($"Body Type: {vehicle.BodyType}");
+            Console.WriteLine($"Seating: {vehicle.Seating}");
+            Console.WriteLine($"Engine: {vehicle.Engine}");
+            Console.WriteLine($"Transmisson: {vehicle.Transmisson}");
+            Console.WriteLine($"Steering Position: {vehicle.SteeringPosition}");
+            Console.WriteLine($"Restraint System: {vehicle.RestraintSystem}");
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine();
         }

@@ -2,44 +2,60 @@
 {
   "A": {
     "Text": "Manual",
-    "HasClutchPedal": true
+    "HasClutchPedal": true,
+    "ForwardSpeeds":  6
   },
   "B": {
     "Text": "Manual",
-    "HasClutchPedal": true
+    "HasClutchPedal": true,
+    "ForwardSpeeds": 6
   },
   "C": {
-    "Text": "Auto"
+    "Text": "Auto",
+    "HasTorqueConverter": true,
+    "ForwardSpeeds": 6
   },
   "D": {
-    "Text": "Auto"
+    "Text": "Auto",
+    "HasTorqueConverter": true,
+    "ForwardSpeeds": 6
   },
   "E": {
-    "Text": "Sportshift"
+    "Text": "Sportshift",
+    "ForwardSpeeds": 6
   },
   "F": {
-    "Text": "Sportshift"
+    "Text": "Sportshift",
+    "ForwardSpeeds": 6
   },
   "J": {
     "V12VantageS": {
-      "Text": "Sportshift III"
+      "Text": "Sportshift III",
+      "ForwardSpeeds": 7
     },
     "default": {
-      "Text": "Sportshift II"
+      "Text": "Sportshift II",
+      "ForwardSpeeds": 7
     }
   },
   "K": {
     "V12VantageS": {
-      "Text": "Sportshift III"
+      "Text": "Sportshift III",
+      "ForwardSpeeds": 7
     },
     "default": {
-      "Text": "Sportshift II"
+      "Text": "Sportshift II",
+      "ForwardSpeeds": 7
     }
   },
   "L": {
-    "Text": "8-speed Auto"
+    "Text": "8-speed Auto",
+    "HasTorqueConverter": true,
+    "ForwardSpeeds": 8
   },
   "M": {
-    "Text": "8-speed Auto"
+    "Text": "8-speed Auto",
+    "HasTorqueConverter": true,
+    "ForwardSpeeds": 8
   }
 }

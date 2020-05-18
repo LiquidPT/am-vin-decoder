@@ -2,6 +2,7 @@
 {
   "A": {
     "Text": "V12 AM04",
+    "Code":  "AM04",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -14,6 +15,7 @@
   },
   "B": {
     "Text": "AM05 - 4.3",
+    "Code":  "AM05",
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4280,
@@ -26,6 +28,7 @@
   },
   "C": {
     "Text": "AM07 - 4.7",
+    "Code":  "AM07",
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4735,
@@ -38,6 +41,7 @@
   },
   "D": {
     "Text": "V12(DBS) AM08",
+    "Code":  "AM08",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -50,6 +54,7 @@
   },
   "E": {
     "Text": "V12 AM09",
+    "Code": "AM09",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -62,6 +67,7 @@
   },
   "F": {
     "Text": "V12(Vantage) AM10",
+    "Code": "AM10",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -74,6 +80,7 @@
   },
   "G": {
     "Text": "GAM05 - 4.3 N400 spec",
+    "Code": "GAM05",
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4280,
@@ -86,6 +93,7 @@
   },
   "J": {
     "Text": "V12(Rapide) AM16",
+    "Code": "AM16",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -98,6 +106,7 @@
   },
   "K": {
     "Text": "4.7(011MY Euro 5) AM14",
+    "Code": "AM14",
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4735,
@@ -110,6 +119,7 @@
   },
   "L": {
     "Text": "4.7(V8S spec) AM15",
+    "Code": "AM15",
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4735,
@@ -122,6 +132,7 @@
   },
   "M": {
     "Text": "V12(DB9 13MY +) AM11",
+    "Code": "AM11",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -134,6 +145,7 @@
   },
   "N": {
     "Text": "V12(Virage) AM25",
+    "Code": "AM25",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -146,6 +158,7 @@
   },
   "P": {
     "Text": "V12(Vanquish) AM11",
+    "Code": "AM11",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -158,6 +171,7 @@
   },
   "U": {
     "Text": "(Vanquish 15MY - AM29)",
+    "Code": "AM29",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -170,6 +184,7 @@
   },
   "R": {
     "Text": "V12 Vantage S AM28",
+    "Code": "AM28",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -182,6 +197,7 @@
   },
   "T": {
     "Text": "V12(Rapide S) AM11",
+    "Code": "AM11",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -194,6 +210,7 @@
   },
   "S": {
     "Text": "(RapideS 15MY - AM29)",
+    "Code": "AM29",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -207,6 +224,7 @@
   "V": {
     "NgDbs": {
       "Text": "V12 Twin Turbo AE31",
+      "Code": "AE31",
       "Cylinders": 12,
       "Induction": "TurboCharged",
       "DisplacementInCc": 5204,
@@ -219,6 +237,7 @@
     },
     "default": {
       "Text": "V12 Twin Turbo AE31",
+      "Code": "AE31",
       "Cylinders": 12,
       "Induction": "TurboCharged",
       "DisplacementInCc": 5204,
@@ -232,6 +251,7 @@
   },
   "W": {
     "Text": "V8 Twin Turbo -177590",
+    "Code": "M177",
     "Cylinders": 8,
     "Induction": "TurboCharged",
     "DisplacementInCc": 3982,
@@ -244,6 +264,7 @@
   },
   "Z": {
     "Text": "Vanquish S(Zagato) AM27",
+    "Code": "AM27",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,

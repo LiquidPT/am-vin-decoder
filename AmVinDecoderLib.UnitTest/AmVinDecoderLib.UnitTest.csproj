@@ -28,4 +28,8 @@
     <ProjectReference Include="..\AmVinDecoderLib\AmVinDecoderLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="VinComponents\" />
+  </ItemGroup>
+
 </Project>

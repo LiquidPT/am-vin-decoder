@@ -4,7 +4,9 @@
 // -------------------------------------------------------------------------------------------------
 
 using System;
+using System.IO;
 using AmVinDecoderLib;
+using Microsoft.Extensions.Configuration;
 
 namespace AmVinDecoder
 {
@@ -12,8 +14,9 @@ namespace AmVinDecoder
     {
         private static void Main(string[] args)
         {
-            string vin;
+            var unitOptions = GetUnitOptions();
 
+            string vin;
             if (args.Length == 0)
             {
                 Console.WriteLine("VIN?: ");
@@ -24,7 +27,7 @@ namespace AmVinDecoder
                 vin = args[0];
             }
 
-            var vehicle = VinDecoder.GetVehicleInfo(vin);
+            var vehicle = VinDecoder.GetVehicleInfo(vin, unitOptions);
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine("Aston Martin VIN Decoder");
             Console.WriteLine("------------------------------------------------------------");
@@ -41,6 +44,16 @@ namespace AmVinDecoder
             Console.WriteLine($"Restraint System: {vehicle.RestraintSystem.Text}");
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine();
+        }
+
+        private static UnitOptions GetUnitOptions()
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+
+            var config = builder.Build();
+            return config.GetSection("Units").Get<UnitOptions>();
         }
     }
 }

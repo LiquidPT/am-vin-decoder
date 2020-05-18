@@ -9,6 +9,8 @@ namespace AmVinDecoderLib.VinComponents
 {
     public class Engine : BaseVinComponent
     {
+        public string Code { get; set; }
+
         public int Cylinders { get; set; }
 
         public Induction Induction { get; set; }

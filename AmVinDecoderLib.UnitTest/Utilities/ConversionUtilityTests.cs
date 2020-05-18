@@ -24,7 +24,7 @@ namespace AmVinDecoderLib.UnitTest.Utilities
         {
             var result = ConversionUtility.ConvertPower(10, PowerUnit.Kw, PowerUnit.Hp);
             Assert.IsNotNull(result);
-            Assert.AreEqual(13.41, result);
+            Assert.AreEqual(13, result);
         }
 
         [TestMethod]
@@ -32,7 +32,7 @@ namespace AmVinDecoderLib.UnitTest.Utilities
         {
             var result = ConversionUtility.ConvertPower(10, PowerUnit.Hp, PowerUnit.Kw);
             Assert.IsNotNull(result);
-            Assert.AreEqual(7.46, result);
+            Assert.AreEqual(7, result);
         }
 
         [TestMethod]
@@ -47,7 +47,7 @@ namespace AmVinDecoderLib.UnitTest.Utilities
         {
             var result = ConversionUtility.ConvertTorque(10, TorqueUnit.Nm, TorqueUnit.LbFt);
             Assert.IsNotNull(result);
-            Assert.AreEqual(7.38, result);
+            Assert.AreEqual(7, result);
         }
 
         [TestMethod]
@@ -55,7 +55,7 @@ namespace AmVinDecoderLib.UnitTest.Utilities
         {
             var result = ConversionUtility.ConvertTorque(10, TorqueUnit.LbFt, TorqueUnit.Nm);
             Assert.IsNotNull(result);
-            Assert.AreEqual(13.56, result);
+            Assert.AreEqual(14, result);
         }
     }
 }

@@ -27,12 +27,12 @@ namespace AmVinDecoderLib.Utilities
 
             if (fromUnit == PowerUnit.Kw && toUnit == PowerUnit.Hp)
             {
-                return Math.Round(value.Value * HpPerKw, 2);
+                return Math.Round(value.Value * HpPerKw);
             }
 
             if (fromUnit == PowerUnit.Hp && toUnit == PowerUnit.Kw)
             {
-                return Math.Round(value.Value / HpPerKw, 2);
+                return Math.Round(value.Value / HpPerKw);
             }
 
             throw new NotImplementedException("No conversion implemented for these units.");
@@ -52,12 +52,12 @@ namespace AmVinDecoderLib.Utilities
 
             if (fromUnit == TorqueUnit.Nm && toUnit == TorqueUnit.LbFt)
             {
-                return Math.Round(value.Value * LbFtPerNm, 2);
+                return Math.Round(value.Value * LbFtPerNm);
             }
 
             if (fromUnit == TorqueUnit.LbFt && toUnit == TorqueUnit.Nm)
             {
-                return Math.Round(value.Value / LbFtPerNm, 2);
+                return Math.Round(value.Value / LbFtPerNm);
             }
 
             throw new NotImplementedException("No conversion implemented for these units.");

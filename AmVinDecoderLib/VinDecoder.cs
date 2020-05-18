@@ -5,16 +5,22 @@
 
 using System;
 using AmVinDecoderLib.Repositories;
+using AmVinDecoderLib.VinComponents.Enum;
 
 namespace AmVinDecoderLib
 {
     public static class VinDecoder
     {
-        public static VehicleSummary GetVehicleInfo(string vin)
+        public static VehicleSummary GetVehicleInfo(string vin, UnitOptions unitOptions)
         {
             if (string.IsNullOrWhiteSpace(vin))
             {
                 throw new ArgumentNullException(nameof(vin));
+            }
+
+            if (unitOptions == null)
+            {
+                throw new ArgumentNullException(nameof(unitOptions));
             }
 
             if (vin.Length != 17)
@@ -28,6 +34,9 @@ namespace AmVinDecoderLib
                 throw new ArgumentOutOfRangeException(nameof(vin), "Not an Aston Martin VIN");
             }
 
+            var powerUnits = unitOptions.Power ?? (unitOptions.UseMetric ? PowerUnit.Kw : PowerUnit.Hp);
+            var torqueUnits = unitOptions.Torque ?? (unitOptions.UseMetric ? TorqueUnit.Nm : TorqueUnit.LbFt);
+
             var info = new VehicleSummary
             {
                 Vin = vin,
@@ -40,7 +49,7 @@ namespace AmVinDecoderLib
                 SerialNumber = vin.Substring(VinPosition.SerialNumber, 5),
             };
 
-            info.Engine = EngineRepository.Lookup(vin[VinPosition.Engine], info.Model.IsNgDbs);
+            info.Engine = EngineRepository.Lookup(vin[VinPosition.Engine], powerUnits, torqueUnits, info.Model.IsNgDbs);
             info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.IsDb11Volante);
             info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
 

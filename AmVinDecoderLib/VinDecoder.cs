@@ -34,7 +34,7 @@ namespace AmVinDecoderLib
                 throw new ArgumentOutOfRangeException(nameof(vin), "Not an Aston Martin VIN");
             }
 
-            var powerUnits = unitOptions.Power ?? (unitOptions.UseMetric ? PowerUnit.Kw : PowerUnit.Hp);
+            var powerUnits = unitOptions.Power ?? (unitOptions.UseMetric ? PowerUnit.Kw : PowerUnit.Bhp);
             var torqueUnits = unitOptions.Torque ?? (unitOptions.UseMetric ? TorqueUnit.Nm : TorqueUnit.LbFt);
 
             var info = new VehicleSummary

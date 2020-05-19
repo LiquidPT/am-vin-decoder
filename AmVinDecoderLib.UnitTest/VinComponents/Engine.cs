@@ -23,7 +23,7 @@ namespace AmVinDecoderLib.UnitTest.VinComponents
                 Induction = Induction.TurboCharged,
                 MaxPower = 200,
                 MaxPowerRpm = 8000,
-                MaxPowerUnit = PowerUnit.Hp,
+                MaxPowerUnit = PowerUnit.Bhp,
                 MaxTorque = 150,
                 MaxTorqueRpm = 4500,
                 MaxTorqueUnit = TorqueUnit.LbFt,

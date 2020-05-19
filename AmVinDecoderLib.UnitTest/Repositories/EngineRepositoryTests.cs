@@ -18,27 +18,27 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Lookup_SymbolVinCode_ThrowsException()
         {
-            _ = EngineRepository.Lookup('*', PowerUnit.Hp, TorqueUnit.LbFt);
+            _ = EngineRepository.Lookup('*', PowerUnit.Bhp, TorqueUnit.LbFt);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Lookup_NumericVinCode_ThrowsException()
         {
-            _ = EngineRepository.Lookup('1', PowerUnit.Hp, TorqueUnit.LbFt);
+            _ = EngineRepository.Lookup('1', PowerUnit.Bhp, TorqueUnit.LbFt);
         }
 
         [TestMethod]
         [ExpectedException(typeof(KeyNotFoundException))]
         public void Lookup_UnknownLetterVinCode_ThrowsException()
         {
-            _ = EngineRepository.Lookup('X', PowerUnit.Hp, TorqueUnit.LbFt);
+            _ = EngineRepository.Lookup('X', PowerUnit.Bhp, TorqueUnit.LbFt);
         }
 
         [TestMethod]
         public void Lookup_KnownLetterVinCode_ReturnsValue()
         {
-            var result = EngineRepository.Lookup('A', PowerUnit.Hp, TorqueUnit.LbFt);
+            var result = EngineRepository.Lookup('A', PowerUnit.Bhp, TorqueUnit.LbFt);
             Assert.IsNotNull(result.Text);
         }
     }

@@ -25,12 +25,12 @@ namespace AmVinDecoderLib.Utilities
                 return value;
             }
 
-            if (fromUnit == PowerUnit.Kw && toUnit == PowerUnit.Hp)
+            if (fromUnit == PowerUnit.Kw && toUnit == PowerUnit.Bhp)
             {
                 return Math.Round(value.Value * HpPerKw);
             }
 
-            if (fromUnit == PowerUnit.Hp && toUnit == PowerUnit.Kw)
+            if (fromUnit == PowerUnit.Bhp && toUnit == PowerUnit.Kw)
             {
                 return Math.Round(value.Value / HpPerKw);
             }

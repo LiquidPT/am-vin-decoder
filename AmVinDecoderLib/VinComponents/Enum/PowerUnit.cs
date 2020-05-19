@@ -8,9 +8,9 @@ namespace AmVinDecoderLib.VinComponents.Enum
     public enum PowerUnit
     {
         /// <summary>
-        /// HP, horsepower
+        /// BHP, brake horsepower
         /// </summary>
-        Hp,
+        Bhp,
 
         /// <summary>
         /// KW, kilowatts

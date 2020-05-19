@@ -15,14 +15,14 @@ namespace AmVinDecoderLib.UnitTest.Utilities
         [TestMethod]
         public void ConvertPower_Null_ReturnsNull()
         {
-            var result = ConversionUtility.ConvertPower(null, PowerUnit.Kw, PowerUnit.Hp);
+            var result = ConversionUtility.ConvertPower(null, PowerUnit.Kw, PowerUnit.Bhp);
             Assert.IsNull(result);
         }
 
         [TestMethod]
         public void ConvertPower_KwToHp_ReturnsCorrectValue()
         {
-            var result = ConversionUtility.ConvertPower(10, PowerUnit.Kw, PowerUnit.Hp);
+            var result = ConversionUtility.ConvertPower(10, PowerUnit.Kw, PowerUnit.Bhp);
             Assert.IsNotNull(result);
             Assert.AreEqual(13, result);
         }
@@ -30,7 +30,7 @@ namespace AmVinDecoderLib.UnitTest.Utilities
         [TestMethod]
         public void ConvertPower_HpToKw_ReturnsCorrectValue()
         {
-            var result = ConversionUtility.ConvertPower(10, PowerUnit.Hp, PowerUnit.Kw);
+            var result = ConversionUtility.ConvertPower(10, PowerUnit.Bhp, PowerUnit.Kw);
             Assert.IsNotNull(result);
             Assert.AreEqual(7, result);
         }

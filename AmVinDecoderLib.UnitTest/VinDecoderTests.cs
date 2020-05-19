@@ -19,7 +19,7 @@ namespace AmVinDecoderLib.UnitTest
             unitOptions = new UnitOptions
             {
                 UseMetric = true,
-                Power = PowerUnit.Hp,
+                Power = PowerUnit.Bhp,
                 Torque = TorqueUnit.LbFt,
             };
         }

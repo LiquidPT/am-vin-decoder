@@ -32,43 +32,45 @@ namespace AmVinDecoderLib.Repositories
                 return data.ToObject<RestraintSystem>();
             }
 
-            if (data[Default] != null)
+            if (data[Default] == null)
             {
-                Dictionary<string, RestraintSystem> subdata = data.ToObject<Dictionary<string, RestraintSystem>>();
+                throw new FormatException($"JSON node for RestraintSystem {validatedVinCode} was not in the expected format.");
+            }
 
-                // Check what type of branching clause it is.
-                var nonDefault = subdata.Where(s => s.Key != Default);
-                if (!nonDefault.Any())
+            Dictionary<string, RestraintSystem> subdata = data.ToObject<Dictionary<string, RestraintSystem>>();
+            if (subdata.Count == 1)
+            {
+                // Only a default item. Return it.
+                return subdata[Default];
+            }
+
+            // Get only the items that aren't the dafault one for examination
+            var nonDefault = subdata.Where(s => s.Key != Default);
+
+            // Sub data is for the DB 11 Volante.
+            // TODO: Refactor as this is fragile
+            var sample = nonDefault.First();
+            if (sample.Key == DB11Volante)
+            {
+                if (isDB11Volante)
                 {
-                    return subdata[Default];
-                }
-
-                // Sub data is for the DB 11 Volante
-                var sample = nonDefault.First();
-                if (sample.Key == DB11Volante)
-                {
-                    if (isDB11Volante)
-                    {
-                        return sample.Value;
-                    }
-
-                    return subdata[Default];
-                }
-
-                // Sub data is year comparison based
-                // TODO: Do better checking here
-                foreach (var yearClause in nonDefault)
-                {
-                    if (CSharpScript.EvaluateAsync<bool>($"{intModelYear}{yearClause.Key}").Result)
-                    {
-                        return yearClause.Value;
-                    }
+                    return sample.Value;
                 }
 
                 return subdata[Default];
             }
 
-            throw new FormatException($"JSON node for RestraintSystem {validatedVinCode} was not in the expected format.");
+            // Sub data is year comparison based
+            // TODO: Do better validation checking here
+            foreach (var yearClause in nonDefault)
+            {
+                if (CSharpScript.EvaluateAsync<bool>($"{intModelYear}{yearClause.Key}").Result)
+                {
+                    return yearClause.Value;
+                }
+            }
+
+            return subdata[Default];
         }
     }
 }

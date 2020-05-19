@@ -165,7 +165,7 @@ namespace AmVinDecoderLib.UnitTest.Data
 
             Assert.AreEqual(expectedText, actual.Text);
             Assert.AreEqual(expectedIsV12VantageS, actual.IsV12VantageS);
-            Assert.AreEqual(expectedIsDB11Volante, actual.IsDB11Volante);
+            Assert.AreEqual(expectedIsDB11Volante, actual.IsDb11Volante);
         }
     }
 }

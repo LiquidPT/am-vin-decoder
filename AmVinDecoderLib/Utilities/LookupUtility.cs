@@ -10,7 +10,7 @@ namespace AmVinDecoderLib.Utilities
 {
     public static class LookupUtility
     {
-        internal static string ValidateLetterVinCode(char vinCode)
+        public static string ValidateLetterVinCode(char vinCode)
         {
             if (!char.IsLetter(vinCode))
             {
@@ -20,7 +20,7 @@ namespace AmVinDecoderLib.Utilities
             return vinCode.ToString().ToUpperInvariant();
         }
 
-        internal static string ValidateLetterOrDigitVinCode(string vinCode, int length)
+        public static string ValidateLetterOrDigitVinCode(string vinCode, int length)
         {
             if (string.IsNullOrWhiteSpace(vinCode))
             {

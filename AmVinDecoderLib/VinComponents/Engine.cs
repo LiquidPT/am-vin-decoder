@@ -9,14 +9,24 @@ namespace AmVinDecoderLib.VinComponents
 {
     public class Engine : BaseVinComponent
     {
+        public string Code { get; set; }
+
         public int Cylinders { get; set; }
 
         public Induction Induction { get; set; }
 
-        public decimal Displacement { get; set; }
+        public double DisplacementInCc { get; set; }
 
-        public decimal Power { get; set; }
+        public double? MaxPower { get; set; }
 
-        public decimal Torque { get; set; }
+        public PowerUnit MaxPowerUnit { get; set; }
+
+        public double? MaxPowerRpm { get; set; }
+
+        public double? MaxTorque { get; set; }
+
+        public TorqueUnit MaxTorqueUnit { get; set; }
+
+        public double? MaxTorqueRpm { get; set; }
     }
 }

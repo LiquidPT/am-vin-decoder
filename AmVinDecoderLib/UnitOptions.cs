@@ -3,14 +3,16 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-namespace AmVinDecoderLib.VinComponents
+using AmVinDecoderLib.VinComponents.Enum;
+
+namespace AmVinDecoderLib
 {
-    public class Model : BaseVinComponent
+    public class UnitOptions
     {
-        public bool IsV12VantageS { get; set; }
+        public bool UseMetric { get; set; }
 
-        public bool IsDb11Volante { get; set; }
+        public PowerUnit? Power { get; set; }
 
-        public bool IsNgDbs { get; set; }
+        public TorqueUnit? Torque { get; set; }
     }
 }

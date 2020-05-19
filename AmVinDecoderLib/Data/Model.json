@@ -48,13 +48,14 @@
   },
   "M": {
     "Text": "DB11 Volante",
-    "IsDB11Volante":  true
+    "IsDb11Volante":  true
   },
   "N": {
     "Text": "New Vantage Coupe"
   },
   "R": {
-    "Text": "New DBS Coupe"
+    "Text": "New DBS Coupe",
+    "IsNgDbs":  true
   },
   "S": {
     "0": {

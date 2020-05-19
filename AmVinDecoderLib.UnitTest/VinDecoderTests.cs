@@ -12,7 +12,7 @@ namespace AmVinDecoderLib.UnitTest
     [TestClass]
     public class VinDecoderTests
     {
-        private UnitOptions unitOptions;
+        private readonly UnitOptions unitOptions;
 
         public VinDecoderTests()
         {

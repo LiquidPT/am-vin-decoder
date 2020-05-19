@@ -13,8 +13,8 @@ namespace AmVinDecoderLib.UnitTest.Data
     [TestClass]
     public class Engine
     {
-        private PowerUnit powerUnit = PowerUnit.Kw;
-        private TorqueUnit torqueUnit = TorqueUnit.Nm;
+        private readonly PowerUnit powerUnit = PowerUnit.Kw;
+        private readonly TorqueUnit torqueUnit = TorqueUnit.Nm;
 
         [TestMethod]
         public void Lookup_A_ReturnsExpectedValues()

@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using AmVinDecoderLib.VinComponents.Enum;
@@ -13,8 +14,6 @@ namespace AmVinDecoderLib.Repositories
 {
     public class EngineRepository : BaseRepository<Engine, dynamic>
     {
-        private const string NewDbsCoupe = "NewDbsCoupe";
-
         public static Engine Lookup(char vinCode, PowerUnit powerUnits, TorqueUnit torqueUnits, ModelType? model = null)
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
@@ -27,11 +26,11 @@ namespace AmVinDecoderLib.Repositories
             }
             else if (data[Default] != null)
             {
-                var subdata = data.ToObject<Dictionary<string, Engine>>();
+                Dictionary<string, Engine> subdata = data.ToObject<Dictionary<string, Engine>>();
 
-                if (model == ModelType.NewDbsCoupe)
+                if (subdata.Keys.Contains(model.ToString()))
                 {
-                    result = subdata[NewDbsCoupe];
+                    result = subdata[model.ToString()];
                 }
                 else
                 {

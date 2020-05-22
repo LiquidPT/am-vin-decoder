@@ -9,7 +9,7 @@ using EnsureThat;
 
 namespace AmVinDecoderLib.Utilities
 {
-    public static class StringParamExtensions
+    public static class EnsureThatStringExtensions
     {
         public static void IsAlphaNumeric(this in StringParam param)
         {

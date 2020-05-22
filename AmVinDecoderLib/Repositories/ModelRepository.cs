@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
+using EnsureThat;
 
 namespace AmVinDecoderLib.Repositories
 {
@@ -16,9 +17,9 @@ namespace AmVinDecoderLib.Repositories
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
 
-            if (serialModifer.HasValue && !char.IsDigit(serialModifer.Value))
+            if (serialModifer.HasValue)
             {
-                throw new ArgumentOutOfRangeException(nameof(serialModifer), "Expecting a digit");
+                Ensure.That<char>(serialModifer.Value, nameof(serialModifer)).IsNumeric();
             }
 
             var data = InitializeData()[validatedVinCode];

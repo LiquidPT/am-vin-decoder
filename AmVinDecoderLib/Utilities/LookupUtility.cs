@@ -3,8 +3,6 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using System;
-using System.Linq;
 using EnsureThat;
 
 namespace AmVinDecoderLib.Utilities
@@ -13,10 +11,7 @@ namespace AmVinDecoderLib.Utilities
     {
         public static string ValidateLetterVinCode(char vinCode)
         {
-            if (!char.IsLetter(vinCode))
-            {
-                throw new ArgumentOutOfRangeException(nameof(vinCode), "Expecting a letter code");
-            }
+            Ensure.That<char>(vinCode, nameof(vinCode)).IsAlpha();
 
             return vinCode.ToString().ToUpperInvariant();
         }

@@ -39,6 +39,5 @@ namespace AmVinDecoderLib.Utilities
 
             throw new ArgumentOutOfRangeException(param.Name, "Expecting a digit");
         }
-
     }
 }

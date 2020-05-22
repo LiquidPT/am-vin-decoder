@@ -87,7 +87,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("V8/V8S Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.V8VantageCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -97,7 +97,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("DB9 Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.Db9Coupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -107,7 +107,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("DBS Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.DbsCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -117,7 +117,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("Vanquish Zagato Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.VanquishZagatoCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -127,7 +127,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("V12 Vantage S Coupe", result.Model.Text);
-            Assert.IsTrue(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.V12VantageSCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -137,7 +137,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("DB11 Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.Db11Coupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -147,6 +147,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("Virage Coupe", result.Model.Text);
+            Assert.AreEqual(ModelType.VirageCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -156,7 +157,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("New DBS Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.NewDbsCoupe, result.Model.ModelType);
         }
     }
 }

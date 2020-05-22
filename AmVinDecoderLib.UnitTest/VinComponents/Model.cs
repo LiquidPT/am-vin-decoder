@@ -16,10 +16,8 @@ namespace AmVinDecoderLib.UnitTest.VinComponents
         {
             var component = new vin.Model()
             {
-                IsDb11Volante = false,
-                IsNgDbs = false,
-                IsV12VantageS = true,
                 Text = "Test Text",
+                ModelType = vin.Enum.ModelType.DbsCoupe,
             };
 
             Assert.AreEqual(component.Text, component.ToString());

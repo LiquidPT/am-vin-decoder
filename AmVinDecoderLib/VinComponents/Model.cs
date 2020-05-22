@@ -10,11 +10,5 @@ namespace AmVinDecoderLib.VinComponents
     public class Model : BaseVinComponent
     {
         public ModelType ModelType { get; set; }
-
-        public bool IsV12VantageS { get; set; }
-
-        public bool IsDb11Volante { get; set; }
-
-        public bool IsNgDbs { get; set; }
     }
 }

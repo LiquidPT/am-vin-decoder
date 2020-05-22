@@ -4,6 +4,7 @@
 // -------------------------------------------------------------------------------------------------
 
 using AmVinDecoderLib.Repositories;
+using AmVinDecoderLib.VinComponents.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using vin = AmVinDecoderLib.VinComponents;
 
@@ -16,156 +17,155 @@ namespace AmVinDecoderLib.UnitTest.Data
         public void Lookup_A_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('A', null);
-            TestValues(result, "DB9 Coupe");
+            TestValues(result, "DB9 Coupe", ModelType.Db9Coupe);
         }
 
         [TestMethod]
         public void Lookup_B_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('B', null);
-            TestValues(result, "DB9 Volante");
+            TestValues(result, "DB9 Volante", ModelType.Db9Volante);
         }
 
         [TestMethod]
         public void Lookup_C_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('C', null);
-            TestValues(result, "V8/V8S Coupe");
+            TestValues(result, "V8/V8S Coupe", ModelType.V8VantageCoupe);
         }
 
         [TestMethod]
         public void Lookup_D_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('D', null);
-            TestValues(result, "V8/V8S Roadster");
+            TestValues(result, "V8/V8S Roadster", ModelType.V8VantageRoadster);
         }
 
         [TestMethod]
         public void Lookup_E_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('E', null);
-            TestValues(result, "DBS");
+            TestValues(result, "DBS", ModelType.Dbs);
         }
 
         [TestMethod]
         public void Lookup_E0_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('E', '0');
-            TestValues(result, "DBS Coupe");
+            TestValues(result, "DBS Coupe", ModelType.DbsCoupe);
         }
 
         [TestMethod]
         public void Lookup_E1_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('E', '1');
-            TestValues(result, "DBS Volante");
+            TestValues(result, "DBS Volante", ModelType.DbsVolante);
         }
 
         [TestMethod]
         public void Lookup_F_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('F', null);
-            TestValues(result, "Rapide");
+            TestValues(result, "Rapide", ModelType.Rapide);
         }
 
         [TestMethod]
         public void Lookup_G_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('G', null);
-            TestValues(result, "Virage Coupe");
+            TestValues(result, "Virage Coupe", ModelType.VirageCoupe);
         }
 
         [TestMethod]
         public void Lookup_H_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('H', null);
-            TestValues(result, "Virage Volante");
+            TestValues(result, "Virage Volante", ModelType.VirageVolante);
         }
 
         [TestMethod]
         public void Lookup_J_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('J', null);
-            TestValues(result, "Vanquish Coupe");
+            TestValues(result, "Vanquish Coupe", ModelType.VanquishCoupe);
         }
 
         [TestMethod]
         public void Lookup_J3_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('J', '3');
-            TestValues(result, "Vanquish Zagato Coupe");
+            TestValues(result, "Vanquish Zagato Coupe", ModelType.VanquishZagatoCoupe);
         }
 
         [TestMethod]
         public void Lookup_K_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('K', null);
-            TestValues(result, "Vanquish Volante");
+            TestValues(result, "Vanquish Volante", ModelType.VanquishVolante);
         }
 
         [TestMethod]
         public void Lookup_L_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('L', null);
-            TestValues(result, "DB11 Coupe");
+            TestValues(result, "DB11 Coupe", ModelType.Db11Coupe);
         }
 
         [TestMethod]
         public void Lookup_M_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('M', null);
-            TestValues(result, "DB11 Volante", expectedIsDB11Volante: true);
+            TestValues(result, "DB11 Volante", ModelType.Db11Volante);
         }
 
         [TestMethod]
         public void Lookup_N_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('N', null);
-            TestValues(result, "New Vantage Coupe");
+            TestValues(result, "New Vantage Coupe", ModelType.NewVantageCoupe);
         }
 
         [TestMethod]
         public void Lookup_R_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('R', null);
-            TestValues(result, "New DBS Coupe");
+            TestValues(result, "New DBS Coupe", ModelType.NewDbsCoupe);
         }
 
         [TestMethod]
         public void Lookup_S_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('S', null);
-            TestValues(result, "V12 Vantage Coupe");
+            TestValues(result, "V12 Vantage Coupe", ModelType.V12VantageCoupe);
         }
 
         [TestMethod]
         public void Lookup_S0_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('S', '0');
-            TestValues(result, "V12 Vantage S Coupe", expectedIsV12VantageS: true);
+            TestValues(result, "V12 Vantage S Coupe", ModelType.V12VantageSCoupe);
         }
 
         [TestMethod]
         public void Lookup_S1_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('S', '1');
-            TestValues(result, "V12 Vantage Roadster");
+            TestValues(result, "V12 Vantage Roadster", ModelType.V12VantageRoadster);
         }
 
         [TestMethod]
         public void Lookup_S2_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('S', '2');
-            TestValues(result, "V12 Vantage S Roadster", expectedIsV12VantageS: true);
+            TestValues(result, "V12 Vantage S Roadster", ModelType.V12VantageSRoadster);
         }
 
-        private void TestValues(vin.Model actual, string expectedText, bool expectedIsV12VantageS = false, bool expectedIsDB11Volante = false)
+        private void TestValues(vin.Model actual, string expectedText, ModelType expectedModelType)
         {
             Assert.IsNotNull(actual);
 
             Assert.AreEqual(expectedText, actual.Text);
-            Assert.AreEqual(expectedIsV12VantageS, actual.IsV12VantageS);
-            Assert.AreEqual(expectedIsDB11Volante, actual.IsDb11Volante);
+            Assert.AreEqual(expectedModelType, actual.ModelType);
         }
     }
 }

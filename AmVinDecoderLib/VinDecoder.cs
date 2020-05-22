@@ -14,13 +14,12 @@ namespace AmVinDecoderLib
     {
         public static VehicleSummary GetVehicleInfo(string vin, UnitOptions unitOptions)
         {
-            Ensure.String.IsNotNullOrWhiteSpace(vin, nameof(vin));
-            Ensure.Any.IsNotNull(unitOptions, nameof(unitOptions));
-            Ensure.String.SizeIs(vin, 17, nameof(vin), opts => opts.WithMessage("VIN is not 17 characters long"));
+            Ensure.That(vin, nameof(vin)).IsNotNullOrWhiteSpace();
+            Ensure.That(unitOptions, nameof(unitOptions)).IsNotNull();
+            Ensure.That(vin, nameof(vin), opts => opts.WithMessage("VIN is not 17 characters long")).SizeIs(17);
 
             var wmi = vin.Substring(VinPosition.Wmi, 3);
-
-            Ensure.String.StartsWith(wmi, "SCF", StringComparison.OrdinalIgnoreCase, nameof(vin), opts => opts.WithMessage("Not an Aston Martin VIN"));
+            Ensure.That(wmi, nameof(vin), opts => opts.WithMessage("Not an Aston Martin VIN")).StartsWith("SCF", StringComparison.OrdinalIgnoreCase);
 
             var powerUnits = unitOptions.Power ?? (unitOptions.UseMetric ? PowerUnit.Kw : PowerUnit.Bhp);
             var torqueUnits = unitOptions.Torque ?? (unitOptions.UseMetric ? TorqueUnit.Nm : TorqueUnit.LbFt);

@@ -9,6 +9,7 @@ using System.Linq;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using AmVinDecoderLib.VinComponents.Enum;
+using EnsureThat;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 
 namespace AmVinDecoderLib.Repositories
@@ -22,9 +23,10 @@ namespace AmVinDecoderLib.Repositories
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
 
             int intModelYear = 0;
-            if (!string.IsNullOrWhiteSpace(modelYear) && !int.TryParse(modelYear, out intModelYear))
+            if (!string.IsNullOrWhiteSpace(modelYear))
             {
-                throw new ArgumentOutOfRangeException(nameof(modelYear), "Expecting numeric year");
+                Ensure.That(modelYear, nameof(modelYear)).IsNumeric();
+                intModelYear = int.Parse(modelYear);
             }
 
             var data = InitializeData()[validatedVinCode];

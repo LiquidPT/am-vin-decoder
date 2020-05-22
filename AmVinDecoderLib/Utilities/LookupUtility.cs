@@ -23,12 +23,8 @@ namespace AmVinDecoderLib.Utilities
 
         public static string ValidateLetterOrDigitVinCode(string vinCode, int length)
         {
-            Ensure.String.SizeIs(vinCode, length, nameof(vinCode));
-
-            if (!vinCode.All(char.IsLetterOrDigit))
-            {
-                throw new ArgumentOutOfRangeException(nameof(vinCode), "Expecting only letters and digits");
-            }
+            Ensure.That(vinCode, nameof(vinCode)).SizeIs(length);
+            Ensure.That(vinCode, nameof(vinCode)).IsAlphaNumeric();
 
             return vinCode.ToUpperInvariant();
         }

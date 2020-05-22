@@ -39,28 +39,28 @@ namespace AmVinDecoderLib.UnitTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_EmptyVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo(string.Empty, unitOptions);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_WhitespaceVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo("  ", unitOptions);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_SixteenCharacterVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo("AAAAAAAAAAAAAAAA", unitOptions);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_EighteenCharacterVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo("AAAAAAAAAAAAAAAAAA", unitOptions);
@@ -70,11 +70,11 @@ namespace AmVinDecoderLib.UnitTest
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GetInfo_SymbolInVin_ThrowsException()
         {
-            _ = VinDecoder.GetVehicleInfo("*AAAAAAAAAAAAAAAA", unitOptions);
+            _ = VinDecoder.GetVehicleInfo("SCF*AAAAAAAAAAAAA", unitOptions);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_NonAstonMartinVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo("AAAAAAAAAAAAAAAAA", unitOptions);

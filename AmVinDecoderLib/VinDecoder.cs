@@ -6,6 +6,7 @@
 using System;
 using AmVinDecoderLib.Repositories;
 using AmVinDecoderLib.VinComponents.Enum;
+using EnsureThat;
 
 namespace AmVinDecoderLib
 {
@@ -13,26 +14,13 @@ namespace AmVinDecoderLib
     {
         public static VehicleSummary GetVehicleInfo(string vin, UnitOptions unitOptions)
         {
-            if (string.IsNullOrWhiteSpace(vin))
-            {
-                throw new ArgumentNullException(nameof(vin));
-            }
-
-            if (unitOptions == null)
-            {
-                throw new ArgumentNullException(nameof(unitOptions));
-            }
-
-            if (vin.Length != 17)
-            {
-                throw new ArgumentOutOfRangeException(nameof(vin), "VIN is not 17 characters long");
-            }
+            Ensure.String.IsNotNullOrWhiteSpace(vin, nameof(vin));
+            Ensure.Any.IsNotNull(unitOptions, nameof(unitOptions));
+            Ensure.String.SizeIs(vin, 17, nameof(vin), opts => opts.WithMessage("VIN is not 17 characters long"));
 
             var wmi = vin.Substring(VinPosition.Wmi, 3);
-            if (!wmi.Equals("SCF", StringComparison.OrdinalIgnoreCase))
-            {
-                throw new ArgumentOutOfRangeException(nameof(vin), "Not an Aston Martin VIN");
-            }
+
+            Ensure.String.StartsWith(wmi, "SCF", StringComparison.OrdinalIgnoreCase, nameof(vin), opts => opts.WithMessage("Not an Aston Martin VIN"));
 
             var powerUnits = unitOptions.Power ?? (unitOptions.UseMetric ? PowerUnit.Kw : PowerUnit.Bhp);
             var torqueUnits = unitOptions.Torque ?? (unitOptions.UseMetric ? TorqueUnit.Nm : TorqueUnit.LbFt);

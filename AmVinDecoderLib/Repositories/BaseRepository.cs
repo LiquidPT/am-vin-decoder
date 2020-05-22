@@ -47,6 +47,12 @@ namespace AmVinDecoderLib.Repositories
 
         protected static TFile LookupSubData(string validatedVinCode, string secondaryLookupKey, Func<string, bool> subselectionClause = null)
         {
+            string[] secondaryLookupKeys = { secondaryLookupKey };
+            return LookupSubData(validatedVinCode, secondaryLookupKeys, subselectionClause);
+        }
+
+        protected static TFile LookupSubData(string validatedVinCode, string[] secondaryLookupKeys, Func<string, bool> subselectionClause = null)
+        {
             Ensure.That(validatedVinCode, nameof(validatedVinCode)).IsNotNullOrWhiteSpace();
 
             var data = (dynamic)InitializeData()[validatedVinCode];
@@ -71,7 +77,7 @@ namespace AmVinDecoderLib.Repositories
             var nonDefault = subdata.Where(s => s.Key != Default);
             foreach (var item in nonDefault)
             {
-                if (secondaryLookupKey != null && item.Key.Equals(secondaryLookupKey, StringComparison.Ordinal))
+                if (secondaryLookupKeys != null && secondaryLookupKeys.Contains(item.Key))
                 {
                     // Key is for this model
                     return item.Value;

@@ -19,7 +19,8 @@ namespace AmVinDecoderLib.Repositories
 
             Ensure.That(serialModifer, nameof(serialModifer)).IsNullOrNumeric();
 
-            return LookupSubData(validatedVinCode, validatedBodyCode, (key) => serialModifer.HasValue && key.Equals(serialModifer.Value.ToString(), StringComparison.Ordinal));
+            string[] keys = { validatedBodyCode, serialModifer.ToString() };
+            return LookupSubData(validatedVinCode, keys);
         }
     }
 }

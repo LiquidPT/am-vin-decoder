@@ -28,23 +28,13 @@ namespace AmVinDecoderLib.Repositories
                 return data.ToObject<Model>();
             }
 
-            if (data[Default] != null)
+            if (data[Default] == null)
             {
-                var subdata = data.ToObject<Dictionary<string, Model>>();
-                Model model;
-                try
-                {
-                    model = subdata[serialModifer.ToString()];
-                }
-                catch (KeyNotFoundException)
-                {
-                    model = subdata[Default];
-                }
-
-                return model;
+                throw new FormatException($"JSON node for Model {validatedVinCode} was not in the expected format.");
             }
 
-            throw new FormatException($"JSON node for Model {validatedVinCode} was not in the expected format.");
+            Dictionary<string, Model> subdata = data.ToObject<Dictionary<string, Model>>();
+            return LookupSubData(subdata, serialModifer.ToString());
         }
     }
 }

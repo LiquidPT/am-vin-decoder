@@ -40,5 +40,20 @@ namespace AmVinDecoderLib.Utilities
 
             throw new ArgumentOutOfRangeException(param.Name, "Expecting only digits");
         }
+
+        public static void IsNullOrNumeric(this in StringParam param)
+        {
+            if (string.IsNullOrEmpty(param.Value))
+            {
+                return;
+            }
+
+            if (param.Value.All(char.IsDigit))
+            {
+                return;
+            }
+
+            throw new ArgumentOutOfRangeException(param.Name, "Expecting only digits");
+        }
     }
 }

@@ -5,7 +5,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using AmVinDecoderLib.VinComponents.Enum;
@@ -27,15 +26,7 @@ namespace AmVinDecoderLib.Repositories
             else if (data[Default] != null)
             {
                 Dictionary<string, Engine> subdata = data.ToObject<Dictionary<string, Engine>>();
-
-                if (subdata.Keys.Contains(model.ToString()))
-                {
-                    result = subdata[model.ToString()];
-                }
-                else
-                {
-                    result = subdata[Default];
-                }
+                result = LookupSubData(subdata, model);
             }
 
             if (result == null)

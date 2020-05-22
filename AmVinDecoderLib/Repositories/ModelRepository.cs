@@ -19,22 +19,10 @@ namespace AmVinDecoderLib.Repositories
 
             if (serialModifer.HasValue)
             {
-                Ensure.That<char>(serialModifer.Value, nameof(serialModifer)).IsNumeric();
+                Ensure.That(serialModifer.Value, nameof(serialModifer)).IsNumeric();
             }
 
-            var data = InitializeData()[validatedVinCode];
-            if (data.Text != null)
-            {
-                return data.ToObject<Model>();
-            }
-
-            if (data[Default] == null)
-            {
-                throw new FormatException($"JSON node for Model {validatedVinCode} was not in the expected format.");
-            }
-
-            Dictionary<string, Model> subdata = data.ToObject<Dictionary<string, Model>>();
-            return LookupSubData(subdata, serialModifer.ToString());
+            return LookupSubData(validatedVinCode, serialModifer.ToString());
         }
     }
 }

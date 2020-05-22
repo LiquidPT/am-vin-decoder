@@ -40,14 +40,27 @@ namespace AmVinDecoderLib.Repositories
             return _repo;
         }
 
-        protected static TFile LookupSubData(Dictionary<string, TFile> subdata, ModelType? model, Func<string, bool> subselectionClause = null)
+        protected static TFile LookupSubData(string validatedVinCode, ModelType? model, Func<string, bool> subselectionClause = null)
         {
-            return LookupSubData(subdata, model.ToString(), subselectionClause);
+            return LookupSubData(validatedVinCode, model.ToString(), subselectionClause);
         }
 
-        protected static TFile LookupSubData(Dictionary<string, TFile> subdata, string secondaryLookupKey, Func<string, bool> subselectionClause = null)
+        protected static TFile LookupSubData(string validatedVinCode, string secondaryLookupKey, Func<string, bool> subselectionClause = null)
         {
-            Ensure.That(subdata, nameof(subdata)).IsNotNull();
+            Ensure.That(validatedVinCode, nameof(validatedVinCode)).IsNotNullOrWhiteSpace();
+
+            var data = (dynamic)InitializeData()[validatedVinCode];
+            if (data.Text != null)
+            {
+                return data.ToObject<TFile>();
+            }
+
+            if (data[Default] == null)
+            {
+                throw new FormatException($"JSON node for {typeof(TFile).Name} {validatedVinCode} was not in the expected format.");
+            }
+
+            Dictionary<string, TFile> subdata = data.ToObject<Dictionary<string, TFile>>();
             if (subdata.Count == 1)
             {
                 // Only a default item. Return it.
@@ -58,7 +71,7 @@ namespace AmVinDecoderLib.Repositories
             var nonDefault = subdata.Where(s => s.Key != Default);
             foreach (var item in nonDefault)
             {
-                if (item.Key.Equals(secondaryLookupKey, StringComparison.Ordinal))
+                if (secondaryLookupKey != null && item.Key.Equals(secondaryLookupKey, StringComparison.Ordinal))
                 {
                     // Key is for this model
                     return item.Value;

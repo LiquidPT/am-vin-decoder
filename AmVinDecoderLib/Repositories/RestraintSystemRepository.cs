@@ -20,19 +20,7 @@ namespace AmVinDecoderLib.Repositories
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
             Ensure.That(modelYear, nameof(modelYear)).IsNullOrNumeric();
 
-            var data = InitializeData()[validatedVinCode];
-            if (data.Text != null)
-            {
-                return data.ToObject<RestraintSystem>();
-            }
-
-            if (data[Default] == null)
-            {
-                throw new FormatException($"JSON node for RestraintSystem {validatedVinCode} was not in the expected format.");
-            }
-
-            Dictionary<string, RestraintSystem> subdata = data.ToObject<Dictionary<string, RestraintSystem>>();
-            return LookupSubData(subdata, model, (key) => key.Contains("{modelYear}") && CSharpScript.EvaluateAsync<bool>(key.Replace("{modelYear}", modelYear)).Result);
+            return LookupSubData(validatedVinCode, model, (key) => key.Contains("{modelYear}") && CSharpScript.EvaluateAsync<bool>(key.Replace("{modelYear}", modelYear)).Result);
         }
     }
 }

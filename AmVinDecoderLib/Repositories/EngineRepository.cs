@@ -16,24 +16,8 @@ namespace AmVinDecoderLib.Repositories
         public static Engine Lookup(char vinCode, PowerUnit powerUnits, TorqueUnit torqueUnits, ModelType? model = null)
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
-            Engine result = null;
 
-            var data = InitializeData()[validatedVinCode];
-            if (data.Text != null)
-            {
-                result = data.ToObject<Engine>();
-            }
-            else if (data[Default] != null)
-            {
-                Dictionary<string, Engine> subdata = data.ToObject<Dictionary<string, Engine>>();
-                result = LookupSubData(subdata, model);
-            }
-
-            if (result == null)
-            {
-                throw new FormatException($"JSON node for Engine {validatedVinCode} was not in the expected format.");
-            }
-
+            Engine result = LookupSubData(validatedVinCode, model);
             return ConvertUnits(result, powerUnits, torqueUnits);
         }
 

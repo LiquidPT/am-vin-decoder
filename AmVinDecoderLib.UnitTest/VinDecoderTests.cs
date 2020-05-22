@@ -159,5 +159,16 @@ namespace AmVinDecoderLib.UnitTest
             Assert.AreEqual("New DBS Coupe", result.Model.Text);
             Assert.AreEqual(ModelType.NewDbsCoupe, result.Model.ModelType);
         }
+
+        [TestMethod]
+        public void GetInfo_DB11AmrVin_ReturnsValue()
+        {
+            var result = VinDecoder.GetVehicleInfo("SCFRMFEV5LGL09012", unitOptions);
+            Assert.IsNotNull(result);
+
+            Assert.AreEqual("DB11 AMR", result.Model.Text);
+            Assert.AreEqual(ModelType.Db11Amr, result.Model.ModelType);
+            Assert.AreEqual("2020", result.ModelYear.Text);
+        }
     }
 }

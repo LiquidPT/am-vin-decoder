@@ -4,7 +4,6 @@
 // -------------------------------------------------------------------------------------------------
 
 using System;
-using System.Collections.Generic;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using EnsureThat;
@@ -13,16 +12,14 @@ namespace AmVinDecoderLib.Repositories
 {
     public class ModelRepository : BaseRepository<Model, dynamic>
     {
-        public static Model Lookup(char vinCode, char? serialModifer)
+        public static Model Lookup(char vinCode, string bodyCode, char? serialModifer)
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
+            var validatedBodyCode = LookupUtility.ValidateLetterOrDigitVinCode(bodyCode, 2, allowNull: true);
 
-            if (serialModifer.HasValue)
-            {
-                Ensure.That(serialModifer.Value, nameof(serialModifer)).IsNumeric();
-            }
+            Ensure.That(serialModifer, nameof(serialModifer)).IsNullOrNumeric();
 
-            return LookupSubData(validatedVinCode, serialModifer.ToString());
+            return LookupSubData(validatedVinCode, validatedBodyCode, (key) => serialModifer.HasValue && key.Equals(serialModifer.Value.ToString(), StringComparison.Ordinal));
         }
     }
 }

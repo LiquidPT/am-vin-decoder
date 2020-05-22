@@ -57,8 +57,14 @@
     "ModelType": "VanquishVolante"
   },
   "L": {
-    "Text": "DB11 Coupe",
-    "ModelType": "Db11Coupe"
+    "FE": {
+      "Text": "DB11 AMR",
+      "ModelType": "Db11Amr"
+    },
+    "default": {
+      "Text": "DB11 Coupe",
+      "ModelType": "Db11Coupe"
+    }
   },
   "M": {
     "Text": "DB11 Volante",

@@ -22,11 +22,9 @@ namespace AmVinDecoderLib.Repositories
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
 
-            int intModelYear = 0;
             if (!string.IsNullOrWhiteSpace(modelYear))
             {
                 Ensure.That(modelYear, nameof(modelYear)).IsNumeric();
-                intModelYear = int.Parse(modelYear);
             }
 
             var data = InitializeData()[validatedVinCode];
@@ -67,7 +65,7 @@ namespace AmVinDecoderLib.Repositories
             // TODO: Do better validation checking here
             foreach (var yearClause in nonDefault)
             {
-                if (CSharpScript.EvaluateAsync<bool>($"{intModelYear}{yearClause.Key}").Result)
+                if (CSharpScript.EvaluateAsync<bool>($"{modelYear}{yearClause.Key}").Result)
                 {
                     return yearClause.Value;
                 }

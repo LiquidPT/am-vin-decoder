@@ -21,28 +21,28 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void Lookup_EmptyVinCode_ThrowsException()
         {
             _ = BodyTypeRepository.Lookup(string.Empty);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Lookup_WhitespaceVinCode_ThrowsException()
         {
             _ = BodyTypeRepository.Lookup("  ");
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void Lookup_OneCharacterVinCode_ThrowsException()
         {
             _ = BodyTypeRepository.Lookup("A");
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void Lookup_ThreeCharacterVinCode_ThrowsException()
         {
             _ = BodyTypeRepository.Lookup("AAA");

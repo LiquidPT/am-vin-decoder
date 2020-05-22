@@ -5,6 +5,7 @@
 
 using System;
 using System.Linq;
+using EnsureThat;
 
 namespace AmVinDecoderLib.Utilities
 {
@@ -22,15 +23,7 @@ namespace AmVinDecoderLib.Utilities
 
         public static string ValidateLetterOrDigitVinCode(string vinCode, int length)
         {
-            if (string.IsNullOrWhiteSpace(vinCode))
-            {
-                throw new ArgumentNullException(nameof(vinCode));
-            }
-
-            if (vinCode.Length != length)
-            {
-                throw new ArgumentOutOfRangeException(nameof(vinCode), $"VIN code is not {length} characters long");
-            }
+            Ensure.String.SizeIs(vinCode, length, nameof(vinCode));
 
             if (!vinCode.All(char.IsLetterOrDigit))
             {

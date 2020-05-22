@@ -108,7 +108,7 @@ namespace AmVinDecoderLib.UnitTest.Data
         public void Lookup_BA_ReturnsExpectedValues()
         {
             var result = BodyTypeRepository.Lookup("BA");
-            TestValues(result, "Vantage coupe", 2, BodyStyle.Coupe);
+            TestValues(result, "Vantage coupe", 2, BodyStyle.Hatchback);
         }
 
         [TestMethod]
@@ -122,14 +122,14 @@ namespace AmVinDecoderLib.UnitTest.Data
         public void Lookup_BC_ReturnsExpectedValues()
         {
             var result = BodyTypeRepository.Lookup("BC");
-            TestValues(result, "V12 Vantage/S coupe", 2, BodyStyle.Coupe);
+            TestValues(result, "V12 Vantage/S coupe", 2, BodyStyle.Hatchback);
         }
 
         [TestMethod]
         public void Lookup_BD_ReturnsExpectedValues()
         {
             var result = BodyTypeRepository.Lookup("BD");
-            TestValues(result, "Vantage S coupe", 2, BodyStyle.Coupe);
+            TestValues(result, "Vantage S coupe", 2, BodyStyle.Hatchback);
         }
 
         [TestMethod]
@@ -150,7 +150,7 @@ namespace AmVinDecoderLib.UnitTest.Data
         public void Lookup_BN_ReturnsExpectedValues()
         {
             var result = BodyTypeRepository.Lookup("BN");
-            TestValues(result, "V12VS w/ sports+ pack coupe", 2, BodyStyle.Coupe);
+            TestValues(result, "V12VS w/ sports+ pack coupe", 2, BodyStyle.Hatchback);
         }
 
         [TestMethod]
@@ -252,6 +252,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_CU_ReturnsExpectedValues()
+        {
+            var result = BodyTypeRepository.Lookup("CU");
+            TestValues(result, "Vanquish Zagato shooting brake", 2, BodyStyle.Hatchback);
+        }
+
+        [TestMethod]
         public void Lookup_DA_ReturnsExpectedValues()
         {
             var result = BodyTypeRepository.Lookup("DA");
@@ -315,10 +322,17 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_FE_ReturnsExpectedValues()
+        {
+            var result = BodyTypeRepository.Lookup("FE");
+            TestValues(result, "DB11 AMR", 2, BodyStyle.Coupe);
+        }
+
+        [TestMethod]
         public void Lookup_GA_ReturnsExpectedValues()
         {
             var result = BodyTypeRepository.Lookup("GA");
-            TestValues(result, "New Vantage", 2, BodyStyle.Coupe);
+            TestValues(result, "New Vantage", 2, BodyStyle.Hatchback);
         }
 
         [TestMethod]
@@ -326,6 +340,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         {
             var result = BodyTypeRepository.Lookup("HA");
             TestValues(result, "New DBS Coupe", 2, BodyStyle.Coupe);
+        }
+
+        [TestMethod]
+        public void Lookup_HC_ReturnsExpectedValues()
+        {
+            var result = BodyTypeRepository.Lookup("HC");
+            TestValues(result, "New DBS Volante", 2, BodyStyle.Convertible);
         }
 
         private void TestValues(vin.BodyType actual, string expectedText, int expectedDoorCount, BodyStyle expectedBodyStyle)

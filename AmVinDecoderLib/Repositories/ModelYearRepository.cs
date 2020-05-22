@@ -34,6 +34,12 @@ namespace AmVinDecoderLib.Repositories
             if (char.IsLetter(vinCode))
             {
                 int index = char.ToUpper(vinCode, CultureInfo.InvariantCulture) - 65;
+                if (index >= 9)
+                {
+                    // The letter "I" was skipped
+                    index -= 1;
+                }
+
                 return (index + 2010).ToString(CultureInfo.InvariantCulture);
             }
 

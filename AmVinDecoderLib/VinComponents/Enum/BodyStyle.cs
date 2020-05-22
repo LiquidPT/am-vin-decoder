@@ -8,7 +8,7 @@ namespace AmVinDecoderLib.VinComponents.Enum
     public enum BodyStyle
     {
         /// <summary>
-        /// Coupe: a hardtop car with 2 doors
+        /// Coupe: a hardtop car with 2 doors and a trunk
         /// </summary>
         Coupe,
 
@@ -21,5 +21,10 @@ namespace AmVinDecoderLib.VinComponents.Enum
         /// Sedan: a hardtop car with 4 doors
         /// </summary>
         Sedan,
+
+        /// <summary>
+        /// Hatchback: a hardtop car with 2 doors and a liftgate that opens to the passenger compartment
+        /// </summary>
+        Hatchback,
     }
 }

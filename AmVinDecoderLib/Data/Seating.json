@@ -2,7 +2,7 @@
 {
   "01": {
     "Text": "2+2",
-    "SeatCount":  4
+    "SeatCount": 4
   },
   "02": {
     "Text": "2+2",
@@ -133,6 +133,10 @@
   "CR": {
     "Text": "2+0 or 2+2"
   },
+  "CU": {
+    "Text": "2+0",
+    "SeatCount": 2
+  },
   "DA": {
     "Text": "4 seats",
     "SeatCount": 4
@@ -169,11 +173,19 @@
     "Text": "2+2",
     "SeatCount": 4
   },
+  "FE": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
   "GA": {
     "Text": "2 seats",
     "SeatCount": 2
   },
   "HA": {
+    "Text": "2+2",
+    "SeatCount": 4
+  },
+  "HC": {
     "Text": "2+2",
     "SeatCount": 4
   }

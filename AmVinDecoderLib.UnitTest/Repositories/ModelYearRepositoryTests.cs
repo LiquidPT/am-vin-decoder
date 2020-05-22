@@ -42,5 +42,21 @@ namespace AmVinDecoderLib.UnitTest.Repositories
             Assert.IsNotNull(result.Text);
             Assert.AreEqual("2013", result.Text);
         }
+
+        [TestMethod]
+        public void Lookup_H_ReturnsCorrectValue()
+        {
+            var result = ModelYearRepository.Lookup('H');
+            Assert.IsNotNull(result.Text);
+            Assert.AreEqual("2017", result.Text);
+        }
+
+        [TestMethod]
+        public void Lookup_J_ReturnsCorrectValue()
+        {
+            var result = ModelYearRepository.Lookup('J');
+            Assert.IsNotNull(result.Text);
+            Assert.AreEqual("2018", result.Text);
+        }
     }
 }

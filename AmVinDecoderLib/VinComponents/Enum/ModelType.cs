@@ -88,6 +88,11 @@ namespace AmVinDecoderLib.VinComponents.Enum
         Db11Volante,
 
         /// <summary>
+        /// DB11 AMR
+        /// </summary>
+        Db11Amr,
+
+        /// <summary>
         /// New Vantage Coupe
         /// </summary>
         NewVantageCoupe,
@@ -96,6 +101,11 @@ namespace AmVinDecoderLib.VinComponents.Enum
         /// New DBS Coupe
         /// </summary>
         NewDbsCoupe,
+
+        /// <summary>
+        /// New DBS Volante
+        /// </summary>
+        NewDbsVolante,
 
         /// <summary>
         /// V12 Vantage Coupe

@@ -89,5 +89,9 @@
       "Text": "V12 Vantage Coupe",
       "ModelType": "V12VantageCoupe"
     }
+  },
+  "T": {
+    "Text": "New DBS Volante",
+    "ModelType": "NewDbsVolante"
   }
 }

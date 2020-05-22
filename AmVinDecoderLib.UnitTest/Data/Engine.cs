@@ -143,9 +143,9 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
-        public void Lookup_VIsNgDbs_ReturnsExpectedValues()
+        public void Lookup_VIsNewDbsCoupe_ReturnsExpectedValues()
         {
-            var result = EngineRepository.Lookup('V', powerUnit, torqueUnit, true);
+            var result = EngineRepository.Lookup('V', powerUnit, torqueUnit, ModelType.NewDbsCoupe);
             TestValues(result, "V12 Twin Turbo AE31", "AE31", 12, Induction.TurboCharged, 5204, 533, 6500, 899, 1800);
         }
 

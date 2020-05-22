@@ -37,9 +37,9 @@ namespace AmVinDecoderLib
                 SerialNumber = vin.Substring(VinPosition.SerialNumber, 5),
             };
 
-            info.Engine = EngineRepository.Lookup(vin[VinPosition.Engine], powerUnits, torqueUnits, info.Model.IsNgDbs);
-            info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.IsDb11Volante);
-            info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
+            info.Engine = EngineRepository.Lookup(vin[VinPosition.Engine], powerUnits, torqueUnits, info.Model.ModelType);
+            info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.ModelType);
+            info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.ModelType);
 
             return info;
         }

@@ -13,9 +13,9 @@ namespace AmVinDecoderLib.Repositories
 {
     public class EngineRepository : BaseRepository<Engine, dynamic>
     {
-        private const string NgDbs = "NgDbs";
+        private const string NewDbsCoupe = "NewDbsCoupe";
 
-        public static Engine Lookup(char vinCode, PowerUnit powerUnits, TorqueUnit torqueUnits, bool isNgDbs = false)
+        public static Engine Lookup(char vinCode, PowerUnit powerUnits, TorqueUnit torqueUnits, ModelType? model = null)
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
             Engine result = null;
@@ -29,9 +29,9 @@ namespace AmVinDecoderLib.Repositories
             {
                 var subdata = data.ToObject<Dictionary<string, Engine>>();
 
-                if (isNgDbs)
+                if (model == ModelType.NewDbsCoupe)
                 {
-                    result = subdata[NgDbs];
+                    result = subdata[NewDbsCoupe];
                 }
                 else
                 {

@@ -8,15 +8,16 @@ using System.Collections.Generic;
 using System.Linq;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
+using AmVinDecoderLib.VinComponents.Enum;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 
 namespace AmVinDecoderLib.Repositories
 {
     public class RestraintSystemRepository : BaseRepository<RestraintSystem, dynamic>
     {
-        private const string DB11Volante = "DB11Volante";
+        private const string Db11Volante = "Db11Volante";
 
-        public static RestraintSystem Lookup(char vinCode, string modelYear, bool isDB11Volante = false)
+        public static RestraintSystem Lookup(char vinCode, string modelYear, ModelType? model = null)
         {
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
 
@@ -50,9 +51,9 @@ namespace AmVinDecoderLib.Repositories
             // Sub data is for the DB 11 Volante.
             // TODO: Refactor as this is fragile
             var sample = nonDefault.First();
-            if (sample.Key == DB11Volante)
+            if (sample.Key == Db11Volante)
             {
-                if (isDB11Volante)
+                if (model == ModelType.Db11Volante)
                 {
                     return sample.Value;
                 }

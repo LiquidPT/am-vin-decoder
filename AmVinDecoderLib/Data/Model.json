@@ -1,76 +1,93 @@
 // The 12th position of the VIN, with the 13th as a possible modifier
 {
   "A": {
-    "Text": "DB9 Coupe"
+    "Text": "DB9 Coupe",
+    "ModelType": "Db9Coupe"
   },
   "B": {
-    "Text": "DB9 Volante"
+    "Text": "DB9 Volante",
+    "ModelType": "Db9Volante"
   },
   "C": {
-    "Text": "V8/V8S Coupe"
+    "Text": "V8/V8S Coupe",
+    "ModelType": "V8VantageCoupe"
   },
   "D": {
-    "Text": "V8/V8S Roadster"
+    "Text": "V8/V8S Roadster",
+    "ModelType": "V8VantageRoadster"
   },
   "E": {
     "0": {
-      "Text": "DBS Coupe"
+      "Text": "DBS Coupe",
+      "ModelType": "DbsCoupe"
     },
     "1": {
-      "Text": "DBS Volante"
+      "Text": "DBS Volante",
+      "ModelType": "DbsVolante"
     },
     "default": {
-      "Text": "DBS"
+      "Text": "DBS",
+      "ModelType": "Dbs"
     }
   },
   "F": {
-    "Text": "Rapide"
+    "Text": "Rapide",
+    "ModelType": "Rapide"
   },
   "G": {
-    "Text": "Virage Coupe"
+    "Text": "Virage Coupe",
+    "ModelType": "VirageCoupe"
   },
   "H": {
-    "Text": "Virage Volante"
+    "Text": "Virage Volante",
+    "ModelType": "VirageVolante"
   },
   "J": {
     "3": {
-      "Text": "Vanquish Zagato Coupe"
+      "Text": "Vanquish Zagato Coupe",
+      "ModelType": "VanquishZagatoCoupe"
     },
     "default": {
-      "Text": "Vanquish Coupe"
+      "Text": "Vanquish Coupe",
+      "ModelType": "VanquishCoupe"
     }
   },
   "K": {
-    "Text": "Vanquish Volante"
+    "Text": "Vanquish Volante",
+    "ModelType": "VanquishVolante"
   },
   "L": {
-    "Text": "DB11 Coupe"
+    "Text": "DB11 Coupe",
+    "ModelType": "Db11Coupe"
   },
   "M": {
     "Text": "DB11 Volante",
-    "IsDb11Volante":  true
+    "ModelType": "Db11Volante"
   },
   "N": {
-    "Text": "New Vantage Coupe"
+    "Text": "New Vantage Coupe",
+    "ModelType": "NewVantageCoupe"
   },
   "R": {
     "Text": "New DBS Coupe",
-    "IsNgDbs":  true
+    "ModelType": "NewDbsCoupe"
   },
   "S": {
     "0": {
       "Text": "V12 Vantage S Coupe",
-      "IsV12VantageS":  true
+      "ModelType": "V12VantageSCoupe"
     },
     "1": {
-      "Text": "V12 Vantage Roadster"
+      "Text": "V12 Vantage Roadster",
+      "ModelType": "V12VantageRoadster"
     },
     "2": {
       "Text": "V12 Vantage S Roadster",
-      "IsV12VantageS": true
+      "ModelType": "V12VantageSRoadster"
     },
     "default": {
-      "Text": "V12 Vantage Coupe"
+      "Text": "V12 Vantage Coupe",
+      "ModelType": "V12VantageCoupe"
     }
   }
 }

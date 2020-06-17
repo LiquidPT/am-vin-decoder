@@ -6,6 +6,7 @@
 using System;
 using AmVinDecoderLib.Repositories;
 using AmVinDecoderLib.VinComponents.Enum;
+using EnsureThat;
 
 namespace AmVinDecoderLib
 {
@@ -13,26 +14,12 @@ namespace AmVinDecoderLib
     {
         public static VehicleSummary GetVehicleInfo(string vin, UnitOptions unitOptions)
         {
-            if (string.IsNullOrWhiteSpace(vin))
-            {
-                throw new ArgumentNullException(nameof(vin));
-            }
-
-            if (unitOptions == null)
-            {
-                throw new ArgumentNullException(nameof(unitOptions));
-            }
-
-            if (vin.Length != 17)
-            {
-                throw new ArgumentOutOfRangeException(nameof(vin), "VIN is not 17 characters long");
-            }
+            Ensure.That(vin, nameof(vin)).IsNotNullOrWhiteSpace();
+            Ensure.That(unitOptions, nameof(unitOptions)).IsNotNull();
+            Ensure.That(vin, nameof(vin), opts => opts.WithMessage("VIN is not 17 characters long")).SizeIs(17);
 
             var wmi = vin.Substring(VinPosition.Wmi, 3);
-            if (!wmi.Equals("SCF", StringComparison.OrdinalIgnoreCase))
-            {
-                throw new ArgumentOutOfRangeException(nameof(vin), "Not an Aston Martin VIN");
-            }
+            Ensure.That(wmi, nameof(vin), opts => opts.WithMessage("Not an Aston Martin VIN")).StartsWith("SCF", StringComparison.OrdinalIgnoreCase);
 
             var powerUnits = unitOptions.Power ?? (unitOptions.UseMetric ? PowerUnit.Kw : PowerUnit.Bhp);
             var torqueUnits = unitOptions.Torque ?? (unitOptions.UseMetric ? TorqueUnit.Nm : TorqueUnit.LbFt);
@@ -42,16 +29,16 @@ namespace AmVinDecoderLib
                 Vin = vin,
                 Factory = FactoryRepository.Lookup(vin[VinPosition.Factory]),
                 ModelYear = ModelYearRepository.Lookup(vin[VinPosition.ModelYear]),
-                Model = ModelRepository.Lookup(vin[VinPosition.Model], vin[VinPosition.SerialNumber]),
+                Model = ModelRepository.Lookup(vin[VinPosition.Model], vin.Substring(VinPosition.BodyType, 2), vin[VinPosition.SerialNumber]),
                 SteeringPosition = SteeringRepository.Lookup(vin[VinPosition.Transmission]),
                 BodyType = BodyTypeRepository.Lookup(vin.Substring(VinPosition.BodyType, 2)),
                 Seating = SeatingRepository.Lookup(vin.Substring(VinPosition.BodyType, 2)),
                 SerialNumber = vin.Substring(VinPosition.SerialNumber, 5),
             };
 
-            info.Engine = EngineRepository.Lookup(vin[VinPosition.Engine], powerUnits, torqueUnits, info.Model.IsNgDbs);
-            info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.IsDb11Volante);
-            info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.IsV12VantageS);
+            info.Engine = EngineRepository.Lookup(vin[VinPosition.Engine], powerUnits, torqueUnits, info.Model.ModelType);
+            info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.ModelType);
+            info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.ModelType);
 
             return info;
         }

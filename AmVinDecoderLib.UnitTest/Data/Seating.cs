@@ -257,6 +257,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_CU_ReturnsExpectedValues()
+        {
+            var result = SeatingRepository.Lookup("CU");
+            TestValues(result, TwoPlusZero, 2);
+        }
+
+        [TestMethod]
         public void Lookup_DA_ReturnsExpectedValues()
         {
             var result = SeatingRepository.Lookup("DA");
@@ -320,6 +327,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_FE_ReturnsExpectedValues()
+        {
+            var result = SeatingRepository.Lookup("FE");
+            TestValues(result, TwoPlusTwo, 4);
+        }
+
+        [TestMethod]
         public void Lookup_GA_ReturnsExpectedValues()
         {
             var result = SeatingRepository.Lookup("GA");
@@ -330,6 +344,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         public void Lookup_HA_ReturnsExpectedValues()
         {
             var result = SeatingRepository.Lookup("HA");
+            TestValues(result, TwoPlusTwo, 4);
+        }
+
+        [TestMethod]
+        public void Lookup_HC_ReturnsExpectedValues()
+        {
+            var result = SeatingRepository.Lookup("HC");
             TestValues(result, TwoPlusTwo, 4);
         }
 

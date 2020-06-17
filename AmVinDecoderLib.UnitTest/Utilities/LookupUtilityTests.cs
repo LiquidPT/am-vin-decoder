@@ -50,14 +50,14 @@ namespace AmVinDecoderLib.UnitTest.Utilities
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void ValidateLetterOrDigitVinCode_EmptyVinCode_ThrowsException()
         {
             _ = LookupUtility.ValidateLetterOrDigitVinCode(string.Empty, 2);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void ValidateLetterOrDigitVinCode_WhitespaceVinCode_ThrowsException()
         {
             _ = LookupUtility.ValidateLetterOrDigitVinCode("  ", 2);
@@ -71,7 +71,7 @@ namespace AmVinDecoderLib.UnitTest.Utilities
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void ValidateLetterOrDigitVinCode_WrongLengthVinCode_ThrowsException()
         {
             _ = LookupUtility.ValidateLetterOrDigitVinCode("AA", 3);

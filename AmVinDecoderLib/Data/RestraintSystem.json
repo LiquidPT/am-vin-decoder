@@ -7,7 +7,7 @@
     "Text": "2+0 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.)."
   },
   "E": {
-    ">=2013": {
+    "{modelYear}>=2013": {
       "Text": "2+0 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.). +dual pretensioners / dual stage load limiters for the seat belts."
     },
     "default": {
@@ -15,7 +15,7 @@
     }
   },
   "F": {
-    ">=2013": {
+    "{modelYear}>=2013": {
       "Text": "2+2 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR). +dual pretensioners / dual stage load limiters for the seat belts."
     },
     "default": {
@@ -41,7 +41,7 @@
     "Text": "2+2 seating. Front & side (in seats) airbags +  3-point ELR seatbelts with pyro-pretensioner for driver/  passenger (+ALR pass.) + rear seatbelts (ELR/ALR) + curtain side  airbags in the doors."
   },
   "R": {
-    "DB11Volante": {
+    "Db11Volante": {
       "Text": "2+2 Airbags Drv/Pass: Front, knee, side (in  seat & cantrail) Seat belts Drv/Pass: 3point ELR, pyropretensioners (Retractor & Sill), singlestage load limiter within retractor (+ ALR pass) Rear Pass: 3point ALR. +Roll Bars & Cantrail airbag in doors."
     },
     "default": {

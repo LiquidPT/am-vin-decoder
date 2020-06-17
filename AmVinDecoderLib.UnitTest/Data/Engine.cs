@@ -143,10 +143,17 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
-        public void Lookup_VIsNgDbs_ReturnsExpectedValues()
+        public void Lookup_VIsNewDbsCoupe_ReturnsExpectedValues()
         {
-            var result = EngineRepository.Lookup('V', powerUnit, torqueUnit, true);
+            var result = EngineRepository.Lookup('V', powerUnit, torqueUnit, ModelType.NewDbsCoupe);
             TestValues(result, "V12 Twin Turbo AE31", "AE31", 12, Induction.TurboCharged, 5204, 533, 6500, 899, 1800);
+        }
+
+        [TestMethod]
+        public void Lookup_VIsDb11Amr_ReturnsExpectedValues()
+        {
+            var result = EngineRepository.Lookup('V', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Db11Amr);
+            TestValues(result, "V12 Twin Turbo AE31", "AE31", 12, Induction.TurboCharged, 5204, 630, 6500, 516, 1500, PowerUnit.Bhp, TorqueUnit.LbFt);
         }
 
         [TestMethod]
@@ -154,6 +161,20 @@ namespace AmVinDecoderLib.UnitTest.Data
         {
             var result = EngineRepository.Lookup('W', powerUnit, torqueUnit);
             TestValues(result, "V8 Twin Turbo -177590", "M177", 8, Induction.TurboCharged, 3982, 375, 6000, 685, 2000);
+        }
+
+        [TestMethod]
+        public void Lookup_WIsDb11Coupe_ReturnsExpectedValues()
+        {
+            var result = EngineRepository.Lookup('W', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Db11Coupe);
+            TestValues(result, "V8 Twin Turbo -177590", "M177", 8, Induction.TurboCharged, 3982, 503, 6000, 513, 2000, PowerUnit.Bhp, TorqueUnit.LbFt);
+        }
+
+        [TestMethod]
+        public void Lookup_WIsDb11Volante_ReturnsExpectedValues()
+        {
+            var result = EngineRepository.Lookup('W', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Db11Volante);
+            TestValues(result, "V8 Twin Turbo -177590", "M177", 8, Induction.TurboCharged, 3982, 503, 6000, 513, 2000, PowerUnit.Bhp, TorqueUnit.LbFt);
         }
 
         [TestMethod]
@@ -173,7 +194,9 @@ namespace AmVinDecoderLib.UnitTest.Data
             double? expectedPower,
             double? expectedPowerRpm,
             double? expectedTorque,
-            double? expectedTorqueRpm)
+            double? expectedTorqueRpm,
+            PowerUnit expectedPowerUnit = PowerUnit.Kw,
+            TorqueUnit expectedTorqueUnit = TorqueUnit.Nm)
         {
             Assert.IsNotNull(actual);
 
@@ -184,10 +207,10 @@ namespace AmVinDecoderLib.UnitTest.Data
             Assert.AreEqual(expectedInduction, actual.Induction);
             Assert.AreEqual(expectedDisplacement, actual.DisplacementInCc);
             Assert.AreEqual(expectedPower, actual.MaxPower);
-            Assert.AreEqual(PowerUnit.Kw, actual.MaxPowerUnit);
+            Assert.AreEqual(expectedPowerUnit, actual.MaxPowerUnit);
             Assert.AreEqual(expectedPowerRpm, actual.MaxPowerRpm);
             Assert.AreEqual(expectedTorque, actual.MaxTorque);
-            Assert.AreEqual(TorqueUnit.Nm, actual.MaxTorqueUnit);
+            Assert.AreEqual(expectedTorqueUnit, actual.MaxTorqueUnit);
             Assert.AreEqual(expectedTorqueRpm, actual.MaxTorqueRpm);
         }
     }

@@ -39,28 +39,28 @@ namespace AmVinDecoderLib.UnitTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_EmptyVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo(string.Empty, unitOptions);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_WhitespaceVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo("  ", unitOptions);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_SixteenCharacterVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo("AAAAAAAAAAAAAAAA", unitOptions);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_EighteenCharacterVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo("AAAAAAAAAAAAAAAAAA", unitOptions);
@@ -70,11 +70,11 @@ namespace AmVinDecoderLib.UnitTest
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GetInfo_SymbolInVin_ThrowsException()
         {
-            _ = VinDecoder.GetVehicleInfo("*AAAAAAAAAAAAAAAA", unitOptions);
+            _ = VinDecoder.GetVehicleInfo("SCF*AAAAAAAAAAAAA", unitOptions);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void GetInfo_NonAstonMartinVin_ThrowsException()
         {
             _ = VinDecoder.GetVehicleInfo("AAAAAAAAAAAAAAAAA", unitOptions);
@@ -87,7 +87,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("V8/V8S Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.V8VantageCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -97,7 +97,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("DB9 Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.Db9Coupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -107,7 +107,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("DBS Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.DbsCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -117,7 +117,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("Vanquish Zagato Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.VanquishZagatoCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -127,7 +127,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("V12 Vantage S Coupe", result.Model.Text);
-            Assert.IsTrue(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.V12VantageSCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -137,7 +137,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("DB11 Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.Db11Coupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -147,6 +147,7 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("Virage Coupe", result.Model.Text);
+            Assert.AreEqual(ModelType.VirageCoupe, result.Model.ModelType);
         }
 
         [TestMethod]
@@ -156,7 +157,18 @@ namespace AmVinDecoderLib.UnitTest
             Assert.IsNotNull(result);
 
             Assert.AreEqual("New DBS Coupe", result.Model.Text);
-            Assert.IsFalse(result.Model.IsV12VantageS);
+            Assert.AreEqual(ModelType.NewDbsCoupe, result.Model.ModelType);
+        }
+
+        [TestMethod]
+        public void GetInfo_DB11AmrVin_ReturnsValue()
+        {
+            var result = VinDecoder.GetVehicleInfo("SCFRMFEV5LGL09012", unitOptions);
+            Assert.IsNotNull(result);
+
+            Assert.AreEqual("DB11 AMR", result.Model.Text);
+            Assert.AreEqual(ModelType.Db11Amr, result.Model.ModelType);
+            Assert.AreEqual("2020", result.ModelYear.Text);
         }
     }
 }

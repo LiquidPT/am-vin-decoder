@@ -4,6 +4,7 @@
 // -------------------------------------------------------------------------------------------------
 
 using AmVinDecoderLib.Repositories;
+using AmVinDecoderLib.VinComponents.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using vin = AmVinDecoderLib.VinComponents;
 
@@ -55,30 +56,30 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
-        public void Lookup_JF_ReturnsExpectedValues()
+        public void Lookup_JIsNotV12VantageS_ReturnsExpectedValues()
         {
-            var result = TransmissionRepository.Lookup('J', false);
+            var result = TransmissionRepository.Lookup('J', ModelType.V12VantageCoupe);
             TestValues(result, "Sportshift II", 7);
         }
 
         [TestMethod]
-        public void Lookup_KF_ReturnsExpectedValues()
+        public void Lookup_KIsNotV12VantageS_ReturnsExpectedValues()
         {
-            var result = TransmissionRepository.Lookup('K', false);
+            var result = TransmissionRepository.Lookup('K', ModelType.V12VantageRoadster);
             TestValues(result, "Sportshift II", 7);
         }
 
         [TestMethod]
-        public void Lookup_JT_ReturnsExpectedValues()
+        public void Lookup_JIsV12VantageS_ReturnsExpectedValues()
         {
-            var result = TransmissionRepository.Lookup('J', true);
+            var result = TransmissionRepository.Lookup('J', ModelType.V12VantageSCoupe);
             TestValues(result, "Sportshift III", 7);
         }
 
         [TestMethod]
-        public void Lookup_KT_ReturnsExpectedValues()
+        public void Lookup_KIsV12VantageS_ReturnsExpectedValues()
         {
-            var result = TransmissionRepository.Lookup('K', true);
+            var result = TransmissionRepository.Lookup('K', ModelType.V12VantageSRoadster);
             TestValues(result, "Sportshift III", 7);
         }
 

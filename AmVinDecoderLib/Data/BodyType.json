@@ -3,7 +3,7 @@
   "01": {
     "Text": "Coupe",
     "DoorCount": 2,
-    "BodyStyle":  "Coupe"
+    "BodyStyle": "Coupe"
   },
   "03": {
     "Text": "Coupe",
@@ -73,7 +73,7 @@
   "BA": {
     "Text": "Vantage coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Hatchback"
   },
   "BB": {
     "Text": "Vantage roadster",
@@ -83,12 +83,12 @@
   "BC": {
     "Text": "V12 Vantage/S coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Hatchback"
   },
   "BD": {
     "Text": "Vantage S coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Hatchback"
   },
   "BE": {
     "Text": "Vantage S convertible",
@@ -103,7 +103,7 @@
   "BN": {
     "Text": "V12VS w/ sports+ pack coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Hatchback"
   },
   "BP": {
     "Text": "V12VS w/ sports+ pack convertible",
@@ -175,6 +175,11 @@
     "DoorCount": 2,
     "BodyStyle": "Convertible"
   },
+  "CU": {
+    "Text": "Vanquish Zagato shooting brake",
+    "DoorCount": 2,
+    "BodyStyle": "Hatchback"
+  },
   "DA": {
     "Text": "Rapide",
     "DoorCount": 4,
@@ -220,14 +225,24 @@
     "DoorCount": 2,
     "BodyStyle": "Convertible"
   },
+  "FE": {
+    "Text": "DB11 AMR",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
   "GA": {
     "Text": "New Vantage",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Hatchback"
   },
   "HA": {
     "Text": "New DBS Coupe",
     "DoorCount": 2,
     "BodyStyle": "Coupe"
+  },
+  "HC": {
+    "Text": "New DBS Volante",
+    "DoorCount": 2,
+    "BodyStyle": "Convertible"
   }
 }

@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{90597C91-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6669000B-B947-4153-9A3D-FCF8D653BDD2}"
 	ProjectSection(SolutionItems) = preProject
+		CodeCoverage.runsettings = CodeCoverage.runsettings
 		CustomAnalysisRules.ruleset = CustomAnalysisRules.ruleset
 	EndProjectSection
 EndProject

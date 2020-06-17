@@ -235,7 +235,7 @@
     "MaxTorqueRpm": 5500
   },
   "V": {
-    "NgDbs": {
+    "NewDbsCoupe": {
       "Text": "V12 Twin Turbo AE31",
       "Code": "AE31",
       "Cylinders": 12,
@@ -247,6 +247,19 @@
       "MaxTorque": 663,
       "MaxTorqueUnit": "LbFt",
       "MaxTorqueRpm": 1800
+    },
+    "Db11Amr": {
+      "Text": "V12 Twin Turbo AE31",
+      "Code": "AE31",
+      "Cylinders": 12,
+      "Induction": "TurboCharged",
+      "DisplacementInCc": 5204,
+      "MaxPower": 630,
+      "MaxPowerUnit": "Bhp",
+      "MaxPowerRpm": 6500,
+      "MaxTorque": 516,
+      "MaxTorqueUnit": "LbFt",
+      "MaxTorqueRpm": 1500
     },
     "default": {
       "Text": "V12 Twin Turbo AE31",
@@ -263,17 +276,45 @@
     }
   },
   "W": {
-    "Text": "V8 Twin Turbo -177590",
-    "Code": "M177",
-    "Cylinders": 8,
-    "Induction": "TurboCharged",
-    "DisplacementInCc": 3982,
-    "MaxPower": 503,
-    "MaxPowerUnit": "Bhp",
-    "MaxPowerRpm": 6000,
-    "MaxTorque": 505,
-    "MaxTorqueUnit": "LbFt",
-    "MaxTorqueRpm": 2000
+    "Db11Coupe": {
+      "Text": "V8 Twin Turbo -177590",
+      "Code": "M177",
+      "Cylinders": 8,
+      "Induction": "TurboCharged",
+      "DisplacementInCc": 3982,
+      "MaxPower": 503,
+      "MaxPowerUnit": "Bhp",
+      "MaxPowerRpm": 6000,
+      "MaxTorque": 513,
+      "MaxTorqueUnit": "LbFt",
+      "MaxTorqueRpm": 2000
+    },
+    "Db11Volante": {
+      "Text": "V8 Twin Turbo -177590",
+      "Code": "M177",
+      "Cylinders": 8,
+      "Induction": "TurboCharged",
+      "DisplacementInCc": 3982,
+      "MaxPower": 503,
+      "MaxPowerUnit": "Bhp",
+      "MaxPowerRpm": 6000,
+      "MaxTorque": 513,
+      "MaxTorqueUnit": "LbFt",
+      "MaxTorqueRpm": 2000
+    },
+    "default": {
+      "Text": "V8 Twin Turbo -177590",
+      "Code": "M177",
+      "Cylinders": 8,
+      "Induction": "TurboCharged",
+      "DisplacementInCc": 3982,
+      "MaxPower": 503,
+      "MaxPowerUnit": "Bhp",
+      "MaxPowerRpm": 6000,
+      "MaxTorque": 505,
+      "MaxTorqueUnit": "LbFt",
+      "MaxTorqueRpm": 2000
+    }
   },
   "Z": {
     "Text": "Vanquish S(Zagato) AM27",

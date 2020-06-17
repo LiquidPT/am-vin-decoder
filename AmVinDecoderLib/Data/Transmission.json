@@ -37,7 +37,11 @@
     "ForwardSpeeds": 6
   },
   "J": {
-    "V12VantageS": {
+    "V12VantageSCoupe": {
+      "Text": "Sportshift III",
+      "ForwardSpeeds": 7
+    },
+    "V12VantageSRoadster": {
       "Text": "Sportshift III",
       "ForwardSpeeds": 7
     },
@@ -47,7 +51,11 @@
     }
   },
   "K": {
-    "V12VantageS": {
+    "V12VantageSCoupe": {
+      "Text": "Sportshift III",
+      "ForwardSpeeds": 7
+    },
+    "V12VantageSRoadster": {
       "Text": "Sportshift III",
       "ForwardSpeeds": 7
     },

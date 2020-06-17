@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using AmVinDecoderLib.Repositories;
+using AmVinDecoderLib.VinComponents.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AmVinDecoderLib.UnitTest.Repositories
@@ -65,7 +66,7 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         [TestMethod]
         public void Lookup_KnownLetterVinCodeAndTrueDB11Volante_ReturnsValue()
         {
-            var result = RestraintSystemRepository.Lookup('R', null, true);
+            var result = RestraintSystemRepository.Lookup('R', null, ModelType.Db11Volante);
             Assert.IsNotNull(result.Text);
         }
     }

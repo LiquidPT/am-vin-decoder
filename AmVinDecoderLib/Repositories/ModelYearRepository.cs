@@ -5,7 +5,9 @@
 
 using System;
 using System.Globalization;
+using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
+using EnsureThat;
 
 namespace AmVinDecoderLib.Repositories
 {
@@ -13,10 +15,7 @@ namespace AmVinDecoderLib.Repositories
     {
         public static ModelYear Lookup(char vinCode)
         {
-            if (!char.IsLetterOrDigit(vinCode))
-            {
-                throw new ArgumentOutOfRangeException(nameof(vinCode), "Expecting a letter or digit");
-            }
+            Ensure.That<char>(vinCode, nameof(vinCode)).IsAlphaNumeric();
 
             return new ModelYear
             {
@@ -35,6 +34,12 @@ namespace AmVinDecoderLib.Repositories
             if (char.IsLetter(vinCode))
             {
                 int index = char.ToUpper(vinCode, CultureInfo.InvariantCulture) - 65;
+                if (index >= 9)
+                {
+                    // The letter "I" was skipped
+                    index -= 1;
+                }
+
                 return (index + 2010).ToString(CultureInfo.InvariantCulture);
             }
 

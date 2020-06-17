@@ -4,6 +4,7 @@
 // -------------------------------------------------------------------------------------------------
 
 using AmVinDecoderLib.Repositories;
+using AmVinDecoderLib.VinComponents.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using vin = AmVinDecoderLib.VinComponents;
 
@@ -97,16 +98,16 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
-        public void Lookup_RF_ReturnsExpectedValues()
+        public void Lookup_RIsNotDb11Volante_ReturnsExpectedValues()
         {
-            var result = RestraintSystemRepository.Lookup('R', "0", false);
+            var result = RestraintSystemRepository.Lookup('R', "0", ModelType.Db11Coupe);
             TestValues(result, "2+2 Airbags Drv/Pass: Front, knee, side (in  seat & cantrail) Seat belts Drv/Pass: 3point ELR, pyropretensioners (Retractor & Sill), singlestage load limiter within retractor (+ ALR pass) Rear Pass: 3point ALR.");
         }
 
         [TestMethod]
-        public void Lookup_RT_ReturnsExpectedValues()
+        public void Lookup_RIsDb11Volante_ReturnsExpectedValues()
         {
-            var result = RestraintSystemRepository.Lookup('R', "0", true);
+            var result = RestraintSystemRepository.Lookup('R', "0", ModelType.Db11Volante);
             TestValues(result, "2+2 Airbags Drv/Pass: Front, knee, side (in  seat & cantrail) Seat belts Drv/Pass: 3point ELR, pyropretensioners (Retractor & Sill), singlestage load limiter within retractor (+ ALR pass) Rear Pass: 3point ALR. +Roll Bars & Cantrail airbag in doors.");
         }
 

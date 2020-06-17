@@ -60,7 +60,7 @@
   "S": {
     "0": {
       "Text": "V12 Vantage S Coupe",
-      "IsV12VantageS":  true
+      "IsV12VantageS": true
     },
     "1": {
       "Text": "V12 Vantage Roadster"
@@ -72,5 +72,8 @@
     "default": {
       "Text": "V12 Vantage Coupe"
     }
+  },
+  "0": {
+    "Text":  "Cygnet"
   }
 }

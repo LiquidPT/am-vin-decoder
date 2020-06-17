@@ -22,8 +22,8 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Lookup_NumericVinCode_ThrowsException()
+        [ExpectedException(typeof(KeyNotFoundException))]
+        public void Lookup_UnknownNumericVinCode_ThrowsException()
         {
             _ = EngineRepository.Lookup('1', PowerUnit.Bhp, TorqueUnit.LbFt);
         }
@@ -33,6 +33,12 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         public void Lookup_UnknownLetterVinCode_ThrowsException()
         {
             _ = EngineRepository.Lookup('X', PowerUnit.Bhp, TorqueUnit.LbFt);
+        }
+
+        [TestMethod]
+        public void Lookup_KnownNumericVinCode_ReturnsValue()
+        {
+            _ = EngineRepository.Lookup('0', PowerUnit.Bhp, TorqueUnit.LbFt);
         }
 
         [TestMethod]

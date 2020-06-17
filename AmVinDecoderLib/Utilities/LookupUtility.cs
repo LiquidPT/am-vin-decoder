@@ -20,6 +20,16 @@ namespace AmVinDecoderLib.Utilities
             return vinCode.ToString().ToUpperInvariant();
         }
 
+        public static string ValidateLetterOrDigitVinCode(char vinCode)
+        {
+            if (!char.IsLetterOrDigit(vinCode))
+            {
+                throw new ArgumentOutOfRangeException(nameof(vinCode), "Expecting a letter or digit code");
+            }
+
+            return vinCode.ToString().ToUpperInvariant();
+        }
+
         public static string ValidateLetterOrDigitVinCode(string vinCode, int length)
         {
             if (string.IsNullOrWhiteSpace(vinCode))

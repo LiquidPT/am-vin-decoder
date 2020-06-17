@@ -25,6 +25,11 @@
     "DoorCount": 2,
     "BodyStyle": "Coupe"
   },
+  "11": {
+    "Text": "Cygnet",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
   "AA": {
     "Text": "DB9 Coupe",
     "DoorCount": 2,

@@ -14,7 +14,7 @@ namespace AmVinDecoderLib.Repositories
     {
         public static Model Lookup(char vinCode, char? serialModifer)
         {
-            var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
+            var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode);
 
             if (serialModifer.HasValue && !char.IsDigit(serialModifer.Value))
             {

@@ -17,7 +17,7 @@ namespace AmVinDecoderLib.Repositories
 
         public static Engine Lookup(char vinCode, PowerUnit powerUnits, TorqueUnit torqueUnits, bool isNgDbs = false)
         {
-            var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
+            var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode);
             Engine result = null;
 
             var data = InitializeData()[validatedVinCode];

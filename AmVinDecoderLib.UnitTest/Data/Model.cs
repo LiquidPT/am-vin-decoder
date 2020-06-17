@@ -159,6 +159,13 @@ namespace AmVinDecoderLib.UnitTest.Data
             TestValues(result, "V12 Vantage S Roadster", expectedIsV12VantageS: true);
         }
 
+        [TestMethod]
+        public void Lookup_0_ReturnsExpectedValues()
+        {
+            var result = ModelRepository.Lookup('0', null);
+            TestValues(result, "Cygnet");
+        }
+
         private void TestValues(vin.Model actual, string expectedText, bool expectedIsV12VantageS = false, bool expectedIsDB11Volante = false)
         {
             Assert.IsNotNull(actual);

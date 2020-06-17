@@ -21,8 +21,8 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Lookup_NumericVinCode_ThrowsException()
+        [ExpectedException(typeof(KeyNotFoundException))]
+        public void Lookup_UnknownNumericVinCode_ThrowsException()
         {
             _ = ModelRepository.Lookup('1', null);
         }
@@ -47,6 +47,12 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         public void Lookup_SymbolSerialModifier_ThrowsException()
         {
             _ = ModelRepository.Lookup('A', '*');
+        }
+
+        [TestMethod]
+        public void Lookup_KnownNumericVinCode_ReturnsValue()
+        {
+            _ = ModelRepository.Lookup('0', null);
         }
 
         [TestMethod]

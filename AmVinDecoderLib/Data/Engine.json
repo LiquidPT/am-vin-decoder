@@ -1,8 +1,21 @@
 // The 8th position of the VIN
 {
+  "0": {
+    "Text": "Toyota 1NR-FE",
+    "Code": "1NR-FE",
+    "Cylinders": 4,
+    "Induction": "NormallyAspirated",
+    "DisplacementInCc": 1329,
+    "MaxPower": 97,
+    "MaxPowerUnit": "Bhp",
+    "MaxPowerRpm": 6000,
+    "MaxTorque": 89,
+    "MaxTorqueUnit": "LbFt",
+    "MaxTorqueRpm": 4000
+  },
   "A": {
     "Text": "V12 AM04",
-    "Code":  "AM04",
+    "Code": "AM04",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,
@@ -28,7 +41,7 @@
   },
   "C": {
     "Text": "AM07 - 4.7",
-    "Code":  "AM07",
+    "Code": "AM07",
     "Cylinders": 8,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 4735,
@@ -41,7 +54,7 @@
   },
   "D": {
     "Text": "V12(DBS) AM08",
-    "Code":  "AM08",
+    "Code": "AM08",
     "Cylinders": 12,
     "Induction": "NormallyAspirated",
     "DisplacementInCc": 5935,

@@ -3,7 +3,7 @@
   "01": {
     "Text": "Coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Hatchback"
   },
   "03": {
     "Text": "Coupe",
@@ -22,6 +22,11 @@
   },
   "05": {
     "Text": "DBS",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe"
+  },
+  "11": {
+    "Text": "Cygnet",
     "DoorCount": 2,
     "BodyStyle": "Coupe"
   },

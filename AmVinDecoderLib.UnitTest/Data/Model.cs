@@ -174,6 +174,13 @@ namespace AmVinDecoderLib.UnitTest.Data
             TestValues(result, "New DBS Volante", ModelType.NewDbsVolante);
         }
 
+        [TestMethod]
+        public void Lookup_0_ReturnsExpectedValues()
+        {
+            var result = ModelRepository.Lookup('0', null, null);
+            TestValues(result, "Cygnet", ModelType.Cygnet);
+        }
+
         private void TestValues(vin.Model actual, string expectedText, ModelType expectedModelType)
         {
             Assert.IsNotNull(actual);

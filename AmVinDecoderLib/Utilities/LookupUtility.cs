@@ -16,6 +16,13 @@ namespace AmVinDecoderLib.Utilities
             return vinCode.ToString().ToUpperInvariant();
         }
 
+        public static string ValidateLetterOrDigitVinCode(char vinCode)
+        {
+            Ensure.That<char>(vinCode, nameof(vinCode)).IsAlphaNumeric();
+
+            return vinCode.ToString().ToUpperInvariant();
+        }
+
         public static string ValidateLetterOrDigitVinCode(string vinCode, int length, bool allowNull = false)
         {
             if (allowNull && string.IsNullOrEmpty(vinCode))

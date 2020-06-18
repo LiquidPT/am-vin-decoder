@@ -99,5 +99,9 @@
   "T": {
     "Text": "New DBS Volante",
     "ModelType": "NewDbsVolante"
+  },
+  "0": {
+    "Text": "Cygnet",
+    "ModelType": "Cygnet"
   }
 }

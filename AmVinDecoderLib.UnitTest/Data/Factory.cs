@@ -26,6 +26,13 @@ namespace AmVinDecoderLib.UnitTest.Data
             TestValues(result, "Gaydon");
         }
 
+        [TestMethod]
+        public void Lookup_J_ReturnsExpectedValues()
+        {
+            var result = FactoryRepository.Lookup('J');
+            TestValues(result, "Japan, Toyota, Aichi");
+        }
+
         private void TestValues(vin.Factory actual, string expectedText)
         {
             Assert.IsNotNull(actual);

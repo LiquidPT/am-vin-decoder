@@ -3,7 +3,7 @@
   "A": {
     "Text": "Manual",
     "HasClutchPedal": true,
-    "ForwardSpeeds":  6
+    "ForwardSpeeds": 6
   },
   "B": {
     "Text": "Manual",
@@ -26,6 +26,14 @@
   },
   "F": {
     "Text": "Sportshift",
+    "ForwardSpeeds": 6
+  },
+  "G": {
+    "Text": "Toyota Manual",
+    "ForwardSpeeds": 6
+  },
+  "H": {
+    "Text": "Toyota Manual",
     "ForwardSpeeds": 6
   },
   "J": {

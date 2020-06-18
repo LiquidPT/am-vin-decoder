@@ -54,6 +54,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_11_ReturnsExpectedValues()
+        {
+            var result = SeatingRepository.Lookup("11");
+            TestValues(result, TwoPlusTwo, 4);
+        }
+
+        [TestMethod]
         public void Lookup_AA_ReturnsExpectedValues()
         {
             var result = SeatingRepository.Lookup("AA");

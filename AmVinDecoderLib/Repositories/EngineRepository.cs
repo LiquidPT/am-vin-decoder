@@ -13,7 +13,7 @@ namespace AmVinDecoderLib.Repositories
     {
         public static Engine Lookup(char vinCode, PowerUnit powerUnits, TorqueUnit torqueUnits, ModelType? model = null)
         {
-            var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
+            var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode);
 
             Engine result = LookupSubData(validatedVinCode, model);
             return ConvertUnits(result, powerUnits, torqueUnits);

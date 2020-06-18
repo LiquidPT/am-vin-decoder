@@ -56,6 +56,20 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_G_ReturnsExpectedValues()
+        {
+            var result = TransmissionRepository.Lookup('G');
+            TestValues(result, "Toyota Manual", 6);
+        }
+
+        [TestMethod]
+        public void Lookup_H_ReturnsExpectedValues()
+        {
+            var result = TransmissionRepository.Lookup('G');
+            TestValues(result, "Toyota Manual", 6);
+        }
+
+        [TestMethod]
         public void Lookup_JIsNotV12VantageS_ReturnsExpectedValues()
         {
             var result = TransmissionRepository.Lookup('J', ModelType.V12VantageCoupe);

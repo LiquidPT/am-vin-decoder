@@ -57,7 +57,7 @@ namespace AmVinDecoderLib.UnitTest.Utilities
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void ValidateLetterOrDigitVinCode_WhitespaceVinCode_ThrowsException()
         {
             _ = LookupUtility.ValidateLetterOrDigitVinCode("  ", 2);

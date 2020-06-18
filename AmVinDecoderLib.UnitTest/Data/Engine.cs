@@ -184,6 +184,13 @@ namespace AmVinDecoderLib.UnitTest.Data
             TestValues(result, "Vanquish S(Zagato) AM27", "AM27", 12, Induction.NormallyAspirated, 5935, 444, 7000, 630, 5500);
         }
 
+        [TestMethod]
+        public void Lookup_0_ReturnsExpectedValues()
+        {
+            var result = EngineRepository.Lookup('0', powerUnit, torqueUnit);
+            TestValues(result, "Toyota 1NR-FE", "1NR-FE", 4, Induction.NormallyAspirated, 1329, 72, 6000, 121, 4000);
+        }
+
         private void TestValues(
             vin.Engine actual,
             string expectedText,

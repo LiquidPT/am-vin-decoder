@@ -56,6 +56,20 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_G_ReturnsExpectedValues()
+        {
+            var result = SteeringRepository.Lookup('G');
+            TestValues(result, SteeringPosition.RHD.ToString());
+        }
+
+        [TestMethod]
+        public void Lookup_H_ReturnsExpectedValues()
+        {
+            var result = SteeringRepository.Lookup('H');
+            TestValues(result, SteeringPosition.LHD.ToString());
+        }
+
+        [TestMethod]
         public void Lookup_J_ReturnsExpectedValues()
         {
             var result = SteeringRepository.Lookup('J');

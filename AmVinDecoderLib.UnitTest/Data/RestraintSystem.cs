@@ -84,6 +84,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_M_ReturnsExpectedValues()
+        {
+            var result = RestraintSystemRepository.Lookup('M', "0");
+            TestValues(result, "Unknown Cygnet restraint system");
+        }
+
+        [TestMethod]
         public void Lookup_N_ReturnsExpectedValues()
         {
             var result = RestraintSystemRepository.Lookup('N', "0");

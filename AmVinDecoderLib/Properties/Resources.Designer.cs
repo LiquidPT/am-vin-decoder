@@ -122,5 +122,32 @@ namespace AmVinDecoderLib.Properties {
                 return ResourceManager.GetString("Error_OnlyLettersAndDigits", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} {1} speed automated manual.
+        /// </summary>
+        internal static string Transmission_AutomatedManualFormat {
+            get {
+                return ResourceManager.GetString("Transmission_AutomatedManualFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} speed auto.
+        /// </summary>
+        internal static string Transmission_AutomaticFormat {
+            get {
+                return ResourceManager.GetString("Transmission_AutomaticFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} speed manual.
+        /// </summary>
+        internal static string Transmission_ManualFormat {
+            get {
+                return ResourceManager.GetString("Transmission_ManualFormat", resourceCulture);
+            }
+        }
     }
 }

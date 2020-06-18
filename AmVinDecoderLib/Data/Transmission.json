@@ -2,76 +2,86 @@
 {
   "A": {
     "Text": "Manual",
-    "HasClutchPedal": true,
+    "TransmissionType": "Manual",
     "ForwardSpeeds": 6
   },
   "B": {
     "Text": "Manual",
-    "HasClutchPedal": true,
+    "TransmissionType": "Manual",
     "ForwardSpeeds": 6
   },
   "C": {
     "Text": "Auto",
-    "HasTorqueConverter": true,
+    "TransmissionType": "Automatic",
     "ForwardSpeeds": 6
   },
   "D": {
     "Text": "Auto",
-    "HasTorqueConverter": true,
+    "TransmissionType": "Automatic",
     "ForwardSpeeds": 6
   },
   "E": {
     "Text": "Sportshift",
+    "TransmissionType": "AutomatedManual",
     "ForwardSpeeds": 6
   },
   "F": {
     "Text": "Sportshift",
+    "TransmissionType": "AutomatedManual",
     "ForwardSpeeds": 6
   },
   "G": {
     "Text": "Toyota Manual",
+    "TransmissionType": "Manual",
     "ForwardSpeeds": 6
   },
   "H": {
     "Text": "Toyota Manual",
+    "TransmissionType": "Manual",
     "ForwardSpeeds": 6
   },
   "J": {
     "V12VantageSCoupe": {
       "Text": "Sportshift III",
+      "TransmissionType": "AutomatedManual",
       "ForwardSpeeds": 7
     },
     "V12VantageSRoadster": {
       "Text": "Sportshift III",
+      "TransmissionType": "AutomatedManual",
       "ForwardSpeeds": 7
     },
     "default": {
       "Text": "Sportshift II",
+      "TransmissionType": "AutomatedManual",
       "ForwardSpeeds": 7
     }
   },
   "K": {
     "V12VantageSCoupe": {
       "Text": "Sportshift III",
+      "TransmissionType": "AutomatedManual",
       "ForwardSpeeds": 7
     },
     "V12VantageSRoadster": {
       "Text": "Sportshift III",
+      "TransmissionType": "AutomatedManual",
       "ForwardSpeeds": 7
     },
     "default": {
       "Text": "Sportshift II",
+      "TransmissionType": "AutomatedManual",
       "ForwardSpeeds": 7
     }
   },
   "L": {
     "Text": "8-speed Auto",
-    "HasTorqueConverter": true,
+    "TransmissionType": "Automatic",
     "ForwardSpeeds": 8
   },
   "M": {
     "Text": "8-speed Auto",
-    "HasTorqueConverter": true,
+    "TransmissionType": "Automatic",
     "ForwardSpeeds": 8
   }
 }

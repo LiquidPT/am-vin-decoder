@@ -4,30 +4,30 @@
 // -------------------------------------------------------------------------------------------------
 
 using System;
+using AmVinDecoderLib.Properties;
+using AmVinDecoderLib.VinComponents.Enums;
 
 namespace AmVinDecoderLib.VinComponents
 {
     public class Transmission : BaseVinComponent
     {
-        public bool HasClutchPedal { get; set; }
-
-        public bool HasTorqueConverter { get; set; }
+        public TransmissionType TransmissionType { get; set; }
 
         public int ForwardSpeeds { get; set; }
 
         public override string ToString(IFormatProvider provider)
         {
-            if (HasClutchPedal)
+            if (TransmissionType == TransmissionType.Manual)
             {
-                return string.Format(provider, "{0} speed manual", ForwardSpeeds);
+                return string.Format(provider, Resources.Transmission_ManualFormat, ForwardSpeeds);
             }
 
-            if (HasTorqueConverter)
+            if (TransmissionType == TransmissionType.Automatic)
             {
-                return string.Format(provider, "{0} speed auto", ForwardSpeeds);
+                return string.Format(provider, Resources.Transmission_AutomaticFormat, ForwardSpeeds);
             }
 
-            return string.Format(provider, "{0} {1} speed automated manual", Text, ForwardSpeeds);
+            return string.Format(provider, Resources.Transmission_AutomatedManualFormat, Text, ForwardSpeeds);
         }
     }
 }

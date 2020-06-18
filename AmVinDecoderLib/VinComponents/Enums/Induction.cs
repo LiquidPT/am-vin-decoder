@@ -3,18 +3,18 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-namespace AmVinDecoderLib.VinComponents.Enum
+namespace AmVinDecoderLib.VinComponents.Enums
 {
-    public enum TorqueUnit
+    public enum Induction
     {
         /// <summary>
-        /// lb-ft, pound feet
+        /// NormallyAspirated: no forced induction
         /// </summary>
-        LbFt,
+        NormallyAspirated,
 
         /// <summary>
-        /// N⋅m, newton metres
+        /// TurboCharged: uses a turbo to compress intake air
         /// </summary>
-        Nm,
+        TurboCharged,
     }
 }

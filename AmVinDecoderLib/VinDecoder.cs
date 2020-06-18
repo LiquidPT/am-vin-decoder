@@ -5,7 +5,7 @@
 
 using System;
 using AmVinDecoderLib.Repositories;
-using AmVinDecoderLib.VinComponents.Enum;
+using AmVinDecoderLib.VinComponents.Enums;
 using EnsureThat;
 
 namespace AmVinDecoderLib

@@ -3,18 +3,18 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-namespace AmVinDecoderLib.VinComponents.Enum
+namespace AmVinDecoderLib.VinComponents.Enums
 {
-    public enum SteeringPosition
+    public enum TorqueUnit
     {
         /// <summary>
-        /// Left hand drive
+        /// lb-ft, pound feet
         /// </summary>
-        LHD,
+        LbFt,
 
         /// <summary>
-        /// Right hand drive
+        /// N⋅m, newton metres
         /// </summary>
-        RHD,
+        Nm,
     }
 }

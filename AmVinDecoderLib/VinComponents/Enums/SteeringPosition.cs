@@ -3,18 +3,18 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-namespace AmVinDecoderLib.VinComponents.Enum
+namespace AmVinDecoderLib.VinComponents.Enums
 {
-    public enum PowerUnit
+    public enum SteeringPosition
     {
         /// <summary>
-        /// BHP, brake horsepower
+        /// Left hand drive
         /// </summary>
-        Bhp,
+        LHD,
 
         /// <summary>
-        /// KW, kilowatts
+        /// Right hand drive
         /// </summary>
-        Kw,
+        RHD,
     }
 }

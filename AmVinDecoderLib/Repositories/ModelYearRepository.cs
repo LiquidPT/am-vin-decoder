@@ -5,6 +5,7 @@
 
 using System;
 using System.Globalization;
+using AmVinDecoderLib.Properties;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using EnsureThat;
@@ -43,7 +44,7 @@ namespace AmVinDecoderLib.Repositories
                 return (index + 2010).ToString(CultureInfo.InvariantCulture);
             }
 
-            throw new ArgumentException("Unrecognized model year code.");
+            throw new ArgumentException(Resources.Error_BadModelYear);
         }
     }
 }

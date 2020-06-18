@@ -5,6 +5,7 @@
 
 using System;
 using System.IO;
+using AmVinDecoder.Properties;
 using AmVinDecoderLib;
 using Microsoft.Extensions.Configuration;
 
@@ -26,26 +27,26 @@ namespace AmVinDecoder
             {
                 if (vin == null)
                 {
-                    Console.WriteLine("VIN?: ");
+                    Console.WriteLine($"{Resources.Prompt_Vin}{Resources.LabelSeperator}");
                     vin = Console.ReadLine();
                 }
 
                 var vehicle = VinDecoder.GetVehicleInfo(vin, unitOptions);
-                Console.WriteLine("------------------------------------------------------------");
-                Console.WriteLine("Aston Martin VIN Decoder");
-                Console.WriteLine("------------------------------------------------------------");
-                Console.WriteLine($"VIN: {vin}");
-                Console.WriteLine($"SerialNumber: {vehicle.SerialNumber}");
-                Console.WriteLine($"Model: {vehicle.Model}");
-                Console.WriteLine($"Model Year: {vehicle.ModelYear}");
-                Console.WriteLine($"Factory: {vehicle.Factory}");
-                Console.WriteLine($"Body Type: {vehicle.BodyType}");
-                Console.WriteLine($"Seating: {vehicle.Seating}");
-                Console.WriteLine($"Engine: {vehicle.Engine}");
-                Console.WriteLine($"Transmisson: {vehicle.Transmisson}");
-                Console.WriteLine($"Steering Position: {vehicle.SteeringPosition}");
-                Console.WriteLine($"Restraint System: {vehicle.RestraintSystem}");
-                Console.WriteLine("------------------------------------------------------------");
+                Console.WriteLine($"{Resources.HorizontalRule}");
+                Console.WriteLine($"{Resources.Title}");
+                Console.WriteLine($"{Resources.HorizontalRule}");
+                Console.WriteLine($"{Resources.Label_Vin}{Resources.LabelSeperator}{vin}");
+                Console.WriteLine($"{Resources.Label_SerialNumber}{Resources.LabelSeperator}{vehicle.SerialNumber}");
+                Console.WriteLine($"{Resources.Label_Model}{Resources.LabelSeperator}{vehicle.Model}");
+                Console.WriteLine($"{Resources.Label_ModelYear}{Resources.LabelSeperator}{vehicle.ModelYear}");
+                Console.WriteLine($"{Resources.Label_Factory}{Resources.LabelSeperator}{vehicle.Factory}");
+                Console.WriteLine($"{Resources.Label_BodyType}{Resources.LabelSeperator}{vehicle.BodyType}");
+                Console.WriteLine($"{Resources.Label_Seating}{Resources.LabelSeperator}{vehicle.Seating}");
+                Console.WriteLine($"{Resources.Label_Engine}{Resources.LabelSeperator}{vehicle.Engine}");
+                Console.WriteLine($"{Resources.Label_Transmisson}{Resources.LabelSeperator}{vehicle.Transmisson}");
+                Console.WriteLine($"{Resources.Label_SteeringPosition}{Resources.LabelSeperator}{vehicle.SteeringPosition}");
+                Console.WriteLine($"{Resources.Label_RestraintSystem}{Resources.LabelSeperator}{vehicle.RestraintSystem}");
+                Console.WriteLine($"{Resources.HorizontalRule}");
                 Console.WriteLine();
 
                 vin = null;

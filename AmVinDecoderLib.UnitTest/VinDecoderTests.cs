@@ -4,7 +4,7 @@
 // -------------------------------------------------------------------------------------------------
 
 using System;
-using AmVinDecoderLib.VinComponents.Enum;
+using AmVinDecoderLib.VinComponents.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AmVinDecoderLib.UnitTest

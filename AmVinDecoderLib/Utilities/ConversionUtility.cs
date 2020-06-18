@@ -4,7 +4,8 @@
 // -------------------------------------------------------------------------------------------------
 
 using System;
-using AmVinDecoderLib.VinComponents.Enum;
+using AmVinDecoderLib.Properties;
+using AmVinDecoderLib.VinComponents.Enums;
 
 namespace AmVinDecoderLib.Utilities
 {
@@ -35,7 +36,7 @@ namespace AmVinDecoderLib.Utilities
                 return Math.Round(value.Value / HpPerKw);
             }
 
-            throw new NotImplementedException("No conversion implemented for these units.");
+            throw new NotImplementedException(Resources.Error_ConversionNotImplemented);
         }
 
         public static double? ConvertTorque(double? value, TorqueUnit fromUnit, TorqueUnit toUnit)
@@ -60,7 +61,7 @@ namespace AmVinDecoderLib.Utilities
                 return Math.Round(value.Value / LbFtPerNm);
             }
 
-            throw new NotImplementedException("No conversion implemented for these units.");
+            throw new NotImplementedException(Resources.Error_ConversionNotImplemented);
         }
     }
 }

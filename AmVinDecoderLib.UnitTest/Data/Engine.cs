@@ -4,7 +4,7 @@
 // -------------------------------------------------------------------------------------------------
 
 using AmVinDecoderLib.Repositories;
-using AmVinDecoderLib.VinComponents.Enum;
+using AmVinDecoderLib.VinComponents.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using vin = AmVinDecoderLib.VinComponents;
 

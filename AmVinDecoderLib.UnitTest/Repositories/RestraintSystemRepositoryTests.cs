@@ -6,7 +6,7 @@
 using System;
 using System.Collections.Generic;
 using AmVinDecoderLib.Repositories;
-using AmVinDecoderLib.VinComponents.Enum;
+using AmVinDecoderLib.VinComponents.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AmVinDecoderLib.UnitTest.Repositories

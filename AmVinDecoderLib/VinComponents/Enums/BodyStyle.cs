@@ -3,10 +3,15 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-namespace AmVinDecoderLib.VinComponents.Enum
+namespace AmVinDecoderLib.VinComponents.Enums
 {
     public enum BodyStyle
     {
+        /// <summary>
+        /// Default value. The value has not been set.
+        /// </summary>
+        Unknown,
+
         /// <summary>
         /// Coupe: a hardtop car with 2 doors and a trunk
         /// </summary>

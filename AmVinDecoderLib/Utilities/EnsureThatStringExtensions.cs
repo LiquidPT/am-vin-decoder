@@ -5,6 +5,7 @@
 
 using System;
 using System.Linq;
+using AmVinDecoderLib.Properties;
 using EnsureThat;
 
 namespace AmVinDecoderLib.Utilities
@@ -18,7 +19,7 @@ namespace AmVinDecoderLib.Utilities
                 return;
             }
 
-            throw new ArgumentOutOfRangeException(param.Name, "Expecting only letters and digits");
+            throw new ArgumentOutOfRangeException(param.Name, Resources.Error_OnlyLettersAndDigits);
         }
 
         public static void IsAlpha(this in StringParam param)
@@ -28,7 +29,7 @@ namespace AmVinDecoderLib.Utilities
                 return;
             }
 
-            throw new ArgumentOutOfRangeException(param.Name, "Expecting only letters");
+            throw new ArgumentOutOfRangeException(param.Name, Resources.Error_OnlyLetters);
         }
 
         public static void IsNumeric(this in StringParam param)
@@ -38,7 +39,7 @@ namespace AmVinDecoderLib.Utilities
                 return;
             }
 
-            throw new ArgumentOutOfRangeException(param.Name, "Expecting only digits");
+            throw new ArgumentOutOfRangeException(param.Name, Resources.Error_OnlyDigits);
         }
 
         public static void IsNullOrNumeric(this in StringParam param)
@@ -53,7 +54,7 @@ namespace AmVinDecoderLib.Utilities
                 return;
             }
 
-            throw new ArgumentOutOfRangeException(param.Name, "Expecting only digits");
+            throw new ArgumentOutOfRangeException(param.Name, Resources.Error_OnlyDigits);
         }
     }
 }

@@ -3,18 +3,23 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-namespace AmVinDecoderLib.VinComponents.Enum
+namespace AmVinDecoderLib.VinComponents.Enums
 {
-    public enum PowerUnit
+    public enum TorqueUnit
     {
         /// <summary>
-        /// BHP, brake horsepower
+        /// Default value. The value has not been set.
         /// </summary>
-        Bhp,
+        Unknown,
 
         /// <summary>
-        /// KW, kilowatts
+        /// lb-ft, pound feet
         /// </summary>
-        Kw,
+        LbFt,
+
+        /// <summary>
+        /// N⋅m, newton metres
+        /// </summary>
+        Nm,
     }
 }

@@ -28,7 +28,7 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void Lookup_WhitespaceVinCode_ThrowsException()
         {
             _ = BodyTypeRepository.Lookup("  ");

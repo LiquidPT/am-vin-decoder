@@ -3,6 +3,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
+using AmVinDecoderLib.VinComponents.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using vin = AmVinDecoderLib.VinComponents;
 
@@ -17,7 +18,7 @@ namespace AmVinDecoderLib.UnitTest.VinComponents
             var component = new vin.Model()
             {
                 Text = "Test Text",
-                ModelType = vin.Enum.ModelType.DbsCoupe,
+                ModelType = ModelType.DbsCoupe,
             };
 
             Assert.AreEqual(component.Text, component.ToString());

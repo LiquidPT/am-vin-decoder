@@ -3,6 +3,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
+using AmVinDecoderLib.VinComponents.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using vin = AmVinDecoderLib.VinComponents;
 
@@ -17,12 +18,11 @@ namespace AmVinDecoderLib.UnitTest.VinComponents
             var component = new vin.Transmission()
             {
                 ForwardSpeeds = 4,
-                HasClutchPedal = false,
-                HasTorqueConverter = true,
+                TransmissionType = TransmissionType.Automatic,
                 Text = "Test Text",
             };
 
-            Assert.AreEqual($"{component.ForwardSpeeds} speed auto", component.ToString());
+            Assert.AreEqual($"{component.ForwardSpeeds} speed auto ({component.SteeringPosition})", component.ToString());
         }
 
         [TestMethod]
@@ -31,12 +31,11 @@ namespace AmVinDecoderLib.UnitTest.VinComponents
             var component = new vin.Transmission()
             {
                 ForwardSpeeds = 4,
-                HasClutchPedal = true,
-                HasTorqueConverter = false,
+                TransmissionType = TransmissionType.Manual,
                 Text = "Test Text",
             };
 
-            Assert.AreEqual($"{component.ForwardSpeeds} speed manual", component.ToString());
+            Assert.AreEqual($"{component.ForwardSpeeds} speed manual ({component.SteeringPosition})", component.ToString());
         }
 
         [TestMethod]
@@ -45,12 +44,11 @@ namespace AmVinDecoderLib.UnitTest.VinComponents
             var component = new vin.Transmission()
             {
                 ForwardSpeeds = 4,
-                HasClutchPedal = false,
-                HasTorqueConverter = false,
+                TransmissionType = TransmissionType.AutomatedManual,
                 Text = "Test Text",
             };
 
-            Assert.AreEqual($"{component.Text} {component.ForwardSpeeds} speed automated manual", component.ToString());
+            Assert.AreEqual($"{component.Text} {component.ForwardSpeeds} speed automated manual ({component.SteeringPosition})", component.ToString());
         }
     }
 }

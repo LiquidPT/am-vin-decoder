@@ -8,6 +8,11 @@ namespace AmVinDecoderLib.VinComponents.Enums
     public enum TorqueUnit
     {
         /// <summary>
+        /// Default value. The value has not been set.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// lb-ft, pound feet
         /// </summary>
         LbFt,

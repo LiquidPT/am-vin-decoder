@@ -8,6 +8,11 @@ namespace AmVinDecoderLib.VinComponents.Enums
     public enum SteeringPosition
     {
         /// <summary>
+        /// Default value. The value has not been set.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// Left hand drive
         /// </summary>
         LHD,

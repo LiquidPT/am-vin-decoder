@@ -8,6 +8,11 @@ namespace AmVinDecoderLib.VinComponents.Enums
     public enum SeatingConfiguration
     {
         /// <summary>
+        /// Default value. The value has not been set.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// 2 front seats with 2 small back seats
         /// </summary>
         TwoPlusTwo,

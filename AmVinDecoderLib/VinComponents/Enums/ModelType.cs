@@ -8,6 +8,11 @@ namespace AmVinDecoderLib.VinComponents.Enums
     public enum ModelType
     {
         /// <summary>
+        /// Default value. The value has not been set.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// DB9 Coupe
         /// </summary>
         Db9Coupe,

@@ -8,6 +8,11 @@ namespace AmVinDecoderLib.VinComponents.Enums
     public enum PowerUnit
     {
         /// <summary>
+        /// Default value. The value has not been set.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// BHP, brake horsepower
         /// </summary>
         Bhp,

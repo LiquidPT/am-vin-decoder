@@ -101,6 +101,7 @@
     "ModelType": "NewDbsVolante"
   },
   "0": {
-    "Text":  "Cygnet"
+    "Text": "Cygnet",
+    "ModelType": "Cygnet"
   }
 }

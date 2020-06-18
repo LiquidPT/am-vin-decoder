@@ -22,6 +22,7 @@ namespace AmVinDecoderLib.Utilities
 
             return vinCode.ToString().ToUpperInvariant();
         }
+
         public static string ValidateLetterOrDigitVinCode(string vinCode, int length, bool allowNull = false)
         {
             if (allowNull && string.IsNullOrEmpty(vinCode))

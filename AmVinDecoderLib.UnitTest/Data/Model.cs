@@ -177,8 +177,8 @@ namespace AmVinDecoderLib.UnitTest.Data
         [TestMethod]
         public void Lookup_0_ReturnsExpectedValues()
         {
-            var result = ModelRepository.Lookup('0', null);
-            TestValues(result, "Cygnet");
+            var result = ModelRepository.Lookup('0', null, null);
+            TestValues(result, "Cygnet", ModelType.Cygnet);
         }
 
         private void TestValues(vin.Model actual, string expectedText, ModelType expectedModelType)

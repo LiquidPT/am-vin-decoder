@@ -17,7 +17,7 @@ namespace AmVinDecoderLib.UnitTest.Data
         public void Lookup_01_ReturnsExpectedValues()
         {
             var result = BodyTypeRepository.Lookup("01");
-            TestValues(result, "Coupe", 2, BodyStyle.Coupe);
+            TestValues(result, "Coupe", 2, BodyStyle.Hatchback);
         }
 
         [TestMethod]

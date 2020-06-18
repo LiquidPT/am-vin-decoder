@@ -126,5 +126,10 @@ namespace AmVinDecoderLib.VinComponents.Enum
         /// V12 Vantage S Roadster
         /// </summary>
         V12VantageSRoadster,
+
+        /// <summary>
+        /// Cygnet
+        /// </summary>
+        Cygnet,
     }
 }

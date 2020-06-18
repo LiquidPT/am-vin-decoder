@@ -52,7 +52,7 @@ namespace AmVinDecoderLib.UnitTest.Repositories
         [TestMethod]
         public void Lookup_KnownNumericVinCode_ReturnsValue()
         {
-            _ = ModelRepository.Lookup('0', null);
+            _ = ModelRepository.Lookup('0', null, null);
         }
 
         [TestMethod]

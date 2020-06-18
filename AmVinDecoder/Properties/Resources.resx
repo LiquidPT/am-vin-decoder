@@ -141,14 +141,8 @@
   <data name="Label_RestraintSystem" xml:space="preserve">
     <value>Restraint System</value>
   </data>
-  <data name="Label_Seating" xml:space="preserve">
-    <value>Seating</value>
-  </data>
   <data name="Label_SerialNumber" xml:space="preserve">
     <value>Serial Number</value>
-  </data>
-  <data name="Label_SteeringPosition" xml:space="preserve">
-    <value>Steering Position</value>
   </data>
   <data name="Label_Transmisson" xml:space="preserve">
     <value>Transmisson</value>

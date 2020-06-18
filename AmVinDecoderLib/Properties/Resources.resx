@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BodyType_Format" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
   <data name="Error_BadModelYear" xml:space="preserve">
     <value>Unrecognized model year code.</value>
   </data>
@@ -137,6 +140,21 @@
   </data>
   <data name="Error_OnlyLettersAndDigits" xml:space="preserve">
     <value>Expecting only letters and digits.</value>
+  </data>
+  <data name="SeatingConfiguration_FourSeats" xml:space="preserve">
+    <value>4 seats</value>
+  </data>
+  <data name="SeatingConfiguration_TwoPlusTwo" xml:space="preserve">
+    <value>2+2</value>
+  </data>
+  <data name="SeatingConfiguration_TwoPlusUnknown" xml:space="preserve">
+    <value>2+0 or 2+2</value>
+  </data>
+  <data name="SeatingConfiguration_TwoPlusZero" xml:space="preserve">
+    <value>2+0</value>
+  </data>
+  <data name="SeatingConfiguration_TwoSeats" xml:space="preserve">
+    <value>2 seats</value>
   </data>
   <data name="Transmission_AutomatedManualFormat" xml:space="preserve">
     <value>{0} {1} speed automated manual ({2})</value>

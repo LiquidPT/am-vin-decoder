@@ -41,7 +41,6 @@ namespace AmVinDecoder
                 Console.WriteLine($"{Resources.Label_ModelYear}{Resources.LabelSeperator}{vehicle.ModelYear}");
                 Console.WriteLine($"{Resources.Label_Factory}{Resources.LabelSeperator}{vehicle.Factory}");
                 Console.WriteLine($"{Resources.Label_BodyType}{Resources.LabelSeperator}{vehicle.BodyType}");
-                Console.WriteLine($"{Resources.Label_Seating}{Resources.LabelSeperator}{vehicle.Seating}");
                 Console.WriteLine($"{Resources.Label_Engine}{Resources.LabelSeperator}{vehicle.Engine}");
                 Console.WriteLine($"{Resources.Label_Transmisson}{Resources.LabelSeperator}{vehicle.Transmisson}");
                 Console.WriteLine($"{Resources.Label_RestraintSystem}{Resources.LabelSeperator}{vehicle.RestraintSystem}");

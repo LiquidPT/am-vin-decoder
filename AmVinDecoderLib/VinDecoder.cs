@@ -31,7 +31,6 @@ namespace AmVinDecoderLib
                 ModelYear = ModelYearRepository.Lookup(vin[VinPosition.ModelYear]),
                 Model = ModelRepository.Lookup(vin[VinPosition.Model], vin.Substring(VinPosition.BodyType, 2), vin[VinPosition.SerialNumber]),
                 BodyType = BodyTypeRepository.Lookup(vin.Substring(VinPosition.BodyType, 2)),
-                Seating = SeatingRepository.Lookup(vin.Substring(VinPosition.BodyType, 2)),
                 SerialNumber = vin.Substring(VinPosition.SerialNumber, 5),
             };
 

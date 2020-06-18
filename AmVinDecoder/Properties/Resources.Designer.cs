@@ -124,29 +124,11 @@ namespace AmVinDecoder.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Seating.
-        /// </summary>
-        internal static string Label_Seating {
-            get {
-                return ResourceManager.GetString("Label_Seating", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Serial Number.
         /// </summary>
         internal static string Label_SerialNumber {
             get {
                 return ResourceManager.GetString("Label_SerialNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Steering Position.
-        /// </summary>
-        internal static string Label_SteeringPosition {
-            get {
-                return ResourceManager.GetString("Label_SteeringPosition", resourceCulture);
             }
         }
         

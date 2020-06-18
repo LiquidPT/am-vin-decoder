@@ -3,246 +3,341 @@
   "01": {
     "Text": "Coupe",
     "DoorCount": 2,
-    "BodyStyle": "Hatchback"
-  },
-  "03": {
-    "Text": "Coupe",
-    "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Hatchback",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "02": {
     "Text": "Convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
+  },
+  "03": {
+    "Text": "Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "04": {
     "Text": "Convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "05": {
     "Text": "DBS",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusUnknown"
   },
   "11": {
     "Text": "Cygnet",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "AA": {
     "Text": "DB9 Coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
-  },
-  "AC": {
-    "Text": "DB9 Coupe",
-    "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "AB": {
     "Text": "DB9 Convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
+  },
+  "AC": {
+    "Text": "DB9 Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "AD": {
     "Text": "DB9 Convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "AE": {
     "Text": "DB9 Coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
-  },
-  "AG": {
-    "Text": "DB9 Coupe",
-    "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "AF": {
     "Text": "DB9 Convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
+  },
+  "AG": {
+    "Text": "DB9 Coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "AH": {
     "Text": "DB9 Convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "BA": {
     "Text": "Vantage coupe",
     "DoorCount": 2,
-    "BodyStyle": "Hatchback"
+    "BodyStyle": "Hatchback",
+    "SeatingConfiguration": "TwoSeats",
+    "SeatCount": 2
   },
   "BB": {
     "Text": "Vantage roadster",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoSeats",
+    "SeatCount": 2
   },
   "BC": {
     "Text": "V12 Vantage/S coupe",
     "DoorCount": 2,
-    "BodyStyle": "Hatchback"
+    "BodyStyle": "Hatchback",
+    "SeatingConfiguration": "TwoSeats",
+    "SeatCount": 2
   },
   "BD": {
     "Text": "Vantage S coupe",
     "DoorCount": 2,
-    "BodyStyle": "Hatchback"
+    "BodyStyle": "Hatchback",
+    "SeatingConfiguration": "TwoSeats",
+    "SeatCount": 2
   },
   "BE": {
     "Text": "Vantage S convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoSeats",
+    "SeatCount": 2
   },
   "BF": {
     "Text": "V12 Vantage/S convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoSeats",
+    "SeatCount": 2
   },
   "BN": {
     "Text": "V12VS w/ sports+ pack coupe",
     "DoorCount": 2,
-    "BodyStyle": "Hatchback"
+    "BodyStyle": "Hatchback",
+    "SeatingConfiguration": "TwoSeats",
+    "SeatCount": 2
   },
   "BP": {
     "Text": "V12VS w/ sports+ pack convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoSeats",
+    "SeatCount": 2
   },
   "CA": {
     "Text": "DBS Coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "CB": {
     "Text": "DBS Coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "CC": {
     "Text": "DBS convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "CE": {
     "Text": "Vanquish coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "CF": {
     "Text": "Vanquish coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "CG": {
     "Text": "Vanquish convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "CH": {
     "Text": "Vanquish convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "CJ": {
     "Text": "Vanquish S coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "CK": {
     "Text": "Vanquish S coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "CL": {
     "Text": "Vanquish S convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "CM": {
     "Text": "Vanquish S convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "CP": {
     "Text": "Vanquish Zagato coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusUnknown"
   },
   "CR": {
     "Text": "Vanquish Zagato convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusUnknown"
   },
   "CU": {
     "Text": "Vanquish Zagato shooting brake",
     "DoorCount": 2,
-    "BodyStyle": "Hatchback"
+    "BodyStyle": "Hatchback",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "DA": {
     "Text": "Rapide",
     "DoorCount": 4,
-    "BodyStyle": "Sedan"
+    "BodyStyle": "Sedan",
+    "SeatingConfiguration": "FourSeats",
+    "SeatCount": 4
   },
   "DE": {
     "Text": "Rapide S",
     "DoorCount": 4,
-    "BodyStyle": "Sedan"
+    "BodyStyle": "Sedan",
+    "SeatingConfiguration": "FourSeats",
+    "SeatCount": 4
   },
   "DF": {
     "Text": "Rapide Shadow Ed",
     "DoorCount": 4,
-    "BodyStyle": "Sedan"
+    "BodyStyle": "Sedan",
+    "SeatingConfiguration": "FourSeats",
+    "SeatCount": 4
   },
   "EA": {
     "Text": "Virage coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
-  },
-  "EC": {
-    "Text": "Virage coupe",
-    "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
   },
   "EB": {
     "Text": "Virage convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusZero",
+    "SeatCount": 2
+  },
+  "EC": {
+    "Text": "Virage coupe",
+    "DoorCount": 2,
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "ED": {
     "Text": "Virage convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "FA": {
     "Text": "DB11 coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "FC": {
     "Text": "DB11 convertible",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "FE": {
     "Text": "DB11 AMR",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "GA": {
     "Text": "New Vantage",
     "DoorCount": 2,
-    "BodyStyle": "Hatchback"
+    "BodyStyle": "Hatchback",
+    "SeatingConfiguration": "TwoSeats",
+    "SeatCount": 2
   },
   "HA": {
     "Text": "New DBS Coupe",
     "DoorCount": 2,
-    "BodyStyle": "Coupe"
+    "BodyStyle": "Coupe",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   },
   "HC": {
     "Text": "New DBS Volante",
     "DoorCount": 2,
-    "BodyStyle": "Convertible"
+    "BodyStyle": "Convertible",
+    "SeatingConfiguration": "TwoPlusTwo",
+    "SeatCount": 4
   }
 }

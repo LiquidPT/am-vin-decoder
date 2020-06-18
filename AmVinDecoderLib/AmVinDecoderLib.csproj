@@ -51,9 +51,6 @@
     <None Update="Data\Transmission.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Data\Seating.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Data\Factory.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

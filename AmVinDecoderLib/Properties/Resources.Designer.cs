@@ -61,6 +61,15 @@ namespace AmVinDecoderLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} ({1}).
+        /// </summary>
+        internal static string BodyType_Format {
+            get {
+                return ResourceManager.GetString("BodyType_Format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unrecognized model year code..
         /// </summary>
         internal static string Error_BadModelYear {
@@ -120,6 +129,51 @@ namespace AmVinDecoderLib.Properties {
         internal static string Error_OnlyLettersAndDigits {
             get {
                 return ResourceManager.GetString("Error_OnlyLettersAndDigits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 seats.
+        /// </summary>
+        internal static string SeatingConfiguration_FourSeats {
+            get {
+                return ResourceManager.GetString("SeatingConfiguration_FourSeats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2+2.
+        /// </summary>
+        internal static string SeatingConfiguration_TwoPlusTwo {
+            get {
+                return ResourceManager.GetString("SeatingConfiguration_TwoPlusTwo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2+0 or 2+2.
+        /// </summary>
+        internal static string SeatingConfiguration_TwoPlusUnknown {
+            get {
+                return ResourceManager.GetString("SeatingConfiguration_TwoPlusUnknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2+0.
+        /// </summary>
+        internal static string SeatingConfiguration_TwoPlusZero {
+            get {
+                return ResourceManager.GetString("SeatingConfiguration_TwoPlusZero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 seats.
+        /// </summary>
+        internal static string SeatingConfiguration_TwoSeats {
+            get {
+                return ResourceManager.GetString("SeatingConfiguration_TwoSeats", resourceCulture);
             }
         }
         

@@ -3,85 +3,101 @@
   "A": {
     "Text": "Manual",
     "TransmissionType": "Manual",
-    "ForwardSpeeds": 6
+    "ForwardSpeeds": 6,
+    "SteeringPosition": "RHD"
   },
   "B": {
     "Text": "Manual",
     "TransmissionType": "Manual",
-    "ForwardSpeeds": 6
+    "ForwardSpeeds": 6,
+    "SteeringPosition": "LHD"
   },
   "C": {
     "Text": "Auto",
     "TransmissionType": "Automatic",
-    "ForwardSpeeds": 6
+    "ForwardSpeeds": 6,
+    "SteeringPosition": "RHD"
   },
   "D": {
     "Text": "Auto",
     "TransmissionType": "Automatic",
-    "ForwardSpeeds": 6
+    "ForwardSpeeds": 6,
+    "SteeringPosition": "LHD"
   },
   "E": {
     "Text": "Sportshift",
     "TransmissionType": "AutomatedManual",
-    "ForwardSpeeds": 6
+    "ForwardSpeeds": 6,
+    "SteeringPosition": "RHD"
   },
   "F": {
     "Text": "Sportshift",
     "TransmissionType": "AutomatedManual",
-    "ForwardSpeeds": 6
+    "ForwardSpeeds": 6,
+    "SteeringPosition": "LHD"
   },
   "G": {
     "Text": "Toyota Manual",
     "TransmissionType": "Manual",
-    "ForwardSpeeds": 6
+    "ForwardSpeeds": 6,
+    "SteeringPosition": "RHD"
   },
   "H": {
     "Text": "Toyota Manual",
     "TransmissionType": "Manual",
-    "ForwardSpeeds": 6
+    "ForwardSpeeds": 6,
+    "SteeringPosition": "LHD"
   },
   "J": {
     "V12VantageSCoupe": {
       "Text": "Sportshift III",
       "TransmissionType": "AutomatedManual",
-      "ForwardSpeeds": 7
+      "ForwardSpeeds": 7,
+      "SteeringPosition": "RHD"
     },
     "V12VantageSRoadster": {
       "Text": "Sportshift III",
       "TransmissionType": "AutomatedManual",
-      "ForwardSpeeds": 7
+      "ForwardSpeeds": 7,
+      "SteeringPosition": "RHD"
     },
     "default": {
       "Text": "Sportshift II",
       "TransmissionType": "AutomatedManual",
-      "ForwardSpeeds": 7
+      "ForwardSpeeds": 7,
+      "SteeringPosition": "RHD"
     }
   },
   "K": {
     "V12VantageSCoupe": {
       "Text": "Sportshift III",
       "TransmissionType": "AutomatedManual",
-      "ForwardSpeeds": 7
+      "ForwardSpeeds": 7,
+      "SteeringPosition": "LHD"
     },
     "V12VantageSRoadster": {
       "Text": "Sportshift III",
       "TransmissionType": "AutomatedManual",
-      "ForwardSpeeds": 7
+      "ForwardSpeeds": 7,
+      "SteeringPosition": "LHD"
     },
     "default": {
       "Text": "Sportshift II",
       "TransmissionType": "AutomatedManual",
-      "ForwardSpeeds": 7
+      "ForwardSpeeds": 7,
+      "SteeringPosition": "LHD"
     }
   },
   "L": {
     "Text": "8-speed Auto",
     "TransmissionType": "Automatic",
-    "ForwardSpeeds": 8
+    "ForwardSpeeds": 8,
+    "SteeringPosition": "RHD"
   },
   "M": {
     "Text": "8-speed Auto",
     "TransmissionType": "Automatic",
-    "ForwardSpeeds": 8
+    "ForwardSpeeds": 8,
+    "SteeringPosition": "LHD"
   }
 }

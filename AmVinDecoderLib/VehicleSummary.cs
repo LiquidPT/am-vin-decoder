@@ -23,8 +23,6 @@ namespace AmVinDecoderLib
 
         public Seating Seating { get; internal set; }
 
-        public Steering SteeringPosition { get; internal set; }
-
         public Transmission Transmisson { get; internal set; }
 
         public string SerialNumber { get; internal set; }

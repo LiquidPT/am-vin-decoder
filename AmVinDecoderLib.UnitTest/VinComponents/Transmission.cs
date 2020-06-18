@@ -22,7 +22,7 @@ namespace AmVinDecoderLib.UnitTest.VinComponents
                 Text = "Test Text",
             };
 
-            Assert.AreEqual($"{component.ForwardSpeeds} speed auto", component.ToString());
+            Assert.AreEqual($"{component.ForwardSpeeds} speed auto ({component.SteeringPosition})", component.ToString());
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace AmVinDecoderLib.UnitTest.VinComponents
                 Text = "Test Text",
             };
 
-            Assert.AreEqual($"{component.ForwardSpeeds} speed manual", component.ToString());
+            Assert.AreEqual($"{component.ForwardSpeeds} speed manual ({component.SteeringPosition})", component.ToString());
         }
 
         [TestMethod]
@@ -48,7 +48,7 @@ namespace AmVinDecoderLib.UnitTest.VinComponents
                 Text = "Test Text",
             };
 
-            Assert.AreEqual($"{component.Text} {component.ForwardSpeeds} speed automated manual", component.ToString());
+            Assert.AreEqual($"{component.Text} {component.ForwardSpeeds} speed automated manual ({component.SteeringPosition})", component.ToString());
         }
     }
 }

@@ -139,12 +139,12 @@
     <value>Expecting only letters and digits.</value>
   </data>
   <data name="Transmission_AutomatedManualFormat" xml:space="preserve">
-    <value>{0} {1} speed automated manual</value>
+    <value>{0} {1} speed automated manual ({2})</value>
   </data>
   <data name="Transmission_AutomaticFormat" xml:space="preserve">
-    <value>{0} speed auto</value>
+    <value>{0} speed auto ({1})</value>
   </data>
   <data name="Transmission_ManualFormat" xml:space="preserve">
-    <value>{0} speed manual</value>
+    <value>{0} speed manual ({1})</value>
   </data>
 </root>

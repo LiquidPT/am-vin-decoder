@@ -44,7 +44,6 @@ namespace AmVinDecoder
                 Console.WriteLine($"{Resources.Label_Seating}{Resources.LabelSeperator}{vehicle.Seating}");
                 Console.WriteLine($"{Resources.Label_Engine}{Resources.LabelSeperator}{vehicle.Engine}");
                 Console.WriteLine($"{Resources.Label_Transmisson}{Resources.LabelSeperator}{vehicle.Transmisson}");
-                Console.WriteLine($"{Resources.Label_SteeringPosition}{Resources.LabelSeperator}{vehicle.SteeringPosition}");
                 Console.WriteLine($"{Resources.Label_RestraintSystem}{Resources.LabelSeperator}{vehicle.RestraintSystem}");
                 Console.WriteLine($"{Resources.HorizontalRule}");
                 Console.WriteLine();

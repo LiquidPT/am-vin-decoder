@@ -124,7 +124,7 @@ namespace AmVinDecoderLib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} {1} speed automated manual.
+        ///   Looks up a localized string similar to {0} {1} speed automated manual ({2}).
         /// </summary>
         internal static string Transmission_AutomatedManualFormat {
             get {
@@ -133,7 +133,7 @@ namespace AmVinDecoderLib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} speed auto.
+        ///   Looks up a localized string similar to {0} speed auto ({1}).
         /// </summary>
         internal static string Transmission_AutomaticFormat {
             get {
@@ -142,7 +142,7 @@ namespace AmVinDecoderLib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} speed manual.
+        ///   Looks up a localized string similar to {0} speed manual ({1}).
         /// </summary>
         internal static string Transmission_ManualFormat {
             get {

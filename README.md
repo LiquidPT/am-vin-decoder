@@ -27,7 +27,7 @@ git clone ...
 and
 
 ```
-dotnet test AmVinDecoder.sln
+dotnet test src/AmVinDecoder.sln
 ```
 
 ## Running a VIN

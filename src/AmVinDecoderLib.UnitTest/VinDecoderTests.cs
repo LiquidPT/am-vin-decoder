@@ -170,5 +170,28 @@ namespace AmVinDecoderLib.UnitTest
             Assert.AreEqual(ModelType.Db11Amr, result.Model.ModelType);
             Assert.AreEqual("2020", result.ModelYear.Text);
         }
+
+        [TestMethod]
+        public void GetInfo_DbxVin_ReturnsValue()
+        {
+            var result = VinDecoder.GetVehicleInfo("SCFVUJAW4MTV00073", unitOptions);
+            Assert.IsNotNull(result);
+
+            Assert.AreEqual("DBX", result.Model.Text);
+            Assert.AreEqual(ModelType.Dbx, result.Model.ModelType);
+        }
+
+        [TestMethod]
+        public void GetInfo_V8VantageSVin_ReturnsValue()
+        {
+            var result = VinDecoder.GetVehicleInfo("SCFEKBDL1BGC15126", unitOptions);
+            Assert.IsNotNull(result);
+
+            Assert.AreEqual("V8/V8S Coupe", result.Model.Text);
+            Assert.AreEqual(ModelType.V8VantageCoupe, result.Model.ModelType);
+            Assert.AreEqual("2011", result.ModelYear.Text);
+            Assert.AreEqual("Vantage S coupe", result.BodyType.Text);
+            Assert.AreEqual(BodyStyle.Hatchback, result.BodyType.BodyStyle);
+        }
     }
 }

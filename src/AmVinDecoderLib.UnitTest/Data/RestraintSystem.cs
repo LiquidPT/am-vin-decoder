@@ -125,6 +125,13 @@ namespace AmVinDecoderLib.UnitTest.Data
             TestValues(result, "2+0 Airbags Drv/Pass: Front, knee, side (in  seat & cantrail) Seat belts Drv/Pass: 3point ELR, pyropretensioners (Retractor & Sill), singlestage load limiter  within retractor (+ ALR pass)");
         }
 
+        [TestMethod]
+        public void Lookup_V_ReturnsExpectedValues()
+        {
+            var result = RestraintSystemRepository.Lookup('V', "0");
+            TestValues(result, "Unknown DBX restraint system");
+        }
+
         private void TestValues(vin.RestraintSystem actual, string expectedText)
         {
             Assert.IsNotNull(actual);

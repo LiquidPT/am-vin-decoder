@@ -99,5 +99,17 @@
     "TransmissionType": "Automatic",
     "ForwardSpeeds": 8,
     "SteeringPosition": "LHD"
+  },
+  "T": {
+    "Text": "9-speed Auto",
+    "TransmissionType": "Automatic",
+    "ForwardSpeeds": 9,
+    "SteeringPosition": "RHD"
+  },
+  "U": {
+    "Text": "9-speed Auto",
+    "TransmissionType": "Automatic",
+    "ForwardSpeeds": 9,
+    "SteeringPosition": "LHD"
   }
 }

@@ -23,7 +23,7 @@ namespace AmVinDecoderLib.UnitTest.Data
         public void Lookup_G_ReturnsExpectedValues()
         {
             var result = FactoryRepository.Lookup('G');
-            TestValues(result, "Gaydon");
+            TestValues(result, "England, Gaydon");
         }
 
         [TestMethod]
@@ -31,6 +31,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         {
             var result = FactoryRepository.Lookup('J');
             TestValues(result, "Japan, Toyota, Aichi");
+        }
+
+        [TestMethod]
+        public void Lookup_T_ReturnsExpectedValues()
+        {
+            var result = FactoryRepository.Lookup('T');
+            TestValues(result, "Wales, Saint Athan");
         }
 
         private void TestValues(vin.Factory actual, string expectedText)

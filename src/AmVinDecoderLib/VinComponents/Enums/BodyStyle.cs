@@ -31,5 +31,10 @@ namespace AmVinDecoderLib.VinComponents.Enums
         /// Hatchback: a hardtop car with 2 doors and a liftgate that opens to the passenger compartment
         /// </summary>
         Hatchback,
+
+        /// <summary>
+        /// SUV
+        /// </summary>
+        Suv,
     }
 }

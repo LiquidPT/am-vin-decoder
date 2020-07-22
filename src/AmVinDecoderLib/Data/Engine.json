@@ -302,6 +302,19 @@
       "MaxTorqueUnit": "LbFt",
       "MaxTorqueRpm": 2000
     },
+    "Dbx": {
+      "Text": "V8 Twin Turbo -177590",
+      "Code": "M177",
+      "Cylinders": 8,
+      "Induction": "TurboCharged",
+      "DisplacementInCc": 3982,
+      "MaxPower": 542,
+      "MaxPowerUnit": "Bhp",
+      "MaxPowerRpm": 6500,
+      "MaxTorque": 516,
+      "MaxTorqueUnit": "LbFt",
+      "MaxTorqueRpm": 2200
+    },
     "default": {
       "Text": "V8 Twin Turbo -177590",
       "Code": "M177",

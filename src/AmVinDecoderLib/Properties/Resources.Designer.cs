@@ -133,6 +133,15 @@ namespace AmVinDecoderLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 5 seats.
+        /// </summary>
+        internal static string SeatingConfiguration_FiveSeats {
+            get {
+                return ResourceManager.GetString("SeatingConfiguration_FiveSeats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4 seats.
         /// </summary>
         internal static string SeatingConfiguration_FourSeats {

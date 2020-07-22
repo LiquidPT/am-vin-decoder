@@ -178,6 +178,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_WIsDbx_ReturnsExpectedValues()
+        {
+            var result = EngineRepository.Lookup('W', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Dbx);
+            TestValues(result, "V8 Twin Turbo -177590", "M177", 8, Induction.TurboCharged, 3982, 542, 6500, 516, 2200, PowerUnit.Bhp, TorqueUnit.LbFt);
+        }
+
+        [TestMethod]
         public void Lookup_Z_ReturnsExpectedValues()
         {
             var result = EngineRepository.Lookup('Z', powerUnit, torqueUnit);

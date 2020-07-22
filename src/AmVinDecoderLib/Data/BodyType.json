@@ -339,5 +339,12 @@
     "BodyStyle": "Convertible",
     "SeatingConfiguration": "TwoPlusTwo",
     "SeatCount": 4
+  },
+  "JA": {
+    "Text": "DBX",
+    "DoorCount": 5,
+    "BodyStyle": "Suv",
+    "SeatingConfiguration": "FiveSeats",
+    "SeatCount": 5
   }
 }

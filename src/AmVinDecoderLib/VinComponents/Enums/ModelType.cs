@@ -136,5 +136,10 @@ namespace AmVinDecoderLib.VinComponents.Enums
         /// Cygnet
         /// </summary>
         Cygnet,
+
+        /// <summary>
+        /// DBX
+        /// </summary>
+        Dbx,
     }
 }

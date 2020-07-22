@@ -141,6 +141,9 @@
   <data name="Error_OnlyLettersAndDigits" xml:space="preserve">
     <value>Expecting only letters and digits.</value>
   </data>
+  <data name="SeatingConfiguration_FiveSeats" xml:space="preserve">
+    <value>5 seats</value>
+  </data>
   <data name="SeatingConfiguration_FourSeats" xml:space="preserve">
     <value>4 seats</value>
   </data>

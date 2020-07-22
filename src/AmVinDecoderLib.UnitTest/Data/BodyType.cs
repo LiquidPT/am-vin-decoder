@@ -349,6 +349,13 @@ namespace AmVinDecoderLib.UnitTest.Data
             TestValues(result, "New DBS Volante", 2, BodyStyle.Convertible, SeatingConfiguration.TwoPlusTwo, 4);
         }
 
+        [TestMethod]
+        public void Lookup_JA_ReturnsExpectedValues()
+        {
+            var result = BodyTypeRepository.Lookup("JA");
+            TestValues(result, "DBX", 5, BodyStyle.Suv, SeatingConfiguration.FiveSeats, 5);
+        }
+
         private void TestValues(vin.BodyType actual, string expectedText, int expectedDoorCount, BodyStyle expectedBodyStyle, SeatingConfiguration expectedSeatingConfiguration, int? expectedSeatCount)
         {
             Assert.IsNotNull(actual);

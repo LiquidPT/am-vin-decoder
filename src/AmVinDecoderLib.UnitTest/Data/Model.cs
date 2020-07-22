@@ -175,6 +175,13 @@ namespace AmVinDecoderLib.UnitTest.Data
         }
 
         [TestMethod]
+        public void Lookup_V_ReturnsExpectedValues()
+        {
+            var result = ModelRepository.Lookup('V', null, null);
+            TestValues(result, "DBX", ModelType.Dbx);
+        }
+
+        [TestMethod]
         public void Lookup_0_ReturnsExpectedValues()
         {
             var result = ModelRepository.Lookup('0', null, null);

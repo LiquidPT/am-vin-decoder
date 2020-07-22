@@ -36,5 +36,10 @@ namespace AmVinDecoderLib.VinComponents.Enums
         /// 4 full sized seats
         /// </summary>
         FourSeats,
+
+        /// <summary>
+        /// 5 full sized seats
+        /// </summary>
+        FiveSeats,
     }
 }

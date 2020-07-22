@@ -111,6 +111,20 @@ namespace AmVinDecoderLib.UnitTest.Data
             TestValues(result, "8-speed Auto", TransmissionType.Automatic, 8, SteeringPosition.LHD);
         }
 
+        [TestMethod]
+        public void Lookup_T_ReturnsExpectedValues()
+        {
+            var result = TransmissionRepository.Lookup('T');
+            TestValues(result, "9-speed Auto", TransmissionType.Automatic, 9, SteeringPosition.RHD);
+        }
+
+        [TestMethod]
+        public void Lookup_U_ReturnsExpectedValues()
+        {
+            var result = TransmissionRepository.Lookup('U');
+            TestValues(result, "9-speed Auto", TransmissionType.Automatic, 9, SteeringPosition.LHD);
+        }
+
         private void TestValues(vin.Transmission actual, string expectedText, TransmissionType expectedTransmissionType, int expectedForwardSpeeds, SteeringPosition expectedSteeringPosition)
         {
             Assert.IsNotNull(actual);

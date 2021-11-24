@@ -1,0 +1,4 @@
+﻿{
+  ModelType: VirageVolante,
+  Text: Virage Volante
+}

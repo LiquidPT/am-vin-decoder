@@ -1,0 +1,7 @@
+﻿{
+  DoorCount: 2,
+  BodyStyle: Coupe,
+  SeatingConfiguration: TwoPlusTwo,
+  SeatCount: 4,
+  Text: New DBS Coupe
+}

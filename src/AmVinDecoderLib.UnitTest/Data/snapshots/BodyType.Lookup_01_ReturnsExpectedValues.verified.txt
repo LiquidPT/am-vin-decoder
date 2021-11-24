@@ -1,0 +1,7 @@
+﻿{
+  DoorCount: 2,
+  BodyStyle: Hatchback,
+  SeatingConfiguration: TwoPlusTwo,
+  SeatCount: 4,
+  Text: Coupe
+}

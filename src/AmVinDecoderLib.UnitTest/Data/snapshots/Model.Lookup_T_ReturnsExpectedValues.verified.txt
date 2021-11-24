@@ -1,0 +1,4 @@
+﻿{
+  ModelType: NewDbsVolante,
+  Text: New DBS Volante
+}

@@ -1,0 +1,6 @@
+﻿{
+  TransmissionType: Automatic,
+  ForwardSpeeds: 9,
+  SteeringPosition: RHD,
+  Text: 9-speed Auto
+}

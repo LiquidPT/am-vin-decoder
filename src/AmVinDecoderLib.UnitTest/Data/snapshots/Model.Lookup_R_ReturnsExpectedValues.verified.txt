@@ -1,0 +1,4 @@
+﻿{
+  ModelType: NewDbsCoupe,
+  Text: New DBS Coupe
+}

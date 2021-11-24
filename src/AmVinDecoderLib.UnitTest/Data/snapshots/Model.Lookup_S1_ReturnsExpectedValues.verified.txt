@@ -1,0 +1,4 @@
+﻿{
+  ModelType: V12VantageRoadster,
+  Text: V12 Vantage Roadster
+}

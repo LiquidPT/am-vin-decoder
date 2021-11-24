@@ -1,0 +1,6 @@
+﻿{
+  TransmissionType: AutomatedManual,
+  ForwardSpeeds: 7,
+  SteeringPosition: LHD,
+  Text: Sportshift III
+}

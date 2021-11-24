@@ -1,0 +1,13 @@
+﻿{
+  Code: AM28,
+  Cylinders: 12,
+  Induction: NormallyAspirated,
+  DisplacementInCc: 5935.0,
+  MaxPower: 421.0,
+  MaxPowerUnit: Kw,
+  MaxPowerRpm: 6750.0,
+  MaxTorque: 620.0,
+  MaxTorqueUnit: Nm,
+  MaxTorqueRpm: 5750.0,
+  Text: V12 Vantage S AM28
+}

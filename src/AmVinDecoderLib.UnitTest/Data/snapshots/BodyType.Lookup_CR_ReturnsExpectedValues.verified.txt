@@ -1,0 +1,6 @@
+﻿{
+  DoorCount: 2,
+  BodyStyle: Convertible,
+  SeatingConfiguration: TwoPlusUnknown,
+  Text: Vanquish Zagato convertible
+}

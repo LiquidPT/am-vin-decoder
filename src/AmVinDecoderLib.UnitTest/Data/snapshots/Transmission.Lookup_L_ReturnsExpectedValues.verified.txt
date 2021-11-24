@@ -1,0 +1,6 @@
+﻿{
+  TransmissionType: Automatic,
+  ForwardSpeeds: 8,
+  SteeringPosition: RHD,
+  Text: 8-speed Auto
+}

@@ -1,0 +1,4 @@
+﻿{
+  ModelType: DbsVolante,
+  Text: DBS Volante
+}

@@ -1,0 +1,4 @@
+﻿{
+  ModelType: V12VantageSCoupe,
+  Text: V12 Vantage S Coupe
+}

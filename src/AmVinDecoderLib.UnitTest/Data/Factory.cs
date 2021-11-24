@@ -6,40 +6,41 @@
 namespace AmVinDecoderLib.UnitTest.Data;
 
 [TestClass]
-public class Factory
+public class Factory : VerifyBase
 {
+    private static VerifySettings _settings;
+
+    public Factory()
+    {
+        _settings = new VerifySettings();
+        _settings.UseDirectory("snapshots");
+    }
+
     [TestMethod]
-    public void Lookup_A_ReturnsExpectedValues()
+    public Task Lookup_A_ReturnsExpectedValues()
     {
         var result = FactoryRepository.Lookup('A');
-        TestValues(result, "Austria, Magna Steyr");
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_G_ReturnsExpectedValues()
+    public Task Lookup_G_ReturnsExpectedValues()
     {
         var result = FactoryRepository.Lookup('G');
-        TestValues(result, "England, Gaydon");
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_J_ReturnsExpectedValues()
+    public Task Lookup_J_ReturnsExpectedValues()
     {
         var result = FactoryRepository.Lookup('J');
-        TestValues(result, "Japan, Toyota, Aichi");
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_T_ReturnsExpectedValues()
+    public Task Lookup_T_ReturnsExpectedValues()
     {
         var result = FactoryRepository.Lookup('T');
-        TestValues(result, "Wales, Saint Athan");
-    }
-
-    private void TestValues(vin.Factory actual, string expectedText)
-    {
-        Assert.IsNotNull(actual);
-
-        Assert.AreEqual(expectedText, actual.Text);
+        return Verify(result, _settings);
     }
 }

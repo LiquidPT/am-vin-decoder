@@ -1,0 +1,4 @@
+﻿{
+  ModelType: VanquishVolante,
+  Text: Vanquish Volante
+}

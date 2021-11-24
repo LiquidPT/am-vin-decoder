@@ -1,0 +1,13 @@
+﻿{
+  Code: AM29,
+  Cylinders: 12,
+  Induction: NormallyAspirated,
+  DisplacementInCc: 5935.0,
+  MaxPower: 424.0,
+  MaxPowerUnit: Kw,
+  MaxPowerRpm: 6750.0,
+  MaxTorque: 630.0,
+  MaxTorqueUnit: Nm,
+  MaxTorqueRpm: 5500.0,
+  Text: (Vanquish 15MY - AM29)
+}

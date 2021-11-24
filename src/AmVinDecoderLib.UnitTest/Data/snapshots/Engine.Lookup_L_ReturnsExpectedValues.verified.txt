@@ -1,0 +1,13 @@
+﻿{
+  Code: AM15,
+  Cylinders: 8,
+  Induction: NormallyAspirated,
+  DisplacementInCc: 4735.0,
+  MaxPower: 321.0,
+  MaxPowerUnit: Kw,
+  MaxPowerRpm: 7300.0,
+  MaxTorque: 489.0,
+  MaxTorqueUnit: Nm,
+  MaxTorqueRpm: 5000.0,
+  Text: 4.7(V8S spec) AM15
+}

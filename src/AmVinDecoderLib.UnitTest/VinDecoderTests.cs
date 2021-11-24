@@ -6,6 +6,8 @@
 global using AmVinDecoderLib.Repositories;
 global using AmVinDecoderLib.VinComponents.Enums;
 global using Microsoft.VisualStudio.TestTools.UnitTesting;
+global using VerifyMSTest;
+global using VerifyTests;
 
 global using vin = AmVinDecoderLib.VinComponents;
 

@@ -1,0 +1,7 @@
+﻿{
+  DoorCount: 4,
+  BodyStyle: Sedan,
+  SeatingConfiguration: FourSeats,
+  SeatCount: 4,
+  Text: Rapide
+}

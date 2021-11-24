@@ -1,0 +1,6 @@
+﻿{
+  TransmissionType: Manual,
+  ForwardSpeeds: 6,
+  SteeringPosition: LHD,
+  Text: Manual
+}

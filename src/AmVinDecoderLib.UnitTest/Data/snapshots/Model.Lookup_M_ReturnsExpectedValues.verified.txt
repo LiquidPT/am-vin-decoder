@@ -1,0 +1,4 @@
+﻿{
+  ModelType: Db11Volante,
+  Text: DB11 Volante
+}

@@ -1,0 +1,13 @@
+﻿{
+  Code: M177,
+  Cylinders: 8,
+  Induction: TurboCharged,
+  DisplacementInCc: 3982.0,
+  MaxPower: 542.0,
+  MaxPowerUnit: Bhp,
+  MaxPowerRpm: 6500.0,
+  MaxTorque: 516.0,
+  MaxTorqueUnit: LbFt,
+  MaxTorqueRpm: 2200.0,
+  Text: V8 Twin Turbo -177590
+}

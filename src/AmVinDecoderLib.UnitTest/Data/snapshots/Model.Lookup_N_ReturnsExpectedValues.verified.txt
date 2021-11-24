@@ -1,0 +1,4 @@
+﻿{
+  ModelType: NewVantageCoupe,
+  Text: New Vantage Coupe
+}

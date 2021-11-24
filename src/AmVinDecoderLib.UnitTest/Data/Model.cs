@@ -6,188 +6,188 @@
 namespace AmVinDecoderLib.UnitTest.Data;
 
 [TestClass]
-public class Model
+public class Model : VerifyBase
 {
+    private static VerifySettings _settings;
+
+    public Model()
+    {
+        _settings = new VerifySettings();
+        _settings.UseDirectory("snapshots");
+    }
+
     [TestMethod]
-    public void Lookup_A_ReturnsExpectedValues()
+    public Task Lookup_A_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('A', null, null);
-        TestValues(result, "DB9 Coupe", ModelType.Db9Coupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_B_ReturnsExpectedValues()
+    public Task Lookup_B_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('B', null, null);
-        TestValues(result, "DB9 Volante", ModelType.Db9Volante);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_C_ReturnsExpectedValues()
+    public Task Lookup_C_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('C', null, null);
-        TestValues(result, "V8/V8S Coupe", ModelType.V8VantageCoupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_D_ReturnsExpectedValues()
+    public Task Lookup_D_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('D', null, null);
-        TestValues(result, "V8/V8S Roadster", ModelType.V8VantageRoadster);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_E_ReturnsExpectedValues()
+    public Task Lookup_E_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('E', null, null);
-        TestValues(result, "DBS", ModelType.Dbs);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_E0_ReturnsExpectedValues()
+    public Task Lookup_E0_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('E', null, '0');
-        TestValues(result, "DBS Coupe", ModelType.DbsCoupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_E1_ReturnsExpectedValues()
+    public Task Lookup_E1_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('E', null, '1');
-        TestValues(result, "DBS Volante", ModelType.DbsVolante);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_F_ReturnsExpectedValues()
+    public Task Lookup_F_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('F', null, null);
-        TestValues(result, "Rapide", ModelType.Rapide);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_G_ReturnsExpectedValues()
+    public Task Lookup_G_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('G', null, null);
-        TestValues(result, "Virage Coupe", ModelType.VirageCoupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_H_ReturnsExpectedValues()
+    public Task Lookup_H_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('H', null, null);
-        TestValues(result, "Virage Volante", ModelType.VirageVolante);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_J_ReturnsExpectedValues()
+    public Task Lookup_J_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('J', null, null);
-        TestValues(result, "Vanquish Coupe", ModelType.VanquishCoupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_J3_ReturnsExpectedValues()
+    public Task Lookup_J3_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('J', null, '3');
-        TestValues(result, "Vanquish Zagato Coupe", ModelType.VanquishZagatoCoupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_K_ReturnsExpectedValues()
+    public Task Lookup_K_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('K', null, null);
-        TestValues(result, "Vanquish Volante", ModelType.VanquishVolante);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_L_ReturnsExpectedValues()
+    public Task Lookup_L_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('L', null, null);
-        TestValues(result, "DB11 Coupe", ModelType.Db11Coupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_LFE_ReturnsExpectedValues()
+    public Task Lookup_LFE_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('L', "FE", null);
-        TestValues(result, "DB11 AMR", ModelType.Db11Amr);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_M_ReturnsExpectedValues()
+    public Task Lookup_M_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('M', null, null);
-        TestValues(result, "DB11 Volante", ModelType.Db11Volante);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_N_ReturnsExpectedValues()
+    public Task Lookup_N_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('N', null, null);
-        TestValues(result, "New Vantage Coupe", ModelType.NewVantageCoupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_R_ReturnsExpectedValues()
+    public Task Lookup_R_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('R', null, null);
-        TestValues(result, "New DBS Coupe", ModelType.NewDbsCoupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_S_ReturnsExpectedValues()
+    public Task Lookup_S_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('S', null, null);
-        TestValues(result, "V12 Vantage Coupe", ModelType.V12VantageCoupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_S0_ReturnsExpectedValues()
+    public Task Lookup_S0_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('S', null, '0');
-        TestValues(result, "V12 Vantage S Coupe", ModelType.V12VantageSCoupe);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_S1_ReturnsExpectedValues()
+    public Task Lookup_S1_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('S', null, '1');
-        TestValues(result, "V12 Vantage Roadster", ModelType.V12VantageRoadster);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_S2_ReturnsExpectedValues()
+    public Task Lookup_S2_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('S', null, '2');
-        TestValues(result, "V12 Vantage S Roadster", ModelType.V12VantageSRoadster);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_T_ReturnsExpectedValues()
+    public Task Lookup_T_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('T', null, null);
-        TestValues(result, "New DBS Volante", ModelType.NewDbsVolante);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_V_ReturnsExpectedValues()
+    public Task Lookup_V_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('V', null, null);
-        TestValues(result, "DBX", ModelType.Dbx);
+        return Verify(result, _settings);
     }
 
     [TestMethod]
-    public void Lookup_0_ReturnsExpectedValues()
+    public Task Lookup_0_ReturnsExpectedValues()
     {
         var result = ModelRepository.Lookup('0', null, null);
-        TestValues(result, "Cygnet", ModelType.Cygnet);
-    }
-
-    private void TestValues(vin.Model actual, string expectedText, ModelType expectedModelType)
-    {
-        Assert.IsNotNull(actual);
-
-        Assert.AreEqual(expectedText, actual.Text);
-        Assert.AreEqual(expectedModelType, actual.ModelType);
+        return Verify(result, _settings);
     }
 }

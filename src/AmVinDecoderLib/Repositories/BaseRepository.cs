@@ -4,7 +4,6 @@
 // -------------------------------------------------------------------------------------------------
 
 using AmVinDecoderLib.VinComponents;
-using AmVinDecoderLib.VinComponents.Enums;
 using EnsureThat;
 using Newtonsoft.Json;
 

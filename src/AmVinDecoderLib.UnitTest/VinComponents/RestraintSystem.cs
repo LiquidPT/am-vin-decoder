@@ -3,9 +3,6 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using vin = AmVinDecoderLib.VinComponents;
-
 namespace AmVinDecoderLib.UnitTest.VinComponents
 {
     [TestClass]

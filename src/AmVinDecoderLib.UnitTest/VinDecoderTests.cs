@@ -3,9 +3,11 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using System;
-using AmVinDecoderLib.VinComponents.Enums;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+global using AmVinDecoderLib.Repositories;
+global using AmVinDecoderLib.VinComponents.Enums;
+global using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+global using vin = AmVinDecoderLib.VinComponents;
 
 namespace AmVinDecoderLib.UnitTest
 {

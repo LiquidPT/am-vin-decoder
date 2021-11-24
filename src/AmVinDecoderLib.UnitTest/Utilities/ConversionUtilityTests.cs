@@ -4,8 +4,6 @@
 // -------------------------------------------------------------------------------------------------
 
 using AmVinDecoderLib.Utilities;
-using AmVinDecoderLib.VinComponents.Enums;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AmVinDecoderLib.UnitTest.Utilities
 {

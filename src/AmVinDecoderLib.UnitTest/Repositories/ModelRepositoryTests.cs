@@ -3,10 +3,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
 using AmVinDecoderLib.Repositories;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AmVinDecoderLib.UnitTest.Repositories
 {

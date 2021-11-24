@@ -5,6 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <CodeAnalysisRuleSet>..\CustomAnalysisRules.ruleset</CodeAnalysisRuleSet>
 	<AnalysisMode>AllEnabledByDefault</AnalysisMode>
+	<NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>

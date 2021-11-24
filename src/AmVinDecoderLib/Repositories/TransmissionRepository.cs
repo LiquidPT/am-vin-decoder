@@ -5,7 +5,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using AmVinDecoderLib.VinComponents.Enums;
@@ -28,7 +27,7 @@ namespace AmVinDecoderLib.Repositories
             {
                 Dictionary<string, Transmission> subdata = data.ToObject<Dictionary<string, Transmission>>();
 
-                if (subdata.Keys.Contains(model.ToString()))
+                if (subdata.ContainsKey(model.ToString()))
                 {
                     return subdata[model.ToString()];
                 }

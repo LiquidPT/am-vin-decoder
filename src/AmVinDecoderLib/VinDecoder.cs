@@ -8,6 +8,8 @@ using AmVinDecoderLib.Repositories;
 using AmVinDecoderLib.VinComponents.Enums;
 using EnsureThat;
 
+[assembly: CLSCompliant(false)]
+
 namespace AmVinDecoderLib
 {
     public static class VinDecoder

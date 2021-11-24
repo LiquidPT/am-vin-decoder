@@ -3,6 +3,7 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
+using System;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using AmVinDecoderLib.VinComponents.Enums;
@@ -18,7 +19,7 @@ namespace AmVinDecoderLib.Repositories
             var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
             Ensure.That(modelYear, nameof(modelYear)).IsNullOrNumeric();
 
-            return LookupSubData(validatedVinCode, model, (key) => key.Contains("{modelYear}") && CSharpScript.EvaluateAsync<bool>(key.Replace("{modelYear}", modelYear)).Result);
+            return LookupSubData(validatedVinCode, model, (key) => key.Contains("{modelYear}", StringComparison.InvariantCultureIgnoreCase) && CSharpScript.EvaluateAsync<bool>(key.Replace("{modelYear}", modelYear, StringComparison.InvariantCultureIgnoreCase)).Result);
         }
     }
 }

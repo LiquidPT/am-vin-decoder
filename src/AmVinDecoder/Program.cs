@@ -9,6 +9,8 @@ using AmVinDecoder.Properties;
 using AmVinDecoderLib;
 using Microsoft.Extensions.Configuration;
 
+[assembly: CLSCompliant(true)]
+
 namespace AmVinDecoder
 {
     internal class Program

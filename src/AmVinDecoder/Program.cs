@@ -20,7 +20,7 @@ namespace AmVinDecoder
             var unitOptions = GetUnitOptions();
 
             string vin = null;
-            if (args.Length > 0)
+            if (args?.Length > 0)
             {
                 vin = args[0];
             }

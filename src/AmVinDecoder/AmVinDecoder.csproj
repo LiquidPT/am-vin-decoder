@@ -6,6 +6,7 @@
     <CodeAnalysisRuleSet>..\CustomAnalysisRules.ruleset</CodeAnalysisRuleSet>
 	<AnalysisMode>AllEnabledByDefault</AnalysisMode>
 	<NeutralLanguage>en-US</NeutralLanguage>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>

@@ -5,6 +5,7 @@
     <CodeAnalysisRuleSet>..\CustomAnalysisRules.Test.ruleset</CodeAnalysisRuleSet>
 	<AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <IsPackable>false</IsPackable>
+	<ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>

@@ -15,18 +15,10 @@ public class Transmission : BaseVinComponent
 
     public SteeringPosition SteeringPosition { get; set; }
 
-    public override string ToString(IFormatProvider provider)
+    public override string ToString(IFormatProvider provider) => TransmissionType switch
     {
-        if (TransmissionType == TransmissionType.Manual)
-        {
-            return string.Format(provider, Resources.Transmission_ManualFormat, ForwardSpeeds, SteeringPosition);
-        }
-
-        if (TransmissionType == TransmissionType.Automatic)
-        {
-            return string.Format(provider, Resources.Transmission_AutomaticFormat, ForwardSpeeds, SteeringPosition);
-        }
-
-        return string.Format(provider, Resources.Transmission_AutomatedManualFormat, Text, ForwardSpeeds, SteeringPosition);
-    }
+        TransmissionType.Manual => string.Format(provider, Resources.Transmission_ManualFormat, ForwardSpeeds, SteeringPosition),
+        TransmissionType.Automatic => string.Format(provider, Resources.Transmission_AutomaticFormat, ForwardSpeeds, SteeringPosition),
+        _ => string.Format(provider, Resources.Transmission_AutomatedManualFormat, Text, ForwardSpeeds, SteeringPosition)
+    };
 }

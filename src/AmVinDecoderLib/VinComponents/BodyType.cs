@@ -18,8 +18,5 @@ public class BodyType : BaseVinComponent
 
     public int? SeatCount { get; set; }
 
-    public override string ToString(IFormatProvider provider)
-    {
-        return string.Format(provider, Resources.BodyType_Format, Text, Resources.ResourceManager.GetString($"SeatingConfiguration_{SeatingConfiguration}", CultureInfo.CurrentUICulture));
-    }
+    public override string ToString(IFormatProvider provider) => string.Format(provider, Resources.BodyType_Format, Text, Resources.ResourceManager.GetString($"SeatingConfiguration_{SeatingConfiguration}", CultureInfo.CurrentUICulture));
 }

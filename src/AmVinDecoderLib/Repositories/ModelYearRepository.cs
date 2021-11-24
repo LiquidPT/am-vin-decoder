@@ -26,7 +26,7 @@ namespace AmVinDecoderLib.Repositories
 
         private static string GetText(char vinCode)
         {
-            int digit = (int)char.GetNumericValue(vinCode);
+            var digit = (int)char.GetNumericValue(vinCode);
             if (digit > -1)
             {
                 return (2000 + digit).ToString(CultureInfo.InvariantCulture);
@@ -34,7 +34,7 @@ namespace AmVinDecoderLib.Repositories
 
             if (char.IsLetter(vinCode))
             {
-                int index = char.ToUpper(vinCode, CultureInfo.InvariantCulture) - 65;
+                var index = char.ToUpper(vinCode, CultureInfo.InvariantCulture) - 65;
                 if (index >= 9)
                 {
                     // The letter "I" was skipped

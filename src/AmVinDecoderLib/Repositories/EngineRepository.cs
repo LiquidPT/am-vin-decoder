@@ -15,7 +15,7 @@ namespace AmVinDecoderLib.Repositories
         {
             var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode);
 
-            Engine result = LookupSubData(validatedVinCode, model);
+            var result = LookupSubData(validatedVinCode, model);
             return ConvertUnits(result, powerUnits, torqueUnits);
         }
 

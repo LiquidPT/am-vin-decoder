@@ -5,20 +5,19 @@
 
 using System.Globalization;
 
-namespace AmVinDecoderLib.VinComponents
+namespace AmVinDecoderLib.VinComponents;
+
+public abstract class BaseVinComponent
 {
-    public abstract class BaseVinComponent
+    public string Text { get; set; }
+
+    public override string ToString()
     {
-        public string Text { get; set; }
+        return ToString(CultureInfo.CurrentCulture);
+    }
 
-        public override string ToString()
-        {
-            return ToString(CultureInfo.CurrentCulture);
-        }
-
-        public virtual string ToString(IFormatProvider provider)
-        {
-            return string.Format(provider, "{0}", Text);
-        }
+    public virtual string ToString(IFormatProvider provider)
+    {
+        return string.Format(provider, "{0}", Text);
     }
 }

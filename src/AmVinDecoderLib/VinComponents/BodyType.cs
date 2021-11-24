@@ -8,21 +8,20 @@ using System.Globalization;
 using AmVinDecoderLib.Properties;
 using AmVinDecoderLib.VinComponents.Enums;
 
-namespace AmVinDecoderLib.VinComponents
+namespace AmVinDecoderLib.VinComponents;
+
+public class BodyType : BaseVinComponent
 {
-    public class BodyType : BaseVinComponent
+    public int DoorCount { get; set; }
+
+    public BodyStyle BodyStyle { get; set; }
+
+    public SeatingConfiguration SeatingConfiguration { get; set; }
+
+    public int? SeatCount { get; set; }
+
+    public override string ToString(IFormatProvider provider)
     {
-        public int DoorCount { get; set; }
-
-        public BodyStyle BodyStyle { get; set; }
-
-        public SeatingConfiguration SeatingConfiguration { get; set; }
-
-        public int? SeatCount { get; set; }
-
-        public override string ToString(IFormatProvider provider)
-        {
-            return string.Format(provider, Resources.BodyType_Format, Text, Resources.ResourceManager.GetString($"SeatingConfiguration_{SeatingConfiguration}", CultureInfo.CurrentUICulture));
-        }
+        return string.Format(provider, Resources.BodyType_Format, Text, Resources.ResourceManager.GetString($"SeatingConfiguration_{SeatingConfiguration}", CultureInfo.CurrentUICulture));
     }
 }

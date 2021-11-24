@@ -5,10 +5,9 @@
 
 using AmVinDecoderLib.VinComponents.Enums;
 
-namespace AmVinDecoderLib.VinComponents
+namespace AmVinDecoderLib.VinComponents;
+
+public class Model : BaseVinComponent
 {
-    public class Model : BaseVinComponent
-    {
-        public ModelType ModelType { get; set; }
-    }
+    public ModelType ModelType { get; set; }
 }

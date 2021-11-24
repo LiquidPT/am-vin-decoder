@@ -10,41 +10,40 @@ using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using EnsureThat;
 
-namespace AmVinDecoderLib.Repositories
+namespace AmVinDecoderLib.Repositories;
+
+public static class ModelYearRepository
 {
-    public static class ModelYearRepository
+    public static ModelYear Lookup(char vinCode)
     {
-        public static ModelYear Lookup(char vinCode)
-        {
-            Ensure.That<char>(vinCode, nameof(vinCode)).IsAlphaNumeric();
+        Ensure.That<char>(vinCode, nameof(vinCode)).IsAlphaNumeric();
 
-            return new ModelYear
-            {
-                Text = GetText(vinCode),
-            };
+        return new ModelYear
+        {
+            Text = GetText(vinCode),
+        };
+    }
+
+    private static string GetText(char vinCode)
+    {
+        var digit = (int)char.GetNumericValue(vinCode);
+        if (digit > -1)
+        {
+            return (2000 + digit).ToString(CultureInfo.InvariantCulture);
         }
 
-        private static string GetText(char vinCode)
+        if (char.IsLetter(vinCode))
         {
-            var digit = (int)char.GetNumericValue(vinCode);
-            if (digit > -1)
+            var index = char.ToUpper(vinCode, CultureInfo.InvariantCulture) - 65;
+            if (index >= 9)
             {
-                return (2000 + digit).ToString(CultureInfo.InvariantCulture);
+                // The letter "I" was skipped
+                index -= 1;
             }
 
-            if (char.IsLetter(vinCode))
-            {
-                var index = char.ToUpper(vinCode, CultureInfo.InvariantCulture) - 65;
-                if (index >= 9)
-                {
-                    // The letter "I" was skipped
-                    index -= 1;
-                }
-
-                return (index + 2010).ToString(CultureInfo.InvariantCulture);
-            }
-
-            throw new ArgumentException(Resources.Error_BadModelYear);
+            return (index + 2010).ToString(CultureInfo.InvariantCulture);
         }
+
+        throw new ArgumentException(Resources.Error_BadModelYear);
     }
 }

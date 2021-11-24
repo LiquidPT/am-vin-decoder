@@ -3,6 +3,8 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
+namespace AmVinDecoderLib.UnitTest.Repositories;
+
 [TestClass]
 public class TransmissionRepositoryTests
 {

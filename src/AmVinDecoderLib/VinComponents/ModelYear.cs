@@ -5,6 +5,6 @@
 
 namespace AmVinDecoderLib.VinComponents;
 
-public class ModelYear : BaseVinComponent
+public record ModelYear : BaseVinComponent
 {
 }

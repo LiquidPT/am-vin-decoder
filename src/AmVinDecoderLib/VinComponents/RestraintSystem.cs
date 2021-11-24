@@ -5,6 +5,6 @@
 
 namespace AmVinDecoderLib.VinComponents;
 
-public class RestraintSystem : BaseVinComponent
+public record RestraintSystem : BaseVinComponent
 {
 }

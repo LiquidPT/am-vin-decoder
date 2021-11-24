@@ -7,11 +7,11 @@ using System.Globalization;
 
 namespace AmVinDecoderLib.VinComponents;
 
-public abstract class BaseVinComponent
+public abstract record BaseVinComponent
 {
-    public string Text { get; set; }
+    public string Text { get; init; }
 
-    public override string ToString() => ToString(CultureInfo.CurrentUICulture);
+    public override sealed string ToString() => ToString(CultureInfo.CurrentUICulture);
 
     public virtual string ToString(IFormatProvider provider) => string.Format(provider, "{0}", Text);
 }

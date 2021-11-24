@@ -5,7 +5,7 @@
 
 namespace AmVinDecoderLib.VinComponents;
 
-public class Model : BaseVinComponent
+public record Model : BaseVinComponent
 {
-    public ModelType ModelType { get; set; }
+    public ModelType ModelType { get; init; }
 }

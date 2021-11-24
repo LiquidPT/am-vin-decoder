@@ -7,15 +7,15 @@ using AmVinDecoderLib.Properties;
 
 namespace AmVinDecoderLib.VinComponents;
 
-public class Transmission : BaseVinComponent
+public record Transmission : BaseVinComponent
 {
-    public TransmissionType TransmissionType { get; set; }
+    public TransmissionType TransmissionType { get; init; }
 
-    public int ForwardSpeeds { get; set; }
+    public int ForwardSpeeds { get; init; }
 
-    public SteeringPosition SteeringPosition { get; set; }
+    public SteeringPosition SteeringPosition { get; init; }
 
-    public override string ToString(IFormatProvider provider) => TransmissionType switch
+    public override sealed string ToString(IFormatProvider provider) => TransmissionType switch
     {
         TransmissionType.Manual => string.Format(provider, Resources.Transmission_ManualFormat, ForwardSpeeds, SteeringPosition),
         TransmissionType.Automatic => string.Format(provider, Resources.Transmission_AutomaticFormat, ForwardSpeeds, SteeringPosition),

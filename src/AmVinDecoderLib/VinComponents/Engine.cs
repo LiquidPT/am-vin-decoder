@@ -5,25 +5,25 @@
 
 namespace AmVinDecoderLib.VinComponents;
 
-public class Engine : BaseVinComponent
+public record Engine : BaseVinComponent
 {
-    public string Code { get; set; }
+    public string Code { get; init; }
 
-    public int Cylinders { get; set; }
+    public int Cylinders { get; init; }
 
-    public Induction Induction { get; set; }
+    public Induction Induction { get; init; }
 
-    public double DisplacementInCc { get; set; }
+    public double DisplacementInCc { get; init; }
 
     public double? MaxPower { get; set; }
 
     public PowerUnit MaxPowerUnit { get; set; }
 
-    public double? MaxPowerRpm { get; set; }
+    public double? MaxPowerRpm { get; init; }
 
     public double? MaxTorque { get; set; }
 
     public TorqueUnit MaxTorqueUnit { get; set; }
 
-    public double? MaxTorqueRpm { get; set; }
+    public double? MaxTorqueRpm { get; init; }
 }

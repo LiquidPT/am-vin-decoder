@@ -5,11 +5,11 @@
 
 namespace AmVinDecoderLib;
 
-public class UnitOptions
+public record UnitOptions
 {
-    public bool UseMetric { get; set; }
+    public bool UseMetric { get; init; }
 
-    public PowerUnit? Power { get; set; }
+    public PowerUnit? Power { get; init; }
 
-    public TorqueUnit? Torque { get; set; }
+    public TorqueUnit? Torque { get; init; }
 }

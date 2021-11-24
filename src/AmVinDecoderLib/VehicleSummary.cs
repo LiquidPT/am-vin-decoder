@@ -7,23 +7,23 @@ using AmVinDecoderLib.VinComponents;
 
 namespace AmVinDecoderLib;
 
-public class VehicleSummary
+public record VehicleSummary
 {
-    public BodyType BodyType { get; internal set; }
+    public BodyType BodyType { get; init; }
 
     public Engine Engine { get; internal set; }
 
-    public Factory Factory { get; internal set; }
+    public Factory Factory { get; init; }
 
-    public Model Model { get; internal set; }
+    public Model Model { get; init; }
 
-    public ModelYear ModelYear { get; internal set; }
+    public ModelYear ModelYear { get; init; }
 
     public RestraintSystem RestraintSystem { get; internal set; }
 
     public Transmission Transmisson { get; internal set; }
 
-    public string SerialNumber { get; internal set; }
+    public string SerialNumber { get; init; }
 
-    public string Vin { get; internal set; }
+    public string Vin { get; init; }
 }

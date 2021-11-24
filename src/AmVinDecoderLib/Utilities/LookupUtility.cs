@@ -31,7 +31,7 @@ namespace AmVinDecoderLib.Utilities
             }
 
             Ensure.That(vinCode, nameof(vinCode)).IsNotNullOrWhiteSpace();
-            Ensure.That(vinCode, nameof(vinCode)).SizeIs(length);
+            Ensure.That(vinCode, nameof(vinCode)).HasLength(length);
             Ensure.That(vinCode, nameof(vinCode)).IsAlphaNumeric();
 
             return vinCode.ToUpperInvariant();

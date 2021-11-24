@@ -16,7 +16,7 @@ namespace AmVinDecoderLib
         {
             Ensure.That(vin, nameof(vin)).IsNotNullOrWhiteSpace();
             Ensure.That(unitOptions, nameof(unitOptions)).IsNotNull();
-            Ensure.That(vin, nameof(vin), opts => opts.WithMessage("VIN is not 17 characters long")).SizeIs(17);
+            Ensure.That(vin, nameof(vin), opts => opts.WithMessage("VIN is not 17 characters long")).HasLength(17);
 
             var wmi = vin.Substring(VinPosition.Wmi, 3);
             Ensure.That(wmi, nameof(vin), opts => opts.WithMessage("Not an Aston Martin VIN")).StartsWith("SCF", StringComparison.OrdinalIgnoreCase);

@@ -1,0 +1,7 @@
+﻿{
+  DoorCount: 2,
+  BodyStyle: Convertible,
+  SeatingConfiguration: TwoSeats,
+  SeatCount: 2,
+  Text: V12 Vantage/S convertible
+}

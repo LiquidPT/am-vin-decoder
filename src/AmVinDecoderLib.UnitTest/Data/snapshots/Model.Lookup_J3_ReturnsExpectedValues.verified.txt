@@ -1,0 +1,4 @@
+﻿{
+  ModelType: VanquishZagatoCoupe,
+  Text: Vanquish Zagato Coupe
+}

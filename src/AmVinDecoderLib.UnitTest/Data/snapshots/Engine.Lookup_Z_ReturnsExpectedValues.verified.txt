@@ -1,0 +1,13 @@
+﻿{
+  Code: AM27,
+  Cylinders: 12,
+  Induction: NormallyAspirated,
+  DisplacementInCc: 5935.0,
+  MaxPower: 444.0,
+  MaxPowerUnit: Kw,
+  MaxPowerRpm: 7000.0,
+  MaxTorque: 630.0,
+  MaxTorqueUnit: Nm,
+  MaxTorqueRpm: 5500.0,
+  Text: Vanquish S(Zagato) AM27
+}

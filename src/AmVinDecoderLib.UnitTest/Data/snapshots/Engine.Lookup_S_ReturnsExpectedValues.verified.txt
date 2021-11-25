@@ -1,0 +1,13 @@
+﻿{
+  Code: AM29,
+  Cylinders: 12,
+  Induction: NormallyAspirated,
+  DisplacementInCc: 5935.0,
+  MaxPower: 412.0,
+  MaxPowerUnit: Kw,
+  MaxPowerRpm: 6650.0,
+  MaxTorque: 630.0,
+  MaxTorqueUnit: Nm,
+  MaxTorqueRpm: 5500.0,
+  Text: (RapideS 15MY - AM29)
+}

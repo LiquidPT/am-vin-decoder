@@ -1,0 +1,7 @@
+﻿{
+  DoorCount: 2,
+  BodyStyle: Convertible,
+  SeatingConfiguration: TwoPlusZero,
+  SeatCount: 2,
+  Text: Vanquish S convertible
+}

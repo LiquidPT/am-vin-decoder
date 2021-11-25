@@ -5,20 +5,18 @@
 
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
-using AmVinDecoderLib.VinComponents.Enums;
 using EnsureThat;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 
-namespace AmVinDecoderLib.Repositories
-{
-    public class RestraintSystemRepository : BaseRepository<RestraintSystem, dynamic>
-    {
-        public static RestraintSystem Lookup(char vinCode, string modelYear, ModelType? model = null)
-        {
-            var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
-            Ensure.That(modelYear, nameof(modelYear)).IsNullOrNumeric();
+namespace AmVinDecoderLib.Repositories;
 
-            return LookupSubData(validatedVinCode, model, (key) => key.Contains("{modelYear}") && CSharpScript.EvaluateAsync<bool>(key.Replace("{modelYear}", modelYear)).Result);
-        }
+public class RestraintSystemRepository : BaseRepository<RestraintSystem, dynamic>
+{
+    public static RestraintSystem Lookup(char vinCode, string modelYear, ModelType? model = null)
+    {
+        var validatedVinCode = LookupUtility.ValidateLetterVinCode(vinCode);
+        Ensure.That(modelYear, nameof(modelYear)).IsNullOrNumeric();
+
+        return LookupSubData(validatedVinCode, model, (key) => key.Contains("{modelYear}", StringComparison.InvariantCultureIgnoreCase) && CSharpScript.EvaluateAsync<bool>(key.Replace("{modelYear}", modelYear, StringComparison.InvariantCultureIgnoreCase)).Result);
     }
 }

@@ -6,14 +6,13 @@
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 
-namespace AmVinDecoderLib.Repositories
+namespace AmVinDecoderLib.Repositories;
+
+public class BodyTypeRepository : BaseRepository<BodyType>
 {
-    public class BodyTypeRepository : BaseRepository<BodyType>
+    public static BodyType Lookup(string vinCode)
     {
-        public static BodyType Lookup(string vinCode)
-        {
-            var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode, 2);
-            return InitializeData()[validatedVinCode];
-        }
+        var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode, 2);
+        return InitializeData()[validatedVinCode];
     }
 }

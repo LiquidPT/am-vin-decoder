@@ -1,0 +1,6 @@
+﻿{
+  DoorCount: 2,
+  BodyStyle: Coupe,
+  SeatingConfiguration: TwoPlusUnknown,
+  Text: DBS
+}

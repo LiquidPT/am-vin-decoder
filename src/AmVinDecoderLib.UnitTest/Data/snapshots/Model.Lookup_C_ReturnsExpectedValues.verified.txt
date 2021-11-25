@@ -1,0 +1,4 @@
+﻿{
+  ModelType: V8VantageCoupe,
+  Text: V8/V8S Coupe
+}

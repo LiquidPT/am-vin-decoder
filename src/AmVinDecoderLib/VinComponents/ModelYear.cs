@@ -3,9 +3,8 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-namespace AmVinDecoderLib.VinComponents
+namespace AmVinDecoderLib.VinComponents;
+
+public record ModelYear : BaseVinComponent
 {
-    public class ModelYear : BaseVinComponent
-    {
-    }
 }

@@ -5,36 +5,35 @@
 
 using EnsureThat;
 
-namespace AmVinDecoderLib.Utilities
+namespace AmVinDecoderLib.Utilities;
+
+public static class LookupUtility
 {
-    public static class LookupUtility
+    public static string ValidateLetterVinCode(char vinCode)
     {
-        public static string ValidateLetterVinCode(char vinCode)
-        {
-            Ensure.That<char>(vinCode, nameof(vinCode)).IsAlpha();
+        Ensure.That<char>(vinCode, nameof(vinCode)).IsAlpha();
 
-            return vinCode.ToString().ToUpperInvariant();
+        return vinCode.ToString().ToUpperInvariant();
+    }
+
+    public static string ValidateLetterOrDigitVinCode(char vinCode)
+    {
+        Ensure.That<char>(vinCode, nameof(vinCode)).IsAlphaNumeric();
+
+        return vinCode.ToString().ToUpperInvariant();
+    }
+
+    public static string ValidateLetterOrDigitVinCode(string vinCode, int length, bool allowNull = false)
+    {
+        if (allowNull && string.IsNullOrEmpty(vinCode))
+        {
+            return null;
         }
 
-        public static string ValidateLetterOrDigitVinCode(char vinCode)
-        {
-            Ensure.That<char>(vinCode, nameof(vinCode)).IsAlphaNumeric();
+        Ensure.That(vinCode, nameof(vinCode)).IsNotNullOrWhiteSpace();
+        Ensure.That(vinCode, nameof(vinCode)).HasLength(length);
+        Ensure.That(vinCode, nameof(vinCode)).IsAlphaNumeric();
 
-            return vinCode.ToString().ToUpperInvariant();
-        }
-
-        public static string ValidateLetterOrDigitVinCode(string vinCode, int length, bool allowNull = false)
-        {
-            if (allowNull && string.IsNullOrEmpty(vinCode))
-            {
-                return null;
-            }
-
-            Ensure.That(vinCode, nameof(vinCode)).IsNotNullOrWhiteSpace();
-            Ensure.That(vinCode, nameof(vinCode)).SizeIs(length);
-            Ensure.That(vinCode, nameof(vinCode)).IsAlphaNumeric();
-
-            return vinCode.ToUpperInvariant();
-        }
+        return vinCode.ToUpperInvariant();
     }
 }

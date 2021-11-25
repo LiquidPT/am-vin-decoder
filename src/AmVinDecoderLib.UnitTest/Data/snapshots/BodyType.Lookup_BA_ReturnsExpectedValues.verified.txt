@@ -1,0 +1,7 @@
+﻿{
+  DoorCount: 2,
+  BodyStyle: Hatchback,
+  SeatingConfiguration: TwoSeats,
+  SeatCount: 2,
+  Text: Vantage coupe
+}

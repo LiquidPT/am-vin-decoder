@@ -3,48 +3,44 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using AmVinDecoderLib.Repositories;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using vin = AmVinDecoderLib.VinComponents;
+namespace AmVinDecoderLib.UnitTest.Data;
 
-namespace AmVinDecoderLib.UnitTest.Data
+[TestClass]
+public class Factory : VerifyBase
 {
-    [TestClass]
-    public class Factory
+    private static VerifySettings _settings;
+
+    public Factory()
     {
-        [TestMethod]
-        public void Lookup_A_ReturnsExpectedValues()
-        {
-            var result = FactoryRepository.Lookup('A');
-            TestValues(result, "Austria, Magna Steyr");
-        }
+        _settings = new VerifySettings();
+        _settings.UseDirectory("snapshots");
+    }
 
-        [TestMethod]
-        public void Lookup_G_ReturnsExpectedValues()
-        {
-            var result = FactoryRepository.Lookup('G');
-            TestValues(result, "England, Gaydon");
-        }
+    [TestMethod]
+    public Task Lookup_A_ReturnsExpectedValues()
+    {
+        var result = FactoryRepository.Lookup('A');
+        return Verify(result, _settings);
+    }
 
-        [TestMethod]
-        public void Lookup_J_ReturnsExpectedValues()
-        {
-            var result = FactoryRepository.Lookup('J');
-            TestValues(result, "Japan, Toyota, Aichi");
-        }
+    [TestMethod]
+    public Task Lookup_G_ReturnsExpectedValues()
+    {
+        var result = FactoryRepository.Lookup('G');
+        return Verify(result, _settings);
+    }
 
-        [TestMethod]
-        public void Lookup_T_ReturnsExpectedValues()
-        {
-            var result = FactoryRepository.Lookup('T');
-            TestValues(result, "Wales, Saint Athan");
-        }
+    [TestMethod]
+    public Task Lookup_J_ReturnsExpectedValues()
+    {
+        var result = FactoryRepository.Lookup('J');
+        return Verify(result, _settings);
+    }
 
-        private void TestValues(vin.Factory actual, string expectedText)
-        {
-            Assert.IsNotNull(actual);
-
-            Assert.AreEqual(expectedText, actual.Text);
-        }
+    [TestMethod]
+    public Task Lookup_T_ReturnsExpectedValues()
+    {
+        var result = FactoryRepository.Lookup('T');
+        return Verify(result, _settings);
     }
 }

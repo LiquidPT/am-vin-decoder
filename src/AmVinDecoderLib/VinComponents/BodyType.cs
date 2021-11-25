@@ -3,26 +3,20 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using System;
 using System.Globalization;
 using AmVinDecoderLib.Properties;
-using AmVinDecoderLib.VinComponents.Enums;
 
-namespace AmVinDecoderLib.VinComponents
+namespace AmVinDecoderLib.VinComponents;
+
+public record BodyType : BaseVinComponent
 {
-    public class BodyType : BaseVinComponent
-    {
-        public int DoorCount { get; set; }
+    public int DoorCount { get; init; }
 
-        public BodyStyle BodyStyle { get; set; }
+    public BodyStyle BodyStyle { get; init; }
 
-        public SeatingConfiguration SeatingConfiguration { get; set; }
+    public SeatingConfiguration SeatingConfiguration { get; init; }
 
-        public int? SeatCount { get; set; }
+    public int? SeatCount { get; init; }
 
-        public override string ToString(IFormatProvider provider)
-        {
-            return string.Format(provider, Resources.BodyType_Format, Text, Resources.ResourceManager.GetString($"SeatingConfiguration_{SeatingConfiguration}", CultureInfo.CurrentUICulture));
-        }
-    }
+    public override sealed string ToString(IFormatProvider provider) => string.Format(provider, Resources.BodyType_Format, Text, Resources.ResourceManager.GetString($"SeatingConfiguration_{SeatingConfiguration}", CultureInfo.CurrentUICulture));
 }

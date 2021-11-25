@@ -1,0 +1,13 @@
+﻿{
+  Code: AM25,
+  Cylinders: 12,
+  Induction: NormallyAspirated,
+  DisplacementInCc: 5935.0,
+  MaxPower: 365.0,
+  MaxPowerUnit: Kw,
+  MaxPowerRpm: 6500.0,
+  MaxTorque: 569.0,
+  MaxTorqueUnit: Nm,
+  MaxTorqueRpm: 5750.0,
+  Text: V12(Virage) AM25
+}

@@ -3,23 +3,22 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-namespace AmVinDecoderLib.VinComponents.Enums
+namespace AmVinDecoderLib.VinComponents.Enums;
+
+public enum SteeringPosition
 {
-    public enum SteeringPosition
-    {
-        /// <summary>
-        /// Default value. The value has not been set.
-        /// </summary>
-        Unknown,
+    /// <summary>
+    /// Default value. The value has not been set.
+    /// </summary>
+    Unknown,
 
-        /// <summary>
-        /// Left hand drive
-        /// </summary>
-        LHD,
+    /// <summary>
+    /// Left hand drive
+    /// </summary>
+    LHD,
 
-        /// <summary>
-        /// Right hand drive
-        /// </summary>
-        RHD,
-    }
+    /// <summary>
+    /// Right hand drive
+    /// </summary>
+    RHD,
 }

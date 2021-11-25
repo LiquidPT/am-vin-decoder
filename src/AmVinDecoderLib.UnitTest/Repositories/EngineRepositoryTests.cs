@@ -3,49 +3,42 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using AmVinDecoderLib.Repositories;
-using AmVinDecoderLib.VinComponents.Enums;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+namespace AmVinDecoderLib.UnitTest.Repositories;
 
-namespace AmVinDecoderLib.UnitTest.Repositories
+[TestClass]
+public class EngineRepositoryTests
 {
-    [TestClass]
-    public class EngineRepositoryTests
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentOutOfRangeException))]
+    public void Lookup_SymbolVinCode_ThrowsException()
     {
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        public void Lookup_SymbolVinCode_ThrowsException()
-        {
-            _ = EngineRepository.Lookup('*', PowerUnit.Bhp, TorqueUnit.LbFt);
-        }
+        _ = EngineRepository.Lookup('*', PowerUnit.Bhp, TorqueUnit.LbFt);
+    }
 
-        [TestMethod]
-        [ExpectedException(typeof(KeyNotFoundException))]
-        public void Lookup_UnknownNumericVinCode_ThrowsException()
-        {
-            _ = EngineRepository.Lookup('1', PowerUnit.Bhp, TorqueUnit.LbFt);
-        }
+    [TestMethod]
+    [ExpectedException(typeof(KeyNotFoundException))]
+    public void Lookup_UnknownNumericVinCode_ThrowsException()
+    {
+        _ = EngineRepository.Lookup('1', PowerUnit.Bhp, TorqueUnit.LbFt);
+    }
 
-        [TestMethod]
-        [ExpectedException(typeof(KeyNotFoundException))]
-        public void Lookup_UnknownLetterVinCode_ThrowsException()
-        {
-            _ = EngineRepository.Lookup('X', PowerUnit.Bhp, TorqueUnit.LbFt);
-        }
+    [TestMethod]
+    [ExpectedException(typeof(KeyNotFoundException))]
+    public void Lookup_UnknownLetterVinCode_ThrowsException()
+    {
+        _ = EngineRepository.Lookup('X', PowerUnit.Bhp, TorqueUnit.LbFt);
+    }
 
-        [TestMethod]
-        public void Lookup_KnownNumericVinCode_ReturnsValue()
-        {
-            _ = EngineRepository.Lookup('0', PowerUnit.Bhp, TorqueUnit.LbFt);
-        }
+    [TestMethod]
+    public void Lookup_KnownNumericVinCode_ReturnsValue()
+    {
+        _ = EngineRepository.Lookup('0', PowerUnit.Bhp, TorqueUnit.LbFt);
+    }
 
-        [TestMethod]
-        public void Lookup_KnownLetterVinCode_ReturnsValue()
-        {
-            var result = EngineRepository.Lookup('A', PowerUnit.Bhp, TorqueUnit.LbFt);
-            Assert.IsNotNull(result.Text);
-        }
+    [TestMethod]
+    public void Lookup_KnownLetterVinCode_ReturnsValue()
+    {
+        var result = EngineRepository.Lookup('A', PowerUnit.Bhp, TorqueUnit.LbFt);
+        Assert.IsNotNull(result.Text);
     }
 }

@@ -3,16 +3,13 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using AmVinDecoderLib.VinComponents.Enums;
+namespace AmVinDecoderLib;
 
-namespace AmVinDecoderLib
+public record UnitOptions
 {
-    public class UnitOptions
-    {
-        public bool UseMetric { get; set; }
+    public bool UseMetric { get; init; }
 
-        public PowerUnit? Power { get; set; }
+    public PowerUnit? Power { get; init; }
 
-        public TorqueUnit? Torque { get; set; }
-    }
+    public TorqueUnit? Torque { get; init; }
 }

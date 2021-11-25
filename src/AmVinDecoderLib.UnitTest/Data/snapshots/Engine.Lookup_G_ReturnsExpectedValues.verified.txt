@@ -1,0 +1,13 @@
+﻿{
+  Code: GAM05,
+  Cylinders: 8,
+  Induction: NormallyAspirated,
+  DisplacementInCc: 4280.0,
+  MaxPower: 298.0,
+  MaxPowerUnit: Kw,
+  MaxPowerRpm: 7000.0,
+  MaxTorque: 419.0,
+  MaxTorqueUnit: Nm,
+  MaxTorqueRpm: 5000.0,
+  Text: GAM05 - 4.3 N400 spec
+}

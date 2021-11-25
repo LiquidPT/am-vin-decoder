@@ -1,0 +1,7 @@
+﻿{
+  DoorCount: 2,
+  BodyStyle: Coupe,
+  SeatingConfiguration: TwoPlusZero,
+  SeatCount: 2,
+  Text: Virage coupe
+}

@@ -3,57 +3,55 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using System;
 using AmVinDecoderLib.Properties;
 using EnsureThat;
 
-namespace AmVinDecoderLib.Utilities
+namespace AmVinDecoderLib.Utilities;
+
+public static class EnsureThatValueTypeExtensions
 {
-    public static class EnsureThatValueTypeExtensions
+    public static void IsAlphaNumeric(this in Param<char> param)
     {
-        public static void IsAlphaNumeric(this in Param<char> param)
+        if (char.IsLetterOrDigit(param.Value))
         {
-            if (char.IsLetterOrDigit(param.Value))
-            {
-                return;
-            }
-
-            throw new ArgumentOutOfRangeException(param.Name, Resources.Error_OnlyLettersAndDigits);
+            return;
         }
 
-        public static void IsAlpha(this in Param<char> param)
-        {
-            if (char.IsLetter(param.Value))
-            {
-                return;
-            }
+        throw new ArgumentOutOfRangeException(param.Name, Resources.Error_OnlyLettersAndDigits);
+    }
 
-            throw new ArgumentOutOfRangeException(param.Name, Resources.Error_CharLetter);
+    public static void IsAlpha(this in Param<char> param)
+    {
+        if (char.IsLetter(param.Value))
+        {
+            return;
         }
 
-        public static void IsNumeric(this in Param<char> param)
-        {
-            if (char.IsDigit(param.Value))
-            {
-                return;
-            }
+        throw new ArgumentOutOfRangeException(param.Name, Resources.Error_CharLetter);
+    }
 
-            throw new ArgumentOutOfRangeException(param.Name, Resources.Error_CharDigit);
+    public static void IsNumeric(this in Param<char> param)
+    {
+        if (char.IsDigit(param.Value))
+        {
+            return;
         }
 
-        public static void IsNullOrNumeric(this in Param<char?> param)
+        throw new ArgumentOutOfRangeException(param.Name, Resources.Error_CharDigit);
+    }
+
+    public static void IsNullOrNumeric(this in Param<char?> param)
+    {
+        if (!param.Value.HasValue)
         {
-            if (!param.Value.HasValue)
-            {
-                return;
-            }
-
-            if (char.IsDigit(param.Value.Value))
-            {
-                return;
-            }
-
-            throw new ArgumentOutOfRangeException(param.Name, Resources.Error_CharDigit);
+            return;
         }
+
+        if (char.IsDigit(param.Value.Value))
+        {
+            return;
+        }
+
+        throw new ArgumentOutOfRangeException(param.Name, Resources.Error_CharDigit);
     }
 }

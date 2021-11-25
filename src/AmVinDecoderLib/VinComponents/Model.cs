@@ -3,12 +3,9 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using AmVinDecoderLib.VinComponents.Enums;
+namespace AmVinDecoderLib.VinComponents;
 
-namespace AmVinDecoderLib.VinComponents
+public record Model : BaseVinComponent
 {
-    public class Model : BaseVinComponent
-    {
-        public ModelType ModelType { get; set; }
-    }
+    public ModelType ModelType { get; init; }
 }

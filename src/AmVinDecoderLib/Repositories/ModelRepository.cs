@@ -7,19 +7,18 @@ using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
 using EnsureThat;
 
-namespace AmVinDecoderLib.Repositories
+namespace AmVinDecoderLib.Repositories;
+
+public class ModelRepository : BaseRepository<Model, dynamic>
 {
-    public class ModelRepository : BaseRepository<Model, dynamic>
+    public static Model Lookup(char vinCode, string bodyCode, char? serialModifer)
     {
-        public static Model Lookup(char vinCode, string bodyCode, char? serialModifer)
-        {
-            var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode);
-            var validatedBodyCode = LookupUtility.ValidateLetterOrDigitVinCode(bodyCode, 2, allowNull: true);
+        var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode);
+        var validatedBodyCode = LookupUtility.ValidateLetterOrDigitVinCode(bodyCode, 2, allowNull: true);
 
-            Ensure.That(serialModifer, nameof(serialModifer)).IsNullOrNumeric();
+        Ensure.That(serialModifer, nameof(serialModifer)).IsNullOrNumeric();
 
-            string[] keys = { validatedBodyCode, serialModifer.ToString() };
-            return LookupSubData(validatedVinCode, keys);
-        }
+        string[] keys = { validatedBodyCode, serialModifer.ToString() };
+        return LookupSubData(validatedVinCode, keys);
     }
 }

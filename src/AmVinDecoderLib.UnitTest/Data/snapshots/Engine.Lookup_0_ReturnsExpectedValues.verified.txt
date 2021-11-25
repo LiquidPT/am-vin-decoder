@@ -1,0 +1,13 @@
+﻿{
+  Code: 1NR-FE,
+  Cylinders: 4,
+  Induction: NormallyAspirated,
+  DisplacementInCc: 1329.0,
+  MaxPower: 72.0,
+  MaxPowerUnit: Kw,
+  MaxPowerRpm: 6000.0,
+  MaxTorque: 121.0,
+  MaxTorqueUnit: Nm,
+  MaxTorqueRpm: 4000.0,
+  Text: Toyota 1NR-FE
+}

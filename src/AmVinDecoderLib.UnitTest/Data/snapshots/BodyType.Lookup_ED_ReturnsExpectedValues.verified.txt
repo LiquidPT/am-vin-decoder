@@ -1,0 +1,7 @@
+﻿{
+  DoorCount: 2,
+  BodyStyle: Convertible,
+  SeatingConfiguration: TwoPlusTwo,
+  SeatCount: 4,
+  Text: Virage convertible
+}

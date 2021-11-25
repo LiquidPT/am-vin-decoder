@@ -3,25 +3,20 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using AmVinDecoderLib.VinComponents.Enums;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using vin = AmVinDecoderLib.VinComponents;
+namespace AmVinDecoderLib.UnitTest.VinComponents;
 
-namespace AmVinDecoderLib.UnitTest.VinComponents
+[TestClass]
+public class Model
 {
-    [TestClass]
-    public class Model
+    [TestMethod]
+    public void ToString_ValidComponent_ReturnsExpectedValue()
     {
-        [TestMethod]
-        public void ToString_ValidComponent_ReturnsExpectedValue()
+        var component = new vin.Model()
         {
-            var component = new vin.Model()
-            {
-                Text = "Test Text",
-                ModelType = ModelType.DbsCoupe,
-            };
+            Text = "Test Text",
+            ModelType = ModelType.DbsCoupe,
+        };
 
-            Assert.AreEqual(component.Text, component.ToString());
-        }
+        Assert.AreEqual(component.Text, component.ToString());
     }
 }

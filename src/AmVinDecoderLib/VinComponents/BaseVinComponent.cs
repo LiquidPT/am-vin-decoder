@@ -3,23 +3,15 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using System;
 using System.Globalization;
 
-namespace AmVinDecoderLib.VinComponents
+namespace AmVinDecoderLib.VinComponents;
+
+public abstract record BaseVinComponent
 {
-    public abstract class BaseVinComponent
-    {
-        public string Text { get; set; }
+    public string Text { get; init; }
 
-        public override string ToString()
-        {
-            return ToString(CultureInfo.CurrentCulture);
-        }
+    public override sealed string ToString() => ToString(CultureInfo.CurrentUICulture);
 
-        public virtual string ToString(IFormatProvider provider)
-        {
-            return string.Format(provider, "{0}", Text);
-        }
-    }
+    public virtual string ToString(IFormatProvider provider) => string.Format(provider, "{0}", Text);
 }

@@ -1,0 +1,13 @@
+﻿{
+  Code: AE31,
+  Cylinders: 12,
+  Induction: TurboCharged,
+  DisplacementInCc: 5204.0,
+  MaxPower: 630.0,
+  MaxPowerUnit: Bhp,
+  MaxPowerRpm: 6500.0,
+  MaxTorque: 516.0,
+  MaxTorqueUnit: LbFt,
+  MaxTorqueRpm: 1500.0,
+  Text: V12 Twin Turbo AE31
+}

@@ -20,6 +20,11 @@ jobs:
               run: dotnet restore src/AmVinDecoder.sln
             - name: Build
               run: dotnet build --configuration Release --no-restore src/AmVinDecoder.sln
+            - name: Upload library binaries
+              uses: actions/upload-artifact@v2
+              with:
+                  name: binaries
+                  path: src/AmVinDecoderLib/bin/
             - name: Test
               run: dotnet test --no-restore --verbosity normal src/AmVinDecoder.sln
             - name: Upload dotnet test results

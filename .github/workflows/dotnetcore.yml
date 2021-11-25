@@ -18,10 +18,17 @@ jobs:
             - name: Setup .NET Core
               uses: actions/setup-dotnet@v1
               with:
-                  dotnet-version: 3.1.101
+                  dotnet-version: ${{ matrix.dotnet-version }}
             - name: Install dependencies
               run: dotnet restore src/AmVinDecoder.sln
             - name: Build
               run: dotnet build --configuration Release --no-restore src/AmVinDecoder.sln
             - name: Test
               run: dotnet test --no-restore --verbosity normal src/AmVinDecoder.sln
+            - name: Upload dotnet test results
+              uses: actions/upload-artifact@v2
+              with:
+                  name: dotnet-results-${{ matrix.dotnet-version }}
+                  path: TestResults-${{ matrix.dotnet-version }}
+              # Use always() to always run this step to publish test results when there are test failures
+              if: ${{ always() }}

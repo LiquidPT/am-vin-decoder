@@ -1,6 +1,6 @@
 # AM VIN Decoder
 
-AM VIN Decoder is a .NET Core 3.1 library, with supporting applications, for decoding the VINs of Aston Martin vehicles. It currently only supports Gaydon era vehicles, but I'm looking to expand on that.
+AM VIN Decoder is a .NET 6 library, with supporting applications, for decoding the VINs of Aston Martin vehicles. It currently only supports Gaydon era vehicles, but I'm looking to expand on that.
 
 [![Build Status](https://github.com/LiquidPT/am-vin-decoder/workflows/.NET%20Core/badge.svg)](https://github.com/LiquidPT/am-vin-decoder/actions?query=workflow%3A%22.NET+Core%22)
 

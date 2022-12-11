@@ -20,5 +20,17 @@ jobs:
               run: dotnet restore src/AmVinDecoder.sln
             - name: Build
               run: dotnet build --configuration Release --no-restore src/AmVinDecoder.sln
+            - name: Upload library binaries
+              uses: actions/upload-artifact@v2
+              with:
+                  name: binaries
+                  path: src/AmVinDecoderLib/bin/
             - name: Test
               run: dotnet test --no-restore --verbosity normal src/AmVinDecoder.sln
+            - name: Upload dotnet test results
+              uses: actions/upload-artifact@v2
+              with:
+                  name: dotnet-unittest-results
+                  path: src/TestResults/
+              # Use always() to always run this step to publish test results when there are test failures
+              if: ${{ always() }}

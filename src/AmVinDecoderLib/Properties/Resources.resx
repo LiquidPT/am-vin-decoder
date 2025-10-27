@@ -132,6 +132,12 @@
   <data name="Error_ConversionNotImplemented" xml:space="preserve">
     <value>No conversion implemented for these units.</value>
   </data>
+  <data name="Error_Format_Length" xml:space="preserve">
+    <value>Expected length '{0}' but found '{1}'.</value>
+  </data>
+  <data name="Error_Format_StartsWith" xml:space="preserve">
+    <value>Value '{0}' is expected to start with '{1}' but does not.</value>
+  </data>
   <data name="Error_OnlyDigits" xml:space="preserve">
     <value>Expecting only digits.</value>
   </data>

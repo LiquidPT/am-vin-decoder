@@ -3,12 +3,11 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-#pragma warning disable SA1210 // Using directives should be ordered alphabetically by namespace
+
 global using AmVinDecoderLib.VinComponents.Enums;
-#pragma warning restore SA1210 // Using directives should be ordered alphabetically by namespace
 
 using AmVinDecoderLib.Repositories;
-using EnsureThat;
+using AmVinDecoderLib.Utilities;
 
 [assembly: CLSCompliant(false)]
 
@@ -18,12 +17,12 @@ public static class VinDecoder
 {
     public static VehicleSummary GetVehicleInfo(string vin, UnitOptions unitOptions)
     {
-        Ensure.That(vin, nameof(vin)).IsNotNullOrWhiteSpace();
-        Ensure.That(unitOptions, nameof(unitOptions)).IsNotNull();
-        Ensure.That(vin, nameof(vin), opts => opts.WithMessage("VIN is not 17 characters long")).HasLength(17);
+        ArgumentException.ThrowIfNullOrEmpty(vin);
+        ArgumentNullException.ThrowIfNull(unitOptions);
+        ArgumentException.ThrowIfNotLength(vin, 17);
 
         var wmi = vin.Substring(VinPosition.Wmi, 3);
-        Ensure.That(wmi, nameof(vin), opts => opts.WithMessage("Not an Aston Martin VIN")).StartsWith("SCF", StringComparison.OrdinalIgnoreCase);
+        ArgumentException.ThrowIfDoesNotStartWith(wmi, "SCF", StringComparison.OrdinalIgnoreCase, nameof(vin));
 
         var powerUnits = unitOptions.Power ?? (unitOptions.UseMetric ? PowerUnit.Kw : PowerUnit.Bhp);
         var torqueUnits = unitOptions.Torque ?? (unitOptions.UseMetric ? TorqueUnit.Nm : TorqueUnit.LbFt);

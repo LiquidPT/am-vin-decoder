@@ -4,7 +4,6 @@
 // -------------------------------------------------------------------------------------------------
 
 using AmVinDecoderLib.VinComponents;
-using EnsureThat;
 using Newtonsoft.Json;
 
 namespace AmVinDecoderLib.Repositories;
@@ -48,7 +47,7 @@ public class BaseRepository<TFile, TDictionary>
 
     protected static TFile LookupSubData(string validatedVinCode, string[] secondaryLookupKeys, Func<string, bool> subselectionClause = null)
     {
-        Ensure.That(validatedVinCode, nameof(validatedVinCode)).IsNotNullOrWhiteSpace();
+        ArgumentException.ThrowIfNullOrWhiteSpace(validatedVinCode);
 
         var data = (dynamic)InitializeData()[validatedVinCode];
         if (data.Text != null)

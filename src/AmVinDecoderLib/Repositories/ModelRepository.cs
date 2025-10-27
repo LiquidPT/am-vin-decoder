@@ -5,7 +5,6 @@
 
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
-using EnsureThat;
 
 namespace AmVinDecoderLib.Repositories;
 
@@ -16,7 +15,7 @@ public class ModelRepository : BaseRepository<Model, dynamic>
         var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode);
         var validatedBodyCode = LookupUtility.ValidateLetterOrDigitVinCode(bodyCode, 2, allowNull: true);
 
-        Ensure.That(serialModifer, nameof(serialModifer)).IsNullOrNumeric();
+        ArgumentOutOfRangeException.ThrowIfNotNumericOrNull(serialModifer);
 
         string[] keys = { validatedBodyCode, serialModifer.ToString() };
         return LookupSubData(validatedVinCode, keys);

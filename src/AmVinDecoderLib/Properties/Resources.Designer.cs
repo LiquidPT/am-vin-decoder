@@ -19,7 +19,7 @@ namespace AmVinDecoderLib.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -102,6 +102,24 @@ namespace AmVinDecoderLib.Properties {
         internal static string Error_ConversionNotImplemented {
             get {
                 return ResourceManager.GetString("Error_ConversionNotImplemented", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expected length &apos;{0}&apos; but found &apos;{1}&apos;..
+        /// </summary>
+        internal static string Error_Format_Length {
+            get {
+                return ResourceManager.GetString("Error_Format_Length", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value &apos;{0}&apos; is expected to start with &apos;{1}&apos; but does not..
+        /// </summary>
+        internal static string Error_Format_StartsWith {
+            get {
+                return ResourceManager.GetString("Error_Format_StartsWith", resourceCulture);
             }
         }
         

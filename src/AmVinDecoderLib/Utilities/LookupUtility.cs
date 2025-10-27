@@ -3,22 +3,20 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
-using EnsureThat;
-
 namespace AmVinDecoderLib.Utilities;
 
 public static class LookupUtility
 {
     public static string ValidateLetterVinCode(char vinCode)
     {
-        Ensure.That<char>(vinCode, nameof(vinCode)).IsAlpha();
+        ArgumentOutOfRangeException.ThrowIfNotAlpha(vinCode);
 
         return vinCode.ToString().ToUpperInvariant();
     }
 
     public static string ValidateLetterOrDigitVinCode(char vinCode)
     {
-        Ensure.That<char>(vinCode, nameof(vinCode)).IsAlphaNumeric();
+        ArgumentOutOfRangeException.ThrowIfNotAlphaNumeric(vinCode);
 
         return vinCode.ToString().ToUpperInvariant();
     }
@@ -30,9 +28,9 @@ public static class LookupUtility
             return null;
         }
 
-        Ensure.That(vinCode, nameof(vinCode)).IsNotNullOrWhiteSpace();
-        Ensure.That(vinCode, nameof(vinCode)).HasLength(length);
-        Ensure.That(vinCode, nameof(vinCode)).IsAlphaNumeric();
+        ArgumentException.ThrowIfNullOrWhiteSpace(vinCode);
+        ArgumentException.ThrowIfNotLength(vinCode, length);
+        ArgumentOutOfRangeException.ThrowIfNotAlphaNumeric(vinCode);
 
         return vinCode.ToUpperInvariant();
     }

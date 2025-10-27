@@ -7,7 +7,6 @@ using System.Globalization;
 using AmVinDecoderLib.Properties;
 using AmVinDecoderLib.Utilities;
 using AmVinDecoderLib.VinComponents;
-using EnsureThat;
 
 namespace AmVinDecoderLib.Repositories;
 
@@ -15,7 +14,7 @@ public static class ModelYearRepository
 {
     public static ModelYear Lookup(char vinCode)
     {
-        Ensure.That<char>(vinCode, nameof(vinCode)).IsAlphaNumeric();
+        ArgumentOutOfRangeException.ThrowIfNotAlphaNumeric(vinCode);
 
         return new ModelYear
         {

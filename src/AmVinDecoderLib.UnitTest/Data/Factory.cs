@@ -19,28 +19,28 @@ public class Factory : VerifyBase
     [TestMethod]
     public Task Lookup_A_ReturnsExpectedValues()
     {
-        var result = FactoryRepository.Lookup('A');
+        var result = new FactoryRepository().Lookup('A');
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_G_ReturnsExpectedValues()
     {
-        var result = FactoryRepository.Lookup('G');
+        var result = new FactoryRepository().Lookup('G');
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_J_ReturnsExpectedValues()
     {
-        var result = FactoryRepository.Lookup('J');
+        var result = new FactoryRepository().Lookup('J');
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_T_ReturnsExpectedValues()
     {
-        var result = FactoryRepository.Lookup('T');
+        var result = new FactoryRepository().Lookup('T');
         return Verify(result, _settings);
     }
 }

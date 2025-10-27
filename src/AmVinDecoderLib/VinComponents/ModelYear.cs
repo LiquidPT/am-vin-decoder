@@ -5,6 +5,9 @@
 
 namespace AmVinDecoderLib.VinComponents;
 
+/// <summary>
+/// Represents the model year component of a vehicle identification number (VIN).
+/// </summary>
 public record ModelYear : BaseVinComponent
 {
 }

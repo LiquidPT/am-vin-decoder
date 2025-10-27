@@ -5,6 +5,9 @@
 
 namespace AmVinDecoderLib.VinComponents.Enums;
 
+/// <summary>
+/// Specifies the seating configuration options for a vehicle.
+/// </summary>
 public enum SeatingConfiguration
 {
     /// <summary>

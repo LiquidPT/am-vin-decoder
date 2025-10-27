@@ -3,6 +3,8 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
+using System.Globalization;
+
 namespace AmVinDecoderLib.UnitTest.VinComponents;
 
 [TestClass]
@@ -18,7 +20,7 @@ public class Transmission
             Text = "Test Text",
         };
 
-        Assert.AreEqual($"{component.ForwardSpeeds} speed auto ({component.SteeringPosition})", component.ToString());
+        Assert.AreEqual($"{component.ForwardSpeeds} speed auto ({component.SteeringPosition})", component.ToString(CultureInfo.CurrentCulture));
     }
 
     [TestMethod]
@@ -31,7 +33,7 @@ public class Transmission
             Text = "Test Text",
         };
 
-        Assert.AreEqual($"{component.ForwardSpeeds} speed manual ({component.SteeringPosition})", component.ToString());
+        Assert.AreEqual($"{component.ForwardSpeeds} speed manual ({component.SteeringPosition})", component.ToString(CultureInfo.CurrentCulture));
     }
 
     [TestMethod]
@@ -44,6 +46,6 @@ public class Transmission
             Text = "Test Text",
         };
 
-        Assert.AreEqual($"{component.Text} {component.ForwardSpeeds} speed automated manual ({component.SteeringPosition})", component.ToString());
+        Assert.AreEqual($"{component.Text} {component.ForwardSpeeds} speed automated manual ({component.SteeringPosition})", component.ToString(CultureInfo.CurrentCulture));
     }
 }

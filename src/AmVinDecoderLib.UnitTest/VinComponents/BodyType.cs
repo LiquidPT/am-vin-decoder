@@ -3,6 +3,8 @@
 // Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.
 // -------------------------------------------------------------------------------------------------
 
+using System.Globalization;
+
 namespace AmVinDecoderLib.UnitTest.VinComponents;
 
 [TestClass]
@@ -20,7 +22,7 @@ public class BodyType
             SeatCount = 4,
         };
 
-        Assert.AreEqual($"{component.Text} (4 seats)", component.ToString());
+        Assert.AreEqual($"{component.Text} (4 seats)", component.ToString(CultureInfo.CurrentCulture));
     }
 
     [TestMethod]
@@ -35,7 +37,7 @@ public class BodyType
             SeatCount = 4,
         };
 
-        Assert.AreEqual($"{component.Text} (2+2)", component.ToString());
+        Assert.AreEqual($"{component.Text} (2+2)", component.ToString(CultureInfo.CurrentCulture));
     }
 
     [TestMethod]
@@ -50,7 +52,7 @@ public class BodyType
             SeatCount = 4,
         };
 
-        Assert.AreEqual($"{component.Text} (2+0)", component.ToString());
+        Assert.AreEqual($"{component.Text} (2+0)", component.ToString(CultureInfo.CurrentCulture));
     }
 
     [TestMethod]
@@ -65,7 +67,7 @@ public class BodyType
             SeatCount = 4,
         };
 
-        Assert.AreEqual($"{component.Text} (2+0 or 2+2)", component.ToString());
+        Assert.AreEqual($"{component.Text} (2+0 or 2+2)", component.ToString(CultureInfo.CurrentCulture));
     }
 
     [TestMethod]
@@ -80,6 +82,6 @@ public class BodyType
             SeatCount = 4,
         };
 
-        Assert.AreEqual($"{component.Text} (2 seats)", component.ToString());
+        Assert.AreEqual($"{component.Text} (2 seats)", component.ToString(CultureInfo.CurrentCulture));
     }
 }

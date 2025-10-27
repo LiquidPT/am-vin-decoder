@@ -9,7 +9,9 @@ global using Microsoft.VisualStudio.TestTools.UnitTesting;
 global using VerifyMSTest;
 global using VerifyTests;
 
+#pragma warning disable CS8981 // The type name only contains lower-cased ascii characters. Such names may become reserved for the language.
 global using vin = AmVinDecoderLib.VinComponents;
+#pragma warning restore CS8981 // The type name only contains lower-cased ascii characters. Such names may become reserved for the language.
 
 namespace AmVinDecoderLib.UnitTest;
 
@@ -32,7 +34,7 @@ public class VinDecoderTests
     [ExpectedException(typeof(ArgumentNullException))]
     public void GetInfo_NullVin_ThrowsException()
     {
-        _ = VinDecoder.GetVehicleInfo("AAAAAAAAAAAAAAAAA", null);
+        _ = VinDecoder.GetVehicleInfo("AAAAAAAAAAAAAAAAA", null!);
     }
 
     [TestMethod]

@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 [assembly: CLSCompliant(true)]
 
 var unitOptions = GetUnitOptions();
-string vin = null;
+string? vin = null;
 if (args?.Length > 0)
 {
     vin = args[0];

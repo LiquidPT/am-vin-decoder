@@ -5,6 +5,13 @@
 
 namespace AmVinDecoderLib.VinComponents.Enums;
 
+/// <summary>
+/// Specifies the available model types for vehicles, including various coupe, roadster, and special edition variants.
+/// </summary>
+/// <remarks>Use this enumeration to identify or categorize vehicle models in applications that require
+/// distinction between different types, such as inventory management, configuration, or reporting. The values represent
+/// specific models and body styles, including both legacy and current options. The Unknown value indicates that the
+/// model type has not been specified.</remarks>
 public enum ModelType
 {
     /// <summary>

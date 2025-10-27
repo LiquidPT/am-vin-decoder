@@ -5,6 +5,9 @@
 
 namespace AmVinDecoderLib.VinComponents;
 
+/// <summary>
+/// Represents a factory component in a VIN (Vehicle Identification Number).
+/// </summary>
 public record Factory : BaseVinComponent
 {
 }

@@ -10,9 +10,24 @@ using AmVinDecoderLib.VinComponents;
 
 namespace AmVinDecoderLib.Repositories;
 
-public static class ModelYearRepository
+/// <summary>
+/// Provides functionality to retrieve model year information based on a VIN code character.
+/// </summary>
+/// <remarks>This repository translates a single alphanumeric VIN code character into its corresponding model year
+/// representation. It is intended for use in scenarios where decoding vehicle identification numbers is required. The
+/// class is designed for consistency in usage and may be extended to support additional VIN decoding
+/// features.</remarks>
+public class ModelYearRepository
 {
-    public static ModelYear Lookup(char vinCode)
+    /// <summary>
+    /// Retrieves the model year information corresponding to the specified VIN code character.
+    /// </summary>
+    /// <remarks>Throws an exception if the provided VIN code character is not alphanumeric. The returned
+    /// ModelYear object contains the textual representation of the model year as determined by the VIN code.</remarks>
+    /// <param name="vinCode">The VIN code character to look up. Must be an alphanumeric character representing a model year code.</param>
+    /// <returns>A ModelYear instance containing the model year information for the specified VIN code character.</returns>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "For consistency")]
+    public ModelYear Lookup(char vinCode)
     {
         ArgumentOutOfRangeException.ThrowIfNotAlphaNumeric(vinCode);
 

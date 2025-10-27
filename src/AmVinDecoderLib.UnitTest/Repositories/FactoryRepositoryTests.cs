@@ -12,27 +12,27 @@ public class FactoryRepositoryTests
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void Lookup_SymbolVinCode_ThrowsException()
     {
-        _ = FactoryRepository.Lookup('*');
+        _ = new FactoryRepository().Lookup('*');
     }
 
     [TestMethod]
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void Lookup_NumericVinCode_ThrowsException()
     {
-        _ = FactoryRepository.Lookup('1');
+        _ = new FactoryRepository().Lookup('1');
     }
 
     [TestMethod]
     [ExpectedException(typeof(KeyNotFoundException))]
     public void Lookup_UnknownLetterVinCode_ThrowsException()
     {
-        _ = FactoryRepository.Lookup('X');
+        _ = new FactoryRepository().Lookup('X');
     }
 
     [TestMethod]
     public void Lookup_KnownLetterVinCode_ReturnsValue()
     {
-        var result = FactoryRepository.Lookup('A');
+        var result = new FactoryRepository().Lookup('A');
         Assert.IsNotNull(result.Text);
     }
 }

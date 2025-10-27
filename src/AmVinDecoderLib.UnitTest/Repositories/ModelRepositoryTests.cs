@@ -12,21 +12,21 @@ public class ModelRepositoryTests
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void Lookup_SymbolVinCode_ThrowsException()
     {
-        _ = ModelRepository.Lookup('*', null, null);
+        _ = new ModelRepository().Lookup('*', null!, null);
     }
 
     [TestMethod]
     [ExpectedException(typeof(KeyNotFoundException))]
     public void Lookup_UnknownNumericVinCode_ThrowsException()
     {
-        _ = ModelRepository.Lookup('1', null, null);
+        _ = new ModelRepository().Lookup('1', null!, null);
     }
 
     [TestMethod]
     [ExpectedException(typeof(KeyNotFoundException))]
     public void Lookup_UnknownLetterVinCode_ThrowsException()
     {
-        var result = ModelRepository.Lookup('X', null, null);
+        var result = new ModelRepository().Lookup('X', null!, null);
         _ = result.Text;
     }
 
@@ -34,38 +34,38 @@ public class ModelRepositoryTests
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void Lookup_LetterSerialModifier_ThrowsException()
     {
-        _ = ModelRepository.Lookup('A', null, 'A');
+        _ = new ModelRepository().Lookup('A', null!, 'A');
     }
 
     [TestMethod]
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void Lookup_SymbolSerialModifier_ThrowsException()
     {
-        _ = ModelRepository.Lookup('A', null, '*');
+        _ = new ModelRepository().Lookup('A', null!, '*');
     }
 
     [TestMethod]
     public void Lookup_KnownNumericVinCode_ReturnsValue()
     {
-        _ = ModelRepository.Lookup('0', null, null);
+        _ = new ModelRepository().Lookup('0', null!, null);
     }
 
     [TestMethod]
     public void Lookup_KnownLetterVinCode_ReturnsValue()
     {
-        _ = ModelRepository.Lookup('A', null, null);
+        _ = new ModelRepository().Lookup('A', null!, null);
     }
 
     [TestMethod]
     public void Lookup_KnownLetterVinCodeDefaultSerialModifier_ReturnsValue()
     {
-        _ = ModelRepository.Lookup('E', null, null);
+        _ = new ModelRepository().Lookup('E', null!, null);
     }
 
     [TestMethod]
     public void Lookup_KnownLetterVinCodeAndSerialModifier_ReturnsValue()
     {
-        var result = ModelRepository.Lookup('E', null, '0');
+        var result = new ModelRepository().Lookup('E', null!, '0');
         Assert.IsNotNull(result.Text);
     }
 }

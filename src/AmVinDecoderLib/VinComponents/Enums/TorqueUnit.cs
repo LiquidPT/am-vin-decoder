@@ -5,6 +5,12 @@
 
 namespace AmVinDecoderLib.VinComponents.Enums;
 
+/// <summary>
+/// Specifies the units of measurement for torque values.
+/// </summary>
+/// <remarks>Use this enumeration to indicate the unit in which a torque value is expressed, such as pound-feet or
+/// newton-metres. The <see cref="TorqueUnit.Unknown"/> value represents an unset or unspecified unit and should not be
+/// used for calculations.</remarks>
 public enum TorqueUnit
 {
     /// <summary>

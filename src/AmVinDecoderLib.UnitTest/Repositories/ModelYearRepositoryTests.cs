@@ -12,13 +12,13 @@ public class ModelYearRepositoryTests
     [ExpectedException(typeof(ArgumentOutOfRangeException))]
     public void Lookup_SymbolVinCode_ThrowsException()
     {
-        _ = ModelYearRepository.Lookup('*');
+        _ = new ModelYearRepository().Lookup('*');
     }
 
     [TestMethod]
     public void Lookup_NumericVinCode_ReturnsValue()
     {
-        var result = ModelYearRepository.Lookup('6');
+        var result = new ModelYearRepository().Lookup('6');
         Assert.IsNotNull(result.Text);
         Assert.AreEqual("2006", result.Text);
     }
@@ -26,7 +26,7 @@ public class ModelYearRepositoryTests
     [TestMethod]
     public void Lookup_FirstLetterVinCode_ReturnsValue()
     {
-        var result = ModelYearRepository.Lookup('A');
+        var result = new ModelYearRepository().Lookup('A');
         Assert.IsNotNull(result.Text);
         Assert.AreEqual("2010", result.Text);
     }
@@ -34,7 +34,7 @@ public class ModelYearRepositoryTests
     [TestMethod]
     public void Lookup_LetterVinCode_ReturnsValue()
     {
-        var result = ModelYearRepository.Lookup('D');
+        var result = new ModelYearRepository().Lookup('D');
         Assert.IsNotNull(result.Text);
         Assert.AreEqual("2013", result.Text);
     }
@@ -42,7 +42,7 @@ public class ModelYearRepositoryTests
     [TestMethod]
     public void Lookup_H_ReturnsCorrectValue()
     {
-        var result = ModelYearRepository.Lookup('H');
+        var result = new ModelYearRepository().Lookup('H');
         Assert.IsNotNull(result.Text);
         Assert.AreEqual("2017", result.Text);
     }
@@ -50,7 +50,7 @@ public class ModelYearRepositoryTests
     [TestMethod]
     public void Lookup_J_ReturnsCorrectValue()
     {
-        var result = ModelYearRepository.Lookup('J');
+        var result = new ModelYearRepository().Lookup('J');
         Assert.IsNotNull(result.Text);
         Assert.AreEqual("2018", result.Text);
     }

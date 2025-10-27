@@ -13,9 +13,25 @@ using AmVinDecoderLib.Utilities;
 
 namespace AmVinDecoderLib;
 
+/// <summary>
+/// Provides methods for decoding a Vehicle Identification Number (VIN) and retrieving summary information about the
+/// corresponding vehicle.
+/// </summary>
+/// <remarks>This static class offers functionality to extract vehicle details such as factory, model year,
+/// engine, transmission, and restraint system from a VIN string. All methods are static and thread-safe. The class is
+/// intended for use with VINs that begin with "SCF" and are exactly 17 characters in length, corresponding to supported
+/// vehicle formats.</remarks>
 public static class VinDecoder
 {
-    public static VehicleSummary GetVehicleInfo(string vin, UnitOptions unitOptions)
+    /// <summary>
+    /// Retrieves detailed summary information for a vehicle based on its VIN and specified unit options.
+    /// </summary>
+    /// <param name="vin">The 17-character vehicle identification number (VIN) used to identify the vehicle. Must not be null, empty, or
+    /// shorter than 17 characters, and must start with "SCF".</param>
+    /// <param name="unitOptions">The unit options specifying preferred measurement units for power and torque. Must not be null.</param>
+    /// <returns>A VehicleSummary object containing information about the vehicle, including factory, model year, model, body
+    /// type, serial number, engine, restraint system, and transmission details.</returns>
+    public static VehicleSummary GetVehicleInfo(string? vin, UnitOptions unitOptions)
     {
         ArgumentException.ThrowIfNullOrEmpty(vin);
         ArgumentNullException.ThrowIfNull(unitOptions);
@@ -30,16 +46,16 @@ public static class VinDecoder
         var info = new VehicleSummary
         {
             Vin = vin,
-            Factory = FactoryRepository.Lookup(vin[VinPosition.Factory]),
-            ModelYear = ModelYearRepository.Lookup(vin[VinPosition.ModelYear]),
-            Model = ModelRepository.Lookup(vin[VinPosition.Model], vin.Substring(VinPosition.BodyType, 2), vin[VinPosition.SerialNumber]),
-            BodyType = BodyTypeRepository.Lookup(vin.Substring(VinPosition.BodyType, 2)),
+            Factory = new FactoryRepository().Lookup(vin[VinPosition.Factory]),
+            ModelYear = new ModelYearRepository().Lookup(vin[VinPosition.ModelYear]),
+            Model = new ModelRepository().Lookup(vin[VinPosition.Model], vin.Substring(VinPosition.BodyType, 2), vin[VinPosition.SerialNumber]),
+            BodyType = new BodyTypeRepository().Lookup(vin.Substring(VinPosition.BodyType, 2)),
             SerialNumber = vin.Substring(VinPosition.SerialNumber, 5),
         };
 
-        info.Engine = EngineRepository.Lookup(vin[VinPosition.Engine], powerUnits, torqueUnits, info.Model.ModelType);
-        info.RestraintSystem = RestraintSystemRepository.Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.ModelType);
-        info.Transmisson = TransmissionRepository.Lookup(vin[VinPosition.Transmission], info.Model.ModelType);
+        info.Engine = new EngineRepository().Lookup(vin[VinPosition.Engine], powerUnits, torqueUnits, info.Model.ModelType);
+        info.RestraintSystem = new RestraintSystemRepository().Lookup(vin[VinPosition.Restraint], info.ModelYear.Text, info.Model.ModelType);
+        info.Transmisson = new TransmissionRepository().Lookup(vin[VinPosition.Transmission], info.Model.ModelType);
 
         return info;
     }

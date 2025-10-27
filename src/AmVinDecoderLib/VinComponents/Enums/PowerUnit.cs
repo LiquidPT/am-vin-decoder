@@ -5,6 +5,11 @@
 
 namespace AmVinDecoderLib.VinComponents.Enums;
 
+/// <summary>
+/// Specifies the units of measurement for power values, such as brake horsepower or kilowatts.
+/// </summary>
+/// <remarks>Use this enumeration to indicate the unit in which a power value is expressed. The value may be used
+/// for display, conversion, or validation purposes in applications that handle power measurements.</remarks>
 public enum PowerUnit
 {
     /// <summary>

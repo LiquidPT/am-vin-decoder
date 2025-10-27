@@ -8,11 +8,19 @@ using AmVinDecoderLib.VinComponents;
 
 namespace AmVinDecoderLib.Repositories;
 
+/// <summary>
+/// Repository for looking up BodyType information based on VIN code.
+/// </summary>
 public class BodyTypeRepository : BaseRepository<BodyType>
 {
-    public static BodyType Lookup(string vinCode)
+    /// <summary>
+    /// Retrieves the body type associated with the specified VIN code.
+    /// </summary>
+    /// <param name="vinCode">The VIN code to look up. Must consist of letters or digits and be at least two characters long.</param>
+    /// <returns>The body type corresponding to the validated VIN code.</returns>
+    public BodyType Lookup(string vinCode)
     {
         var validatedVinCode = LookupUtility.ValidateLetterOrDigitVinCode(vinCode, 2);
-        return InitializeData()[validatedVinCode];
+        return Repo[validatedVinCode];
     }
 }

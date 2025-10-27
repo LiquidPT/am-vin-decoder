@@ -5,6 +5,13 @@
 
 namespace AmVinDecoderLib.VinComponents.Enums;
 
+/// <summary>
+/// Specifies the available body styles for a vehicle.
+/// </summary>
+/// <remarks>Use this enumeration to indicate the general configuration of a vehicle's exterior, such as coupe,
+/// sedan, or SUV. The values correspond to common automotive body styles and may be used for filtering, display, or
+/// categorization purposes. The <see cref="BodyStyle.Unknown"/> value represents an unset or unspecified body
+/// style.</remarks>
 public enum BodyStyle
 {
     /// <summary>

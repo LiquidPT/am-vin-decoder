@@ -44,7 +44,7 @@ public class LookupUtilityTests
     [ExpectedException(typeof(ArgumentNullException))]
     public void ValidateLetterOrDigitVinCode_NullVinCode_ThrowsException()
     {
-        _ = LookupUtility.ValidateLetterOrDigitVinCode(null, 2);
+        _ = LookupUtility.ValidateLetterOrDigitVinCode(null!, 2);
     }
 
     [TestMethod]

@@ -22,182 +22,182 @@ public class Engine : VerifyBase
     [TestMethod]
     public Task Lookup_A_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('A', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('A', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_B_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('B', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('B', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_C_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('C', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('C', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_D_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('D', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('D', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_E_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('E', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('E', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_F_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('F', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('F', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_G_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('G', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('G', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_J_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('J', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('J', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_K_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('K', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('K', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_L_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('L', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('L', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_M_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('M', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('M', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_N_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('N', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('N', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_P_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('P', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('P', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_U_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('U', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('U', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_R_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('R', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('R', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_T_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('T', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('T', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_S_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('S', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('S', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_V_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('V', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('V', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_VIsNewDbsCoupe_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('V', powerUnit, torqueUnit, ModelType.NewDbsCoupe);
+        var result = new EngineRepository().Lookup('V', powerUnit, torqueUnit, ModelType.NewDbsCoupe);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_VIsDb11Amr_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('V', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Db11Amr);
+        var result = new EngineRepository().Lookup('V', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Db11Amr);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_W_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('W', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('W', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_WIsDb11Coupe_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('W', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Db11Coupe);
+        var result = new EngineRepository().Lookup('W', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Db11Coupe);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_WIsDb11Volante_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('W', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Db11Volante);
+        var result = new EngineRepository().Lookup('W', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Db11Volante);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_WIsDbx_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('W', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Dbx);
+        var result = new EngineRepository().Lookup('W', PowerUnit.Bhp, TorqueUnit.LbFt, ModelType.Dbx);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_Z_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('Z', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('Z', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 
     [TestMethod]
     public Task Lookup_0_ReturnsExpectedValues()
     {
-        var result = EngineRepository.Lookup('0', powerUnit, torqueUnit);
+        var result = new EngineRepository().Lookup('0', powerUnit, torqueUnit);
         return Verify(result, _settings);
     }
 }

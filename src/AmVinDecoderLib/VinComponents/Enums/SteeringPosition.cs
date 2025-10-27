@@ -5,6 +5,13 @@
 
 namespace AmVinDecoderLib.VinComponents.Enums;
 
+/// <summary>
+/// Specifies the steering wheel position for a vehicle, indicating whether it is configured for left-hand drive,
+/// right-hand drive, or is unspecified.
+/// </summary>
+/// <remarks>Use this enumeration to identify or set the steering configuration of a vehicle. The value is
+/// typically determined by regional driving conventions and may affect compatibility with certain markets or
+/// regulations.</remarks>
 public enum SteeringPosition
 {
     /// <summary>

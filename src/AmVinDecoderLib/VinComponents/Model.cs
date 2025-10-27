@@ -5,7 +5,13 @@
 
 namespace AmVinDecoderLib.VinComponents;
 
+/// <summary>
+/// Represents a vehicle model and its associated type information.
+/// </summary>
 public record Model : BaseVinComponent
 {
+    /// <summary>
+    /// Gets the type of model represented by this instance.
+    /// </summary>
     public ModelType ModelType { get; init; }
 }

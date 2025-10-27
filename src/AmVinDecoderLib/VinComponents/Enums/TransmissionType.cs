@@ -5,6 +5,12 @@
 
 namespace AmVinDecoderLib.VinComponents.Enums;
 
+/// <summary>
+/// Specifies the type of transmission used in a vehicle.
+/// </summary>
+/// <remarks>Use this enumeration to indicate whether a vehicle has an automatic, manual, or automated manual
+/// transmission. The value <see cref="TransmissionType.Unknown"/> represents an unset or unspecified transmission
+/// type.</remarks>
 public enum TransmissionType
 {
     /// <summary>
